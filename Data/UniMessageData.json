@@ -1,0 +1,18 @@
+[
+
+    {
+        "id": "1",
+        "category": "UniMessage",
+        "message":" Keep Calm and Carry On "
+    },
+    {
+        "id": "2",
+        "category": "UniMessage",
+        "message":" Be happy and don't care about what people think"
+    },
+    {
+        "id": "3",
+        "category": "UniMessage",
+        "message":"The future belongs to those who believe in the beauty of their dreams"
+    }
+]

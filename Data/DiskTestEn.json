@@ -1,0 +1,62 @@
+[
+
+    {
+        "id": "1",
+        "language": "English",
+        "section": "D",
+        "question": "1.I am assertive, demanding and decisive",
+        "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
+    },
+    {
+        "id": "2",
+        "language": "English",
+        "section": "D",
+        "question": "2.I enjoy doing multiple tasks at once",
+        "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
+    },
+    {
+        "id": "3",
+        "language": "English",
+        "section": "D",
+        "question": "1.I am assertive, demanding and decisive",
+        "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
+        }, 
+    {
+        "id": "6",
+        "language": "English",
+        "section": "I",
+        "question": "6.I enjoy influencing and inspiring people",
+        "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
+           
+    }, {
+        "id": "7",
+        "language": "English",
+        "section": "I",
+        "question": "7.I am optimistic about others",
+        "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
+    }, {
+        "id": "11",
+        "language": "English",
+        "section": "S",
+        "question": "11.I thrive in consistent enviroments over changing ones.",
+        "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
+    }, {
+        "id": "12",
+        "language": "English",
+        "section": "S",
+        "question": "12.I prefer specifics over generalizations",
+        "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
+    }, {
+        "id": "16",
+        "language": "English",
+        "section": "C",
+        "question": "16.I typically do not take big risks.",
+        "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
+    }, {
+        "id": "17",
+        "language": "English",
+        "section": "C",
+        "question": "17.I love tasks, order and details.",
+        "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
+    }
+]
