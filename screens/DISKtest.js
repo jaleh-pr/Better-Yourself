@@ -16,8 +16,10 @@ const DiskTest = (props) => {
     const [option3, setOption3] = useState();
     const [option4, setOption4] = useState();
     const [option5, setOption5] = useState();
+    const [scoreD, setScoreD] = useState(0);
+    const [myValue, setMyValue] = useState();
 
-    const NextPage = () => {
+    const StartExam = () => {
         setPageNum(pageNum + 1);
         setQuestionAnswers(questionNum);
     };
@@ -26,7 +28,14 @@ const DiskTest = (props) => {
         setQuestionAnswers(questionNum);
     };
 
-    
+    const getValueHandler = (selectedValue) =>{
+        if (selectedValue === radioProps[4]){
+            setMyValue(5)
+        }else if (selectedValue === radioProps[3]){
+            setMyValue(4)
+        }
+    }; 
+
     const setQuestionAnswers = (questionNum) => {
         const ques = JSON.stringify(DiskTestData[questionNum].question);
         const op1 = JSON.stringify(DiskTestData[questionNum].options[0]);
@@ -54,7 +63,7 @@ if(pageNum === 0 ){
                 </Text>
 
                 <TouchableOpacity
-                        onPress={() => NextPage()}
+                        onPress={() => StartExam()}
                         style={styles.button}
                     >
                             <Text>Start</Text> 
@@ -88,16 +97,18 @@ if(pageNum === 0 ){
                 </TouchableOpacity>
             </View> 
             <View>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={getValueHandler.bind(this, radioProps[3])}>
                     <Text>{radioProps[3]}</Text>  
                 </TouchableOpacity>
             </View> 
             <View>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={getValueHandler.bind(this, radioProps[4])}>
                     <Text>{radioProps[4]}</Text>  
                 </TouchableOpacity>
             </View> 
-           
+           <View>
+            <Text>{myValue}</Text>
+           </View>
             <TouchableOpacity
                         onPress={() => NextQuestion()}
                         style={styles.button}
