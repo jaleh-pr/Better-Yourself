@@ -9,7 +9,8 @@ const DiskTest = (props) => {
     const DiskTestData = require("../Data/DiskTestEn.json");
 
     const [pageNum , setPageNum ] = useState(0);
-    const [questionNum , setQuestionNum ] = useState(1);
+    const [questionNum , setQuestionNum ] = useState(0);
+    const [questionSec, setQuestionSec ] = useState("");
     const [theQuestion, setTheQuestion] = useState("");
     const [option1, setOption1] = useState();
     const [option2, setOption2] = useState();
@@ -17,13 +18,28 @@ const DiskTest = (props) => {
     const [option4, setOption4] = useState();
     const [option5, setOption5] = useState();
     const [scoreD, setScoreD] = useState(0);
-    const [myValue, setMyValue] = useState();
+    const [scoreI, setScoreI] = useState(0);
+    const [scoreC, setScoreC] = useState(0);
+    const [scoreS, setScoreS] = useState(0);
+    const [myValue, setMyValue] = useState(0);
 
     const StartExam = () => {
         setPageNum(pageNum + 1);
         setQuestionAnswers(questionNum);
     };
-    const NextQuestion = () => {
+    const NextQuestion = (myQuestionNum) => {
+        let theValue = myValue;
+        if(radioProps[5] === "D"){
+            setScoreD(scoreD + theValue);
+        }else if(radioProps[5] === "I"){
+            setScoreI(scoreI + theValue);
+        }else if(radioProps[5] === "S"){
+            setScoreS(scoreS + theValue);
+        }else if(radioProps[5] === "C"){
+            setScoreC(scoreC + theValue);
+        }
+        setMyValue(0);
+        //setScoreD(scoreD + theValue);
         setQuestionNum(questionNum + 1);
         setQuestionAnswers(questionNum);
     };
@@ -38,19 +54,21 @@ const DiskTest = (props) => {
 
     const setQuestionAnswers = (questionNum) => {
         const ques = JSON.stringify(DiskTestData[questionNum].question);
+        const queSec = JSON.stringify(DiskTestData[questionNum].section);
         const op1 = JSON.stringify(DiskTestData[questionNum].options[0]);
         const op2 = JSON.stringify(DiskTestData[questionNum].options[1]);
         const op3 = JSON.stringify(DiskTestData[questionNum].options[2]);
         const op4 = JSON.stringify(DiskTestData[questionNum].options[3]);
         const op5 = JSON.stringify(DiskTestData[questionNum].options[4]);
         setTheQuestion(ques.replace(/['"]+/g, ""));
+        setQuestionSec(queSec.replace(/['"]+/g, ""));
         setOption1(op1.replace(/['"]+/g, ""));
         setOption2(op2.replace(/['"]+/g, ""));
         setOption3(op3.replace(/['"]+/g, ""));
         setOption4(op4.replace(/['"]+/g, ""));
         setOption5(op5.replace(/['"]+/g, ""));
     } ;
-    const radioProps = [option1, option2, option3, option4, option5]
+    const radioProps = [option1, option2, option3, option4, option5, questionSec]
 
 if(pageNum === 0 ){
   return (
@@ -107,7 +125,13 @@ if(pageNum === 0 ){
                 </TouchableOpacity>
             </View> 
            <View>
-            <Text>{myValue}</Text>
+            <Text>scoreD = {scoreD}</Text>
+            <Text>scoreI = {scoreI}</Text>
+            <Text>scoreS = {scoreS}</Text>
+            <Text>scoreC = {scoreC}</Text>
+            <Text>myValue = {myValue}</Text>
+            <Text>questionNum = {questionSec}</Text>
+            
            </View>
             <TouchableOpacity
                         onPress={() => NextQuestion()}
