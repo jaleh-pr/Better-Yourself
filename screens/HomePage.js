@@ -51,7 +51,7 @@ const HomePage = (props) => {
                      style={styles.button}
                 >
                     <View>
-                        <Text>Zodiav</Text> 
+                        <Text>Zodiac</Text> 
                     </View>
                 </TouchableOpacity>
                 

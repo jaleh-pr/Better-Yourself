@@ -17,8 +17,25 @@ const Zodic = (props) => {
                 <Text>
                 Zodic
                 </Text>
+
+                <TouchableOpacity
+                     onPress={() => onLanNumProps(11)}
+                     style={styles.button}
+                >
+                    <View>
+                        <Text>Month Zodiac</Text> 
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity
+                     onPress={() => onLanNumProps(12)}
+                     style={styles.button}
+                >
+                    <View>
+                        <Text>Year Zodiac</Text> 
+                    </View>
+                </TouchableOpacity>
             </View>
-            <TouchableOpacity
+                <TouchableOpacity
                      onPress={() => onLanNumProps(0)}
                      style={styles.button}
                 >
@@ -36,7 +53,17 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         color: "black",
-        paddingTop: 10,
-    }
+        paddingTop: 1,
+    },
+    button:{
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding:12,
+      marginTop:35,
+      borderColor:'#55c2da',
+      borderRadius:10,
+      borderWidth:1,
+      backgroundColor:'#55c2da'
+  }
 })
 export default Zodic;
