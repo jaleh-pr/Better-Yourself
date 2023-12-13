@@ -1,0 +1,120 @@
+[
+
+    {
+        "id": "1",
+        "category": "ZodiacMonth",
+        "title": "Aries: March 21 to April 19",
+        "message1": "Aries is the first astrological sign, symbolized by the ram. They have a strong desire to be at the forefront and excel in various aspects of life. They are known for their energy, ambition, independence, and confidence. Natural-born leaders, they thrive on taking risks and tackling challenging situations head-on. They are highly productive and driven to accomplish their goals.",
+        "message2": "Relationships: Aries can be passionate and devoted, but they may also struggle with feelings of jealousy and possessiveness. While they display dedication and intensity, these traits can sometimes lead to difficulties in maintaining healthy boundaries.",
+        "message3": "Strengths: Aries are known for their strong will and determination. They are often seen as defenders of justice, driven by a strong sense of fairness. They are reliable and supportive in close relationships, always ready to offer help in various situations.",
+        "message4": "Weaknesses: Aries can sometimes be headstrong and impatient, driven by their desire to lead and accomplish tasks quickly. They may act impulsively without considering the consequences, displaying a carefree attitude. This can lead to a lack of healthy boundaries and inhibitions. Additionally, they may overcommit themselves in work projects and overcompensate in relationships, which can make them appear emotionally weak and overly aggressive"
+    },
+    {
+        "id": "2",
+        "category": "ZodiacMonth",
+        "title": " Taurus: April 20 to May 20 ",
+        "message1": "Taurus is the second astrological sign symbolized by the bull. They are known for their stability, reliability, and practicality. Taurus possess a patient and persistent nature, often remaining unaffected by external influences. Taurus loves comfort and luxury. They are highly grounded and practical, demonstrating exceptional commitment to their goals. Loyalty and dependability are among their notable traits, although they can also exhibit stubbornness. If you seek a practical and trustworthy friend or partner, getting to know a Taurus is worthwhile.",
+        "message2":"Relationships: The Taurus sign is highly focused on relationships and believes that friendships and partnerships are essential for their personal growth. Taurus individuals can be loving and dedicated, but they may also exhibit possessiveness and stubbornness.",
+        "message3": "Strengths: Taurus is one of the most reliable and trustworthy zodiac signs of all. They’re incredibly loyal, so they don’t give up easily when it comes to the important things in life. Being determined is also one of the main strengths of Taurus.",
+        "message4": "Weaknesses: However, their stubbornness can be considered a weakness, as they may struggle to accept their mistakes and prefer avoiding confrontation rather than engaging in open communication. "
+    },
+    {
+        "id": "3",
+        "category": "ZodiacMonth",
+        "title": " Gemini: May 21 to June 20   ",
+        "message1": "",
+        "message2": "",
+        "message3": "",
+        "message4": ""
+    },
+    {
+        "id": "4",
+        "category": "ZodiacMonth",
+        "title": " Cancer: June 21 to July 22   ",
+        "message1": "",
+        "message2": "",
+        "message3": "",
+        "message4": ""
+    },
+    {
+        "id": "5",
+        "category": "ZodiacMonth",
+        "title": "Leo: July 23 to August 22",
+        "message1":" Be happy and don't care about what people think",
+        "message2": "",
+        "message3": "",
+        "message4": ""
+    },
+    {
+        "id": "6",
+        "category": "ZodiacMonth",
+        "title": " Virgo: August 23 to September 22 ",
+        "message1": "",
+        "message2": "",
+        "message3": "",
+        "message4": ""
+    },
+    {
+        "id": "7",
+        "category": "ZodiacMonth",
+        "title": " Libra: September 23 to October 22   ",
+        "message1": "",
+        "message2": "",
+        "message3": "",
+        "message4": ""
+    },
+    {
+        "id": "8",
+        "category": "ZodiacMonth",
+        "title": " Scorpio: October 23 to November 21 ",
+        "message1": "",
+        "message2": "",
+        "message3": "",
+        "message4": ""
+    },
+    {
+        "id": "9",
+        "category": "ZodiacMonth",
+        "title": " Sagittarius: November 22 to December 21 ",
+        "message1": "",
+        "message2": "",
+        "message3": "",
+        "message4": ""
+    },
+    {
+        "id": "10",
+        "category": "ZodiacMonth",
+        "title": " Capricorn: December 22 to January 19 ",
+        "message1": "",
+        "message2": "",
+        "message3": "",
+        "message4": ""
+    },{
+        "id": "11",
+        "category": "ZodiacMonth",
+        "title": " Aquarius: January 20 to February 18 ",
+        "message1": "",
+        "message2": "",
+        "message3": "",
+        "message4": ""
+    },
+    {
+        "id": "12",
+        "category": "ZodiacMonth",
+        "title": " Pisces: February 19 to March 20 ",
+        "message1": "",
+        "message2": "",
+        "message3": "",
+        "message4": ""
+    },
+    {
+        "id": "13",
+        "category": "ZodiacMonth",
+        "title": "",
+        "message1": "",
+        "message2": "",
+        "message3": "",
+        "message4": ""
+    }
+
+]

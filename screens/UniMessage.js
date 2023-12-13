@@ -21,26 +21,9 @@ const UniMessageData = require("../Data/UniMessageData.json");
 
   return (
     <View style={styles.mainScreen}>
-            
-            {/* <View>
-                <Text>
-               {content}
-                </Text>
-            </View>
-  */}
 
             <MainSection myData={UniMessageData}/>
-                {/* <View>
-                   <MainSection myData={UniMessageData} />
-                </View> */}
-                {/* <TouchableOpacity
-                     onPress={() => onLanNumProps(7)}
-                     style={styles.button}
-                >
-                    <View>
-                        <Text>START</Text> 
-                    </View>
-                </TouchableOpacity> */}
+            
     </View>
   );
 };

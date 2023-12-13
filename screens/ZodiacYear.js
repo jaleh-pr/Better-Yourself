@@ -1,75 +1,34 @@
 
 import React, { useState } from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, SafeAreaView, TextInput, Dimensions} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, SafeAreaView, TextInput} from 'react-native';
 
+//import DateTimePicker from "@react-native-community/datetimepicker";
 import RNPickerSelect from "react-native-picker-select";
+import NumberPlease from 'react-native-number-please';
 
 
+const ZodiacYearData = (props) => {
 
-const ZodiacMonth = (props) => {
+const ZodiacYearDataData = require("../Data/ZodiacYearData.json");
+const [content , setContent ] = useState("");
 
-const ScrHeight = Dimensions.get('window').height;
-const ScrWidth = Dimensions.get('window').width;
-
-const ZodiacMonthData = require("../Data/ZodiacMonth.json");
-
+  const [number, onChangeNumber] = useState(1);
   const [birthdayDate, setBirthdayDate] = useState('Birthday Date');
   const [monthValue, setMonthValue] = useState(1);
-  const [ZoNum, setZoNum] = useState(12);
-  const [theTitle, setTheTitle] = useState('Title');
-  const [theMessage, setTheMessage] = useState('The Message');
+  const [ZoNum, setZoNum] = useState(0);
+  const [theMessage, setTheMessage] = useState('Thanks');
 
-  const setContent = (ZoNum) => {
-  const ZoMT = JSON.stringify(ZodiacMonthData[ZoNum].title);
-  const ZoM1 = JSON.stringify(ZodiacMonthData[ZoNum].message1);
-  const ZoM2 = JSON.stringify(ZodiacMonthData[ZoNum].message2);
-  const ZoM3 = JSON.stringify(ZodiacMonthData[ZoNum].message3);
-  const ZoM4 = JSON.stringify(ZodiacMonthData[ZoNum].message4);
-  setTheTitle(ZoMT.replace(/['"]+/g, ""));
-  setTheMessage(ZoM1.replace(/['"]+/g, "")+"\n"+ ZoM2.replace(/['"]+/g, "")+"\n"+ ZoM3.replace(/['"]+/g, "")+"\n"+ZoM4.replace(/['"]+/g, ""));
-  }
+
+  const ZoM = JSON.stringify(ZodiacYearDataData[ZoNum].message);
+
   const checkBirthdayHandler = () =>{
-    if((monthValue == 3 && birthdayDate > 20 )||( monthValue == 4 && birthdayDate <= 19 )){
-        setZoNum(0);
-        setContent(0);
-    }else if(( monthValue == 4 && birthdayDate > 19 )||( monthValue == 5 && birthdayDate <= 20 )){
-        setZoNum(1);
-        setContent(1);
-    }else if(( monthValue == 5 && birthdayDate > 20 )||( monthValue == 6 && birthdayDate <= 20 )){
-        setZoNum(2);
-        setContent(2);
-    }else if(( monthValue == 6 && birthdayDate > 20 )||( monthValue == 7 && birthdayDate <= 22 )){
-        setZoNum(3);
-        setContent(3);
-    }else if(( monthValue == 7 && birthdayDate > 22 )||( monthValue == 8 && birthdayDate <= 22 )){
-        setZoNum(4);
-        setContent(4);
-    }else if(( monthValue == 8 && birthdayDate > 22 )||( monthValue == 9 && birthdayDate <= 22 )){
-        setZoNum(5);
-        setContent(5);
-    }else if(( monthValue == 9 && birthdayDate > 22 )||( monthValue == 10 && birthdayDate <= 22 )){
-        setZoNum(6);
-        setContent(6); 
-    }else if(( monthValue == 10 && birthdayDate > 22 )||( monthValue == 11 && birthdayDate <= 21 )){
-        setZoNum(7);
-        setContent(7);
-    }else if(( monthValue == 11 && birthdayDate > 21 )||( monthValue == 12 && birthdayDate <= 21 )){
-        setZoNum(8);
-        setContent(8);
-    }else if(( monthValue == 12 && birthdayDate > 21 )||( monthValue == 1 && birthdayDate <= 19 )){
-        setZoNum(9);
-        setContent(9);
-    }else if(( monthValue == 1 && birthdayDate > 19 )||( monthValue == 2 && birthdayDate <= 18 )){
-        setZoNum(10);
-        setContent(10);
-    }else if(( monthValue == 2 && birthdayDate > 18 )||( monthValue == 3 && birthdayDate <= 20 )){
-        setZoNum(11)
-        setContent(11);
+    if(monthValue == 3 && birthdayDate > 5 ) {
+        setZoNum(1)
+    }else if( monthValue == 4 && birthdayDate <= 5 ){
+        setZoNum(2)
     }else{
-        setZoNum(12)
-        setContent(12);
+        setZoNum(3)
     }
-    
   }
 
 
@@ -181,10 +140,7 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
                     >
                             <Text>Confirm</Text> 
             </TouchableOpacity> 
-         <View style= {styles.article}> 
-            <Text style= {styles.title}>{theTitle}</Text>
-            <Text>{theMessage}</Text>
-        </View>
+            <Text>{ZoM}</Text>
          </View>
          
     </View>
@@ -226,17 +182,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     color: "black",
     paddingTop: 3,
-  },
-  article:{
-   
-   padding: 20,
-   //height: 'ScrHeight/5',
-  // overflow:'scroll',
-  },
-  title:{
-   textAlign:'center',
-    marginBottom:10,
-    fontSize:18
   }
 })
-export default ZodiacMonth;
+export default ZodiacYearData;
