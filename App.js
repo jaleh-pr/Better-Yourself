@@ -12,6 +12,7 @@ import Zodic from './screens/Zodic';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import DISKtest from './screens/DISKtest';
+import SelfEsteemTest from './screens/SelfEsteemTest';
 import ZodiacMonth from './screens/ZodiacMonth';
 
 const ScrHeight = Dimensions.get('window').height;
@@ -45,9 +46,13 @@ export default function App() {
     content = <Zodic onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   }else if (LanguageName === "English" && ScreenNum === 7){
     content = <DISKtest onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
-  }else if (LanguageName === "English" && ScreenNum === 11){
+  }else if (LanguageName === "English" && ScreenNum === 8){
+    content = <SelfEsteemTest onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+  } else if (LanguageName === "English" && ScreenNum === 11){
     content = <ZodiacMonth onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   }
+
+  
 
   let footer;
   if (ScreenNum > 2){

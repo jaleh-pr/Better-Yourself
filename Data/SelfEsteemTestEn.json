@@ -1,0 +1,364 @@
+[
+
+    {
+        "id": "1",
+        "language": "English",
+        "question": "1.I spend a lot of time daydreaming.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },
+    {
+        "id": "2",
+        "language": "English",
+        "question": "2. I’m pretty sure of myself.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },
+    {
+        "id": "3",
+        "language": "English",
+        "question": "3. I often wish I were someone else.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },
+    {
+        "id": "4",
+        "language": "English",
+        "question": "4. I’m easy to like.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },
+    {
+        "id": "5",
+        "language": "English",
+        "question": "5. My family and I have a lot of fun together. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },
+    {
+        "id": "6",
+        "language": "English",
+        "question": "6. I never worry about anything. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },
+    {
+        "id": "7",
+        "language": "English",
+        "question": "7. I find it very hard to talk in front of a group. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },
+    {
+        "id": "8",
+        "language": "English",
+        "question": "8. I wish I were younger",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },
+    {
+        "id": "9",
+        "language": "English",
+        "question": "9. There are lots of things about myself I’d change if I could. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },
+    {
+        "id": "10",
+        "language": "English",
+        "question": "10. I can make up my mind without too much trouble. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },
+    {
+        "id": "11",
+        "language": "English",
+        "question": "11. I’m a lot of fun to be with.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },
+    {
+        "id": "12",
+        "language": "English",
+        "question": "12. I get upset easily at home.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },
+    {
+        "id": "13",
+        "language": "English",
+        "question": "13. I always do the right thing.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "14",
+        "language": "English",
+        "question": "14. I’m proud of my work. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "15",
+        "language": "English",
+        "question": "15. Someone always has to tell me what to do",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "16",
+        "language": "English",
+        "question": "16. It takes me a long time to get used to anything new.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "17",
+        "language": "English",
+        "question": "17. I’m often sorry for the things I do. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "18",
+        "language": "English",
+        "question": "18. I’m popular with people my own age.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "19",
+        "language": "English",
+        "question": "19. My family usually considers my feelings.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "20",
+        "language": "English",
+        "question": "20. I’m never happy.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "21",
+        "language": "English",
+        "question": "21. I’m doing the best work that I can.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "22",
+        "language": "English",
+        "question": "22. I give in very easily.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "23",
+        "language": "English",
+        "question": "23. I can usually take care of myself. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "24",
+        "language": "English",
+        "question": "24. I’m pretty happy. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "25",
+        "language": "English",
+        "question": "25. I would rather associate with people younger than me. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "26",
+        "language": "English",
+        "question": "26. My family expects too much of me.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "27",
+        "language": "English",
+        "question": "27. I like everyone I know.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "28",
+        "language": "English",
+        "question": "28. I like to be called on when I am in a group. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "29",
+        "language": "English",
+        "question": "29. I understand myself. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "30",
+        "language": "English",
+        "question": "30. It’s pretty tough to be me",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "31",
+        "language": "English",
+        "question": "31. Things are all mixed up in my life. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "32",
+        "language": "English",
+        "question": "32. People usually follow my ideas.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "33",
+        "language": "English",
+        "question": "33. No one pays much attention to me at home.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "34",
+        "language": "English",
+        "question": "34. I never get scolded.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "35",
+        "language": "English",
+        "question": "35. I’m not doing as well at work as I’d like to.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "36",
+        "language": "English",
+        "question": "36. I can make up my mind and stick to it.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "37",
+        "language": "English",
+        "question": "37. I really don’t like being a man/woman.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "38",
+        "language": "English",
+        "question": "38. I have a low opinion of myself.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "39",
+        "language": "English",
+        "question": "39. I don’t like to be with other people. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "40",
+        "language": "English",
+        "question": "40. There are many times when I’d like to leave home. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "41",
+        "language": "English",
+        "question": "41. I’m never shy.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "42",
+        "language": "English",
+        "question": "42. I often feel upset. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "43",
+        "language": "English",
+        "question": "43. I often feel ashamed of myself.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "44",
+        "language": "English",
+        "question": "44. I’m not as nice­looking as most people.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "45",
+        "language": "English",
+        "question": "45. If I have something to say, I usually say it.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "46",
+        "language": "English",
+        "question": "46. People pick on me very often.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "47",
+        "language": "English",
+        "question": "47. My family understands me.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "48",
+        "language": "English",
+        "question": "48. I always tell the truth.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "49",
+        "language": "English",
+        "question": "49. My employer or supervisor makes me feel I’m not good enough. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "50",
+        "language": "English",
+        "question": "50. I don’t care what happens to me",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "51",
+        "language": "English",
+        "question": "51. I’m a failure.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "52",
+        "language": "English",
+        "question": "52. I get upset easily when I am scolded.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "53",
+        "language": "English",
+        "question": "53. Most people are better liked than I am. ",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "54",
+        "language": "English",
+        "question": "54. I usually feel as if my family is pushing me.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "55",
+        "language": "English",
+        "question": "55. I always know what to say to people.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "56",
+        "language": "English",
+        "question": "56. I often get discouraged.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },{
+        "id": "57",
+        "language": "English",
+        "question": "57. Things usually don’t bother me.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Like me"
+    },{
+        "id": "58",
+        "language": "English",
+        "question": "58. I can’t be depended on.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    }
+]
