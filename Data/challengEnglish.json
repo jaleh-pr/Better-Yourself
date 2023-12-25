@@ -2,43 +2,339 @@
   {
     "id": "1",
     "Language": "English",
-    "Title": "1Today make someone happy",
-    "Decscription": "1It can be one of your family member ,a friend or even an stranger "
+    "Title": " Make someone happy",
+    "Decscription": "A new study shows that doing kind things for others is an important path to happiness.",
+    "Example": "Give a sincere compliment -  Smile - Help them carry their stuff - Pay the toll fare for the car behind you - Give presents - Thank them for a job well done - Bake cookies."
   },
   {
     "id": "2",
     "Language": "English",
-    "Title": "2Set a goal for today",
-    "Decscription": "2This goal can be accomplishing the urgent things or spending 30 minutes working on you business's website, putting $150 in saving or learning something new or ... "
+    "Title": "Plan something special with your love ones",
+    "Decscription": "Surprises can bring joy and excitement. Plan a fun outing with your loved ones to create happy memories.",
+    "Example":" A Surprise Meal - Going to a theme park - Having a picnic in the park- Visiting a museum or art gallery - going to a concert or live performance, having a movie night at home with popcorn and snacks "
   }, {
     "id": "3",
     "Language": "English",
-    "Title": "3Today make someone happy",
-    "Decscription": "3It can be one of your family member ,a friend or even an stranger "
-  }, {
+    "Title": "Try to eat healthier for one week.",
+    "Decscription": "Eating healthy has lots of advantages. It helps make your bones strong, keeps your heart healthy, prevents illnesses, and improves your mood.",
+    "Example":"Try to avoid fried foods and fast food - Avoid heavy gravies, salad dressings, or sauces and use whole-grain bread, low fat milk and yogurt - Eat plenty of fruits and vegetables - Choose foods that are low in added sugars, saturated fats, and salt"
+    }, {
     "id": "4",
     "Language": "English",
-    "Title": "4Today make someone happy",
-    "Decscription": "4It can be one of your family member ,a friend or even an stranger "
-  }, {
+    "Title": "Pick one of your unhealthy habits and make the decision to stop doing it.",
+    "Decscription": "It usually takes around 30 to 60 days to break a habit. When you examine your lifestyle, you realize how easy it is to develop a list of unhealthy habits. However, those who are aware of their bad habits and can break them are the ones who succeed in real life.",
+    "Example":"Stop sitting around waiting for the perfect moment to begin something - Stop refusing to Learn Anything New - Stop watching too much TV- Quit nail biting - Quit smoking - Stop focusing on the Negatives - Stop being late all the time - Quit using drugs"
+    }, {
     "id": "5",
     "Language": "English",
-    "Title": "5Today make someone happy",
-    "Decscription": "5It can be one of your family member ,a friend or even an stranger "
-  }, {
-    "id": "6",
-    "Language": "English",
-    "Title": "6Today make someone happy",
-    "Decscription": "6It can be one of your family member ,a friend or even an stranger "
-  }, {
-    "id": "7",
-    "Language": "English",
-    "Title": "7Today make someone happy",
-    "Decscription": "7It can be one of your family member ,a friend or even an stranger "
-  }, {
-    "id": "8",
-    "Language": "English",
-    "Title": "8Today make someone happy",
-    "Decscription": "8It can be one of your family member ,a friend or even an stranger "
-  }
+    "Title": "Invite your friend/friends over",
+    "Decscription": "Having good friends is important for your health. Research shows that older adults who have strong relationships and support from others tend to live longer compared to those who have fewer connections.",
+    "Example":""
+    },{
+      "id": "6",
+      "Language": "English",
+      "Title": "Buy a flower for yourself or your loved one",
+      "Decscription": "Getting flowers not only feels nice, but they also make people genuinely smile and can have a long-lasting positive impact on someone's mood.",
+      "Example":""
+    },{
+      "id": "7",
+      "Language": "English",
+      "Title": "Start reading a book or listen to an audiobook",
+      "Decscription": "Reading is a great way to acquire knowledge and can enhance your memory and concentration. It strengthens your brain, exposes you to new ideas, encourages problem-solving, improves communication skills, and helps reduce stress.",
+      "Example":" To Kill a Mockingbird by Harper Lee - 1984 by George Orwel- Pride and Prejudice by Jane Austen - The Great Gatsby by F. Scott Fitzgeral - The Catcher in the Rye by J.D. Salinger - The Harry Potter series by J.K. Rowling- The Lord of the Rings trilogy by J.R.R. Tolkien - The Chronicles of Narnia series by C.S. Lewis - The Alchemist by Paulo Coelho - To Kill a Kingdom by Alexandra Christo"
+    },{
+      "id": "8",
+      "Language": "English",
+      "Title": "Donate to charity or help those in poverty",
+      "Decscription": "The act of helping others, donating to charity, or volunteering your time, will give you an improved sense of wellbeing ",
+      "Example":"Give money to reputable charities - Donate food, clothes, toys, old furniture, and books to the nearest charitable organisation - Provide clean water and meal kits to the homeless community in your local area - Provide employment opportunities for needy people"
+    },{
+      "id": "9",
+      "Language": "English",
+      "Title": "Set a short goal for yourself",
+      "Decscription": "Short-term goals are targets that you set for yourself to achieve in a relatively short period of time, often ranging from a few days to a few months. Setting short-term goals that are regularly attainable, can help you to stay motivated.",
+      "Example":"Reading two books in a month - Spending less time on social media - Exercising 30 minutes every day - Finishing an online course - learning 50 new vocabulary of new language in one month -Taking up a new hobby - Drinking 8 glass of water every day - Losing 2kg weight in one month"
+    },{
+      "id": "10",
+      "Language": "English",
+      "Title": " Smile more often",
+      "Decscription": "Whether your smile is genuine or not, it can act on your body and mind in a variety of positive ways. Smiling helps people relax, Elevates Mood, Boosts the Immune System, Lower Blood Pressure, Helps You Stay Positive and indicates confidence.",
+      "Example":""
+    },{
+      "id": "11",
+      "Language": "English",
+      "Title": "Write Morning Pages",
+      "Decscription": " The idea is to wake up, find a comfortable place without distractions, open your morning journal, and write three pages by hand of any thoughts that come to your mind. Julia Cameron, the author of The Artist's Way, came up with this method of journaling to help people unleash their creativity. Morning pages help you clear your mind and write down all your noisy thoughts on paper, which makes space for more important thoughts. It can also reduce your stress and anxiety. Many worries come from things we can't change, but when you write them down, it takes away their power. Writing morning pages allows you to process your emotions, unleash your creativity, and quiet your inner critic.",
+      "Example":""
+    },{
+      "id": "12",
+      "Language": "English",
+      "Title": "Cook a new dish",
+      "Decscription": "Cooking has the ability to give you the power to make tasty and nutritious meals for yourself and your family. It can help you save money and also provide some enjoyment in the process. Additionally, it can give you a sense of independence.",
+      "Example":"You can try some simple dishes from around the world: Kabab Tabei, Persian Food - Borani Banjan, Afghan Eggplant Dish - Tandoori Chicken, Indian Dish - Kibbeh, Lebanese Dishes - Burritos, Mexican dish - Stuffed Potatoes, French dish - Crunchy garlic chicken - Vegetarian fried rice - Stuffed mushroom - Borek - Pastry dish from Turkey - Mac and cheese - Dal Soup - Rice kofta, Egyptian Dish - Ratatouille - Tuna melt - Moussaka - Greek Eggplant dish"
+    },{
+      "id": "13",
+      "Language": "English",
+      "Title": "If you don't exercise much, try to start exercising for at least 15 minutes every day for two weeks. If you already exercise, add an extra 10 minutes to your routine.",
+      "Decscription": "Fifteen minutes may not seem like a long time, but according to the American College of Sports Medicine, it's a good starting point for fitness. Whether it's walking or doing something more intense, these short workouts can still be very helpful for your body. They can improve circulation, enhance your mood, and increase your metabolism.",
+      "Example":"Walking - Stretches - Squat - Bridge - Push up - Bicycle Crunch - Plank "
+    },{
+      "id": "14",
+      "Language": "English",
+      "Title": "Watch sunset",
+      "Decscription": "Watching the sunset can help you relax and appreciate the beauty of nature, which can reduce your stress.",
+      "Example":""
+    },{
+      "id": "15",
+      "Language": "English",
+      "Title": "Watch sunrise",
+      "Decscription": "The sun is such a magnificent energy. Look up and witness the beauty. Research has shown that. Watching the sunrise can boost your mood, reduce inflammation and depression, and improve your sleep at night.",
+      "Example":""
+    },{
+      "id": "16",
+      "Language": "English",
+      "Title": "Donate clothes that you haven't used for two years or more ",
+      "Decscription": "By donating clothes that you haven't used for a long time, you are not only reducing consumerism and waste but also providing assistance to people in need.",
+      "Example":""
+    },{
+      "id": "17",
+      "Language": "English",
+      "Title": "Clean out and organise one of your drawers",
+      "Decscription": "Create a routine that helps you tackle messy drawers, cluttered surfaces, and crowded closets to reduce feelings of anxiety. Cleaning out and organizing drawers can improve our productivity and efficiency. It can also help us identify items that we no longer need or use.",
+      "Example":""
+    },{
+      "id": "18",
+      "Language": "English",
+      "Title": "Express your feelings to someone you like ",
+      "Decscription": "Showing love is a way to let your loved ones know that you are committed, loyal, and care about them.",
+      "Example":"Some ways to express your love include: listening to them and trying to understand them, saying please and thank you, telling them how important they are to you, writing love messages on sticky notes, giving long and tight hugs unexpectedly, taking care of them when they're sick, giving compliments, asking for their advice and appreciating it, and understanding their needs."
+    },{
+      "id": "19",
+      "Language": "English",
+      "Title": "Try standing on one leg with your eyes closed for at least 20 seconds, but make sure you're in a safe spot.",
+      "Decscription": "Research has shown that being able to stand on one leg is a sign of good health and can indicate how well you can balance. Having good balance is connected to our strength and flexibility.      ",
+      "Example":"Here are the goals that individuals of different age groups should aim to achieve: Under 40: 45 seconds with eyes open, 15 seconds with eyes closed / Aged 40-49: 42 seconds open, 13 seconds closed / Aged 50-59: 41 seconds open, 8 seconds closed / Aged 60-69: 32 seconds open, 4 seconds closed / Aged 70-79: 22 seconds open, 3 seconds closed "
+    },{
+      "id": "20",
+      "Language": "English",
+      "Title": "Plant a plant",
+      "Decscription": "Gardening has a lot of health benefits and can be a fun activity. Having plants in your home or office can bring you joy. Indoor gardening can help reduce stress, increase creativity, productivity, and focus, and aid in recovery.",
+      "Example":"Plant a tree, Grow Your Own Indoor Edible Garden or plant a plant for indoor, like: Succulent ,Cactus, Pothos, Peperomia , Dieffenbachia , Snake Plant, Rubber Tree"
+    },{
+      "id": "21",
+      "Language": "English",
+      "Title": "learn 5 new words of new language every day. ",
+      "Decscription": "You can download the Google Translate app for free on your iPhone or Android device. This app allows you to translate both written text and spoken words in more than 100 languages. It can also help you learn how to pronounce words correctly. Create a daily practice schedule, keep a well-organized vocabulary notebook, and review the words again after 24 hours, one week, and one month.",
+      "Example":""
+    },{
+      "id": "22",
+      "Language": "English",
+      "Title": "Contact your long lost friends",
+      "Decscription": "Old friends can remind you of the person you used to be and help get you in touch with parts of yourself that might have become suppressed over the years. ",
+      "Example":""
+    },{
+      "id": "23",
+      "Language": "English",
+      "Title": "Cut off caffeine at noon every workday for one month",
+      "Decscription": "Using caffeine for a long time or in doses over 400 mg per day may not be safe. It can lead to problems like difficulty sleeping, feeling nervous or restless, experiencing nausea, having a faster heart rate, and other side effects. If you drink coffee in the evening, it can disrupt your sleep for up to six hours after consuming it.Please note that a cup of brewed coffee (8 ounces) contains around 95 mg of caffeine. Black tea has about 47 mg of caffeine per cup, while green tea has about 28 mg. A can of regular or diet dark cola contains about 34 mg of caffeine. Dark chocolate (100 grams) has around 43 mg of caffeine, while milk chocolate has a quarter of that amount.",
+      "Example":""
+    },{
+      "id": "24",
+      "Language": "English",
+      "Title": "Do a puzzle",
+      "Decscription": "Solving puzzles can strengthen the connections between our brain cells and make our thinking faster. It also helps improve our ability to remember things in the short term.",
+      "Example":"Sudoku, Crossword, Logic Puzzle, Maze, Mathematical puzzle, Jigsaw, Word Search, Rubik's Cube, Word Search"
+    },{
+      "id": "25",
+      "Language": "English",
+      "Title": "Learn some magic tricks",
+      "Decscription": "Creating a magic trick is similar to solving a puzzle. It engages your entire brain and provides a thorough exercise that enhances your creativity and problem-solving abilities.",
+      "Example":"Rubber pencil trick, Disappearing coin trick, Spoon bending illusion, Magnetic pencil trick, Walk through paper, Levitating card"
+    },{
+      "id": "26",
+      "Language": "English",
+      "Title": "Watch a good movie",
+      "Decscription": "Studies suggest that watching movies can increase our emotional intelligence and also help in improving social connectivity.",
+      "Example":"The Shawshank Redemption (1994) - The Godfather (1972) - The Dark Knight (2008) - The Godfather Part II (1974) - 12 Angry Men (1957) - Schindler's List (1993) - The Lord of the Rings: The Return of the King (2003) - Pulp Fiction (1994) - The Good, the Bad and the Ugly (1966)"
+    },{
+      "id": "27",
+      "Language": "English",
+      "Title": "listen to a classical music",
+      "Decscription": "Listening to classical music is enjoyable and can have a positive effect on our thinking abilities. When we hear something pleasant, it increases dopamine and improves our brain's ability to think and understand. When these two factors work together, it helps keep an aging brain active and healthy.",
+      "Example":"“The Four Seasons” by Antonio Vivaldi - “Requiem” by Wolfgang Amadeus Mozart - “Für Elise” by Ludwig Van Beethoven - “Carmen” by Georges Bizet - “Moonlight Sonata” by Ludwig Van Beethoven - “Toccata and Fugue in D minor” by Johann Sebastian Bach - “Canon In D Major” by Johann Pachelbel - “Nocturne Op. 9 No. 2” by Chopin - Symphony No. 5 Beethoven - “The Symphony No. 9” by Beethoven - “Eine Kleine Nachtmusik” by Wolfgang Amadeus Mozart"
+    },{
+      "id": "28",
+      "Language": "English",
+      "Title": "Dance with a music you like",
+      "Decscription": " Turn up the music, play your favorite song, and start moving! Including dance in your health and wellness routine can have many benefits. Research shows that people who dance often feel better about themselves and have more confidence. It also gets your heart pumping and improves your balance and core strength. Dancing can make you more flexible, promote healthy bones, and reduce stress. And on top of all that, dancing is a whole lot of fun!",
+      "Example":""
+    },{
+      "id": "29",
+      "Language": "English",
+      "Title": "Make an origami",
+      "Decscription": "When we fold paper to make Origami, it is an activity that stimulates both our mind and body. It helps us focus, concentrate, and improve our ability to coordinate our hands and eyes. It also helps develop our fine motor skills.",
+      "Example":"Origami Boat, Origami Fly, Origami Candy box, Origami Turtle, Origami Dog Face, Origami Heart, Origami Jumping Frog, Origami Rectangular Box."
+    },{
+      "id": "30",
+      "Language": "English",
+      "Title": "Do some cleaning",
+      "Decscription": "Having a cluttered and messy environment can contribute to feelings of stress and anxiety. However, cleaning up and organizing can have positive effects on our ability to concentrate, be productive, and experience emotional well-being. It can also help clear our minds and improve mental clarity.",
+      "Example":"Removing dust from surfaces like furniture, shelves, and electronics - Scrubbing the toilet, sink, and bathtub/shower - Washing windows and removing smudges or dirt - Taking out the trash and ensuring proper waste disposal."
+    },{
+      "id": "31",
+      "Language": "English",
+      "Title": "Write down your goals",
+      "Decscription": "Writing down your goals helps you clearly define what you want to achieve and guides your daily actions towards achieving them. Gail Matthews, a psychology professor at Dominican University in California, conducted a study on goal setting with 267 participants. The study revealed that simply writing down your goals increases the likelihood of achieving them by 42 percent. Instead of just briefly stating your goals, take the time to write a paragraph about how it would feel to achieve them. By acting as if you have already achieved your goals, you will begin to see the connections between your current situation and the necessary steps to reach your goals.",
+      "Example":""
+    },{
+      "id": "32",
+      "Language": "English",
+      "Title": "Buy a small gift for yourself",
+      "Decscription": "Self-gifting means treating yourself to something nice as a way to show that you deserve happiness. It also gives you an opportunity to take a break and rejuvenate yourself.",
+      "Example":"A chocolate - A candle - Some stationary - A cake -  A new house plant - New wallet - A good book - Magazine subscription"
+    },{
+      "id": "33",
+      "Language": "English",
+      "Title": "Write a very accurate note about one of your dreams ",
+      "Decscription": "Writing down your dreams helps you remember important things. It also helps clear your mind and understand your emotions and thoughts, including how your dreams impact them. Additionally, it can help you come up with creative solutions to problems. Keep a journal for your dreams near your bed so you can easily write in it when you wake up in the morning. Try to include as many details as possible and compare your dreams to your real-life experiences.",
+      "Example":""
+    },{
+      "id": "34",
+      "Language": "English",
+      "Title": "Listen to podcasts or radio",
+      "Decscription": "Podcasts have indeed gained significant popularity in recent years. They offer a convenient and accessible way to expand your knowledge, gain valuable insights, receive free coaching, and discover new ideas.",
+      "Example":"There are various podcast apps available for mobile devices, such as Google Podcasts, Apple Podcasts, Amazon Music, Spotify, Stitcher, and SoundCloud."
+    },{
+      "id": "35",
+      "Language": "English",
+      "Title": "Start a Do It Yourself (DIY) project for your home",
+      "Decscription": "Engaging in do-it-yourself (DIY) projects can have several positive effects on your well-being. It can help you feel less stressed and improve your mood. DIY projects also provide an opportunity to learn new skills. Additionally, they allow you to spend quality time with your family. Another benefit is that DIY projects can help you save money. Lastly, DIY projects encourage physical activity and can help you stay active.",
+      "Example":"Indoor Hanging Planter - Rustic Blanket Ladder - Reclaimed Wood Wall Art - Seashell Mirror - Entryway Bench - Chalk Painted Bottles - Rope Basket - Macrame Plant Hangers - A Picture Wall - Old Tyre and Rope Ottomans"
+    },{
+      "id": "36",
+      "Language": "English",
+      "Title": "Learn to make homemade slime",
+      "Decscription": "Slime is liked by many people for different reasons. Some enjoy watching slime change from a solid to a liquid and then back again. Others find it relaxing to squish and play with slime, which can help reduce stress. Some people simply like slime because it's gooey and enjoyable to stretch and play with.",
+      "Example":""
+    },{
+      "id": "37",
+      "Language": "English",
+      "Title": "Learn how to meditate",
+      "Decscription": "Meditation can give you a sense of calm, peace and balance that can benefit both your emotional well-being and your overall health. 1. Find a peaceful and quiet place to sit. 2. Wear comfortable clothes. 3. Decide how long you want to meditate for. 4. Sit in a comfortable position. 5. Make sure your back is straight when you sit. 6. If it helps you relax and concentrate, close your eyes. 7. Pay attention to your breathing. 8. Use mental images to help guide your breathing.",
+      "Example":""
+    },{
+      "id": "38",
+      "Language": "English",
+      "Title": "Explore a new location in your city or state that you haven't visited before or haven't had the chance to explore extensively",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "39",
+      "Language": "English",
+      "Title": "Improve your public speaking skill",
+      "Decscription": "Learning how to speak confidently in front of others is important for various situations, such as leading meetings, improving leadership abilities, delivering important messages, or becoming a respected voice.",
+      "Example":"Practice speaking in front of a mirror - Record yourself speaking and review it - Try speaking without pausing - Practice speaking in the shower - Write speeches to enhance your skills."
+    },{
+      "id": "40",
+      "Language": "English",
+      "Title": "Improve your photography skill",
+      "Decscription": "Over time, even the best memories fade. But a photograph can last a lifetime.",
+      "Example":" Keep the lens clean - Use gridlines to balance your shot - Try using the rule of thirds - Pay attention to lighting - Avoid using flash - Use HDR mode- Focus on one subject - Find different perspectives - Look for symmetry - Avoid zooming in capture small details."
+    },{
+      "id": "41",
+      "Language": "English",
+      "Title": "Listen to a genre of music you haven't tried before",
+      "Decscription": "Listening to different types of music can help you feel more at ease when trying out new sounds. It can also bring out specific emotions that might inspire your creativity.",
+      "Example":"Classical - Jazz- Punk - Blues - Hip hop -Country"
+    },{
+      "id": "42",
+      "Language": "English",
+      "Title": "Go to your nearby library and borrow a book, or visit a bookstore and purchase a book.",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "43",
+      "Language": "English",
+      "Title": "Visit a local museum or art gallery in next week",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "44",
+      "Language": "English",
+      "Title": "Research the culture of a different country online",
+      "Decscription": "By researching the culture of a different country online, you can learn more about how people from that country live and think. This knowledge can help you have more meaningful interactions with people around you. Additionally, exploring different cultures can expose you to new perspectives, which can inspire innovative ideas.",
+      "Example":"India, Guatemala, Japan or Sweden"
+    },{
+      "id": "45",
+      "Language": "English",
+      "Title": "Watch a classic film",
+      "Decscription": "",
+      "Example":"Casablanca - The Godfather - The Wizard of Oz - Gone with the Wind - Citizen Kane "
+    },{
+      "id": "46",
+      "Language": "English",
+      "Title": "Plan a day trip to somewhere outside your city",
+      "Decscription": "Day trips are the perfect opportunity to take a break, relax and enjoy being together as a family.",
+      "Example":""
+    },{
+      "id": "47",
+      "Language": "English",
+      "Title": "Plan a picnic",
+      "Decscription": "You can have a wonderful time reconnecting with loved ones by having a simple picnic with a few snacks and light dishes. Picnics are enjoyable and calming, allowing you to create lasting memories and cherish the company of others.",
+      "Example":"Create DIY sandwiches - Put down your phone - Play some outdoor sports - Take memorable pictures - Watch the sunset - fly a kite"
+    },{
+      "id": "48",
+      "Language": "English",
+      "Title": "Fill out crossword puzzle with your family/friends",
+      "Decscription": "Puzzles are a fun way to spend time, interact with friends and family, and challenge our own knowledge and memory.",
+      "Example":""
+    },{
+      "id": "49",
+      "Language": "English",
+      "Title": "Try to write a short story",
+      "Decscription": "Writing can help improve your thinking skills and memory, reduce stress, and make you feel better. To get started, come up with an idea for your writing. Then, make an outline or think about your characters. Write an interesting beginning and a strong ending. After you're done, read your story out loud. Edit and make changes as needed. Lastly, ask others for feedback to improve your writing even more.",
+      "Example":""
+    },{
+      "id": "50",
+      "Language": "English",
+      "Title": "Sing along to some songs",
+      "Decscription": "Singing makes people happy and brings joy to their lives. It also boosts confidence and helps people feel more connected to themselves in positive and caring ways, which helps them live a good life.",
+      "Example":""
+    },{
+      "id": "51",
+      "Language": "English",
+      "Title": "",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "51",
+      "Language": "English",
+      "Title": "",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "54",
+      "Language": "English",
+      "Title": "",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "55",
+      "Language": "English",
+      "Title": "",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "56",
+      "Language": "English",
+      "Title": "",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "57",
+      "Language": "English",
+      "Title": "",
+      "Decscription": "",
+      "Example":""
+    },
 ]
