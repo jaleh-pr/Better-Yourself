@@ -303,37 +303,673 @@
     },{
       "id": "51",
       "Language": "English",
-      "Title": "",
-      "Decscription": "",
-      "Example":""
+      "Title": "Make a list of your wishes",
+      "Decscription": "When creating a wish list, you can write down anything you want, even if it's not realistic. Imagine your perfect situation and set a timer for 5-10 minutes. Write down everything that comes to your mind without holding back. It's helpful to be detailed and specific because the more specific you are, the better!",
+      "Example":"Travel related wishes – Buying a house - Life milestones - Personal finances - Quality time with loved ones - Buying an instrument"
     },{
-      "id": "51",
+      "id": "52",
       "Language": "English",
-      "Title": "",
-      "Decscription": "",
-      "Example":""
+      "Title": "Make a gratitude list",
+      "Decscription": "Research has shown that expressing gratitude and appreciating the good things in life can improve sleep, reduce stress, and enhance relationships with others. There is also some evidence suggesting that it may lower the chances of heart disease and alleviate symptoms of depression in certain individuals.",
+      "Example":"Write down at least 5 things every time you make a list -  Include plenty of detail - Focus on experiences and people instead of object"
+    },{
+      "id": "53",
+      "Language": "English",
+      "Title": "Give yourself a pep talk",
+      "Decscription": "Pep talks, or positive self-talk, are like conversations we have with ourselves to help us deal with different situations and challenges. We can either think or say these words out loud. The great thing about self-talk is that we trust ourselves more than we trust others, so it can be really helpful in boosting our confidence and motivation.",
+      "Example":"You've got this! Believe in yourself and your abilities - Remember all the times you've overcome challenges before - You are strong, resilient, and capable - Keep pushing forward and never give up - Trust in your potential and know that you have what it takes to succeed - Stay focused, stay determined, and keep striving for your goals - You are capable of achieving great things - Keep going and make yourself proud!"
     },{
       "id": "54",
       "Language": "English",
-      "Title": "",
-      "Decscription": "",
+      "Title": "Try to not use social media for at least a day",
+      "Decscription": "A research study discovered that many students experienced positive changes in their mood, reduced anxiety, and better sleep when they took a break from social media. For example, you can try turning off notifications, limiting the time you spend on social media, connecting with friends and family in person, treating social media as a special reward, and deleting unused social media apps.",
       "Example":""
     },{
       "id": "55",
       "Language": "English",
-      "Title": "",
-      "Decscription": "",
-      "Example":""
+      "Title": "Create some arts",
+      "Decscription": "Art allows us to show who we are and express ourselves. Making art can calm our minds and help us feel better in the present. It can also help us heal from difficult experiences we've had in the past.",
+      "Example":"Draw a landscape - Make a collage - Do finger painting - Do some easy acrylic painting - sketch poses - Do paper quilling - Make a nature prints arts - Draw a doodle art"
     },{
       "id": "56",
       "Language": "English",
-      "Title": "",
-      "Decscription": "",
-      "Example":""
+      "Title": "Sort through your handbag / Wallet",
+      "Decscription": "Being organized and having a clean environment has many advantages. It helps you work better and be more productive. It also improves your performance and gives you a sense of control, which is important for managing stress and staying resilient.",
+      "Example":"Tip everything out of your bag. Shake out any remaining debris over a bin or, for a deeper clean, use a vacuum on a gentle setting."
     },{
       "id": "57",
       "Language": "English",
-      "Title": "",
+      "Title": "Clean your garage/basement or shed",
+      "Decscription": "By cleaning your garage, you can solve or prevent pest issues from getting worse. Many pests, like bugs and rats, can find a cozy home in your garage. Cleaning out your basement or garage gives you the opportunity to donate any items you don't use to people who could benefit from them. Getting rid of unwanted items also creates more space inside your home.",
+      "Example":""
+    },{
+      "id": "58",
+      "Language": "English",
+      "Title": "Clean out your closet",
+      "Decscription": "Cleaning out your closet regularly is a great way to take stock and organise what you have. It allows you to make the most out of what you have more easily.",
+      "Example":""
+    },{
+      "id": "59",
+      "Language": "English",
+      "Title": "Fix something around the house on your own.",
+      "Decscription": "",
+      "Example":" Tightening loose screws - Fix Leaking Plumbing Pipes - Fixing a smelly dishwasher - Fix Loud Cabinet Doors - Get Dents Out of Wood - Feed the lawn - Remove hard water build up with a lemon"
+    },{
+      "id": "60",
+      "Language": "English",
+      "Title": "Clean at least one pair of your shoes",
+      "Decscription": "To clean fabric shoes, start by brushing off any dirt on the surface. Then, in a small bowl, mix one teaspoon of dishwashing liquid with two cups of warm water. Stir the mixture well. Take an old toothbrush and dip it into the soapy solution. Gently scrub the fabric of the shoes with the toothbrush. After that, use a dry paper towel to blot away any soapy residue. Finally, let the shoes air dry in a place away from direct heat and sunlight.",
+      "Example":""
+    },{
+      "id": "61",
+      "Language": "English",
+      "Title": "Give an old piece new life",
+      "Decscription": "It's an amazing feeling to create something new and useful out of something old and run-down.",
+      "Example":"paint a whole piece of furniture - paint an old metal chairs - Tin can planters – transform vintage teacups into teacup candles - transform jam jars into Salt & pepper shakers - transform jam jars into little terrarium - transform an old soccer ball into flower pot"
+    },{
+      "id": "62",
+      "Language": "English",
+      "Title": "Take a nature walk and do photography Hunt.",
+      "Decscription": "Being outside in green spaces supports an active and healthy lifestyle It may help reduce anxiety and depression. Photography Hunt in a nature walk refers to an activity where participants explore a natural environment, such as a park or forest, with the goal of capturing photographs of specific subjects or themes. It involves searching for interesting and visually appealing scenes, landscapes, plants, animals, or other elements of nature to photograph. The Photography Hunt encourages observation, creativity, and appreciation of the natural world through the lens of a camera.",
+      "Example":""
+    },{
+      "id": "63",
+      "Language": "English",
+      "Title": " Go through old family albums.",
+      "Decscription": "Going through old family albums is beneficial for several reasons. Firstly, it allows you to reconnect with cherished memories and moments from the past. It can evoke feelings of nostalgia and bring back happy emotions. Secondly, it provides an opportunity to learn more about your family history and heritage. Old photographs often hold valuable information about your ancestors and their lives. Additionally, going through family albums can strengthen family bonds and create opportunities for storytelling and sharing experiences with loved ones. It can be a meaningful and enjoyable activity that brings generations together.",
+      "Example":""
+    },{
+      "id": "64",
+      "Language": "English",
+      "Title": "Start learning a new skill",
+      "Decscription": "Learning keeps your mind engaged and body active, It gives you motivation and boosts your confidence.",
+      "Example":"Master Photography Skill - Learn how to how to edit images and create graphics from scratch using Adobe Photoshop - Learn How to Draw - Learn basic car repairs - learn to play the guitar - Learn basic self-defence - Learn to change a flat tire - Learning to sew, stitch, and patch "
+    },{
+      "id": "65",
+      "Language": "English",
+      "Title": "Learn some first aids",
+      "Decscription": "Having some basic knowledge of first aid can help you handle critical situations and potentially save lives.",
+      "Example":"CPR - Heimlich Maneuver - Set a Splint - Stop the Bleeding - Treat a Burn"
+    },{
+      "id": "66",
+      "Language": "English",
+      "Title": "Write a Letter to Your Future Self",
+      "Decscription": "Writing letters to yourself can be a powerful way to improve yourself because they help you realign with your values, remember what is important to you, and recommit to your goals. Before you begin, decide how old you want to be when you read this letter in the future. Start by reminding yourself of who you are currently. Write down your fears, share your current beliefs and values, note your skills and abilities, define your goals and aspirations, and include things you want to stop, continue, and start doing. Give yourself advice and ask yourself some questions. Once you are done, seal the letter and store it in a safe place.",
+      "Example":""
+    },{
+      "id": "67",
+      "Language": "English",
+      "Title": "Contact a family member you haven't spoken to lately",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "68",
+      "Language": "English",
+      "Title": "Do some stargazing.",
+      "Decscription": "Gazing at the stars can be a calming and enjoyable way to spend your time. It can also be a great opportunity to learn new things.",
+      "Example":""
+    },{
+      "id": "69",
+      "Language": "English",
+      "Title": "Do some stretches during the day",
+      "Decscription": "Stretching helps to keep our muscles flexible, strong, and in good health. It is important for maintaining a wide range of motion in our joints. Without regular stretching, our muscles can become tight and shortened.",
+      "Example":"Cobra stretch - Knees to chest - Spinal twist - Upper back stretch - Neck stretch - Shoulder stretch - Side stretch - Standing quad stretch"
+    },{
+      "id": "70",
+      "Language": "English",
+      "Title": "Learn to start a fire without matches",
+      "Decscription": "Learning how to start a fire without a lighter or matches is an essential skill to have when you find yourself in a bad situation. However, it is crucial to ensure that you do so in a safe location, preferably outdoors and away from any structures.",
+      "Example":"The hand drill method - Fire Plough - Bow Drill - Flint and Steel - Lens-Based Methods - Soda Can and Chocolate Bar method"
+    },{
+      "id": "71",
+      "Language": "English",
+      "Title": " Try to write a poetry",
+      "Decscription": "Writing poetry can help you become more mindful of the way words and sentences sound. This can enhance your storytelling skills in fiction writing and enable you to effectively convey your emotions and feelings.",
+      "Example":""
+    },{
+      "id": "72",
+      "Language": "English",
+      "Title": "Try going vegetarian for a week",
+      "Decscription": "During this time, avoid eating meat, including fish and poultry. Compared to people who eat meat, vegetarians usually consume less saturated fat and cholesterol, but more vitamins C and E, dietary fiber, folic acid, potassium, magnesium, and plant chemicals called phytochemicals, like carotenoids and flavonoids. A vegetarian diet can give you more energy and make you feel healthier.",
+      "Example":""
+    },{
+      "id": "73",
+      "Language": "English",
+      "Title": "Learn to breathe properly for better health.",
+      "Decscription": "Proper breathing is vital for all bodily systems. It not only enhances mental clarity but also improves sleep, digestion, immune response, and reduces stress. To practice diaphragm breathing in a chair, sit comfortably with bent knees. Relax your shoulders, head, and neck. Place one hand on your upper chest and the other below your rib cage to feel the movement of your diaphragm. Inhale slowly through your nose, allowing your stomach to press against your hand. Keep the hand on your chest still. Exhale through pursed lips, engaging your abdominal muscles, while keeping the hand on your upper chest still. Repeat this breathing technique throughout your exercise session.Continue breathing like this for the duration of your exercise session.",
+      "Example":""
+    },{
+      "id": "74",
+      "Language": "English",
+      "Title": " Read a magazine or newspaper",
+      "Decscription": "Magazines and newspapers provide information about what's popular and help you become knowledgeable in your area of interest. They can also improve your language skills and enhance your writing abilities. By reading them, you can stay updated on the latest global developments.",
+      "Example":""
+    },{
+      "id": "75",
+      "Language": "English",
+      "Title": "Go birdwatching",
+      "Decscription": "Birdwatching is a great way to get into nature and learn more about the incredible native wildlife.",
+      "Example":""
+    },{
+      "id": "76",
+      "Language": "English",
+      "Title": "Do some crafts at home",
+      "Decscription": "Studies have found that engaging in crafts, no matter what materials you use, can boost your mood, increase your self-confidence, and help you feel less stressed.",
+      "Example":"Easy Painted Rocks - Photo Collage - String art with yarn - Toilet paper roll desk organizer - Yarn wall hanging - Cork Stamps - Crepe paper flowers"
+    },{
+      "id": "77",
+      "Language": "English",
+      "Title": "Practice positive daydreaming",
+      "Decscription": "Daydreaming can actually improve your creativity and problem-solving abilities. It can also help you concentrate and stay focused on a particular task. However, it's important not to daydream excessively. To make the most of daydreaming, try these tips: pick the right time, find a suitable place, engage in mindless activities, imagine the future you desire, have a clear goal for your daydream, and let your thoughts wander in a positive direction.",
+      "Example":""
+    },{
+      "id": "78",
+      "Language": "English",
+      "Title": "Give a small gift to one of your loved ones",
+      "Decscription": "Giving gifts gives people a chance to share their emotions, show gratitude towards others, or simply spread kindness in the community. It's a wonderful and gentle way to demonstrate that you care about someone.",
+      "Example":"Personalized keychain -  A handwritten note or letter expressing your love and appreciation - A small potted plant or succulent - A scented candle - A cozy and soft blanket or throw - A small piece of jewelry - A book by their favorite author - A gourmet chocolate or a box of their favorite treats "
+    },{
+      "id": "79",
+      "Language": "English",
+      "Title": "Visit a flower market",
+      "Decscription": "Scientific studies have proven that flowers can really make you feel happier and less stressed. They have the power to uplift your mood and reduce feelings of anxiety.",
+      "Example":""
+    },{
+      "id": "80",
+      "Language": "English",
+      "Title": "Complete an old unfinished task",
+      "Decscription": "An unfinished task can cause stress and anxiety through intrusive thoughts",
+      "Example":"Completing a half-finished art or craft project - Repairing or restoring a piece of furniture - Decluttering and organizing digital files on a computer or smartphone - Cleaning and tidying up a neglected garden or outdoor space - Finishing a book that was started but never completed"
+    },{
+      "id": "81",
+      "Language": "English",
+      "Title": "Re-engage in an old favourite hobby",
+      "Decscription": "Re-engaging in an old favorite hobby can be a fulfilling and enjoyable experience. It allows you to reconnect with something that brings you joy and can provide a sense of nostalgia. Whether it's playing a musical instrument, painting, gardening, or any other hobby.",
+      "Example":""
+    },{
+      "id": "82",
+      "Language": "English",
+      "Title": "Plan having lunch/dinner with a friend",
+      "Decscription": "Eating with friends and family can lead to you feeling happier and more satisfied with your life!",
+      "Example":""
+    },{
+      "id": "83",
+      "Language": "English",
+      "Title": "Remember happy moments in your childhood",
+      "Decscription": "Positive memories from childhood, like when your family was happy together, when you had people who supported you, and when you had fun experiences, can make you feel happy, confident, and safe",
+      "Example":""
+    },{
+      "id": "84",
+      "Language": "English",
+      "Title": "Light a candle",
+      "Decscription": "Lighting candles can create a nice feeling in the room that helps you feel calm and good. Candles can also help reduce stress and make you feel better emotionally.",
+      "Example":""
+    },{
+      "id": "85",
+      "Language": "English",
+      "Title": "Create a water purifying system at home",
+      "Decscription": "To create a water purifier: Cut a water bottle in half. Remove the cap from the bottle. Turn the top half of the bottle upside down and place it into the bottom half of the bottle. Place cotton balls, cloth, or a coffee filter inside the bottle as the first layer. The first layer should be about one to two inches thick. Add an inch of activated charcoal as the second layer on top of the cotton layer. Over the charcoal, add about two inches of gravel or small stones as the third layer. Remember, this method is not for making drinkable water, but it can help filter out some impurities.",
+      "Example":""
+    },{
+      "id": "86",
+      "Language": "English",
+      "Title": "Discover the capital cities of three countries that you were not previously aware of",
+      "Decscription": "A capital city is usually where a country does a lot of its important business, culture, and where most people live. Capital cities are often places with a long history of trade, communication, and transportation.",
+      "Example":"It can be capital city of: Bolivia - Indonesia - Libya - Kazakhstan - Portugal - Hungry"
+    },{
+      "id": "87",
+      "Language": "English",
+      "Title": "Secure Your Mobile Phon",
+      "Decscription": "Phone security, or keeping your phone safe, is about protecting your mobile device from different kinds of cyber-attacks that can harm your privacy, login information, money, and overall safety.",
+      "Example":"Avoid giving out personal information - Use a strong password or pattern to lock your phone - Do not save passwords - Download apps only from trusted stores - Back up your data - Keep your operating system and apps updated - Log out of sites after you make a payment - Avoid public Wi-Fi and only use secure Wi-Fi - Set up remote wipe capabilities"
+    },{
+      "id": "88",
+      "Language": "English",
+      "Title": "Learn about 3 World Leader that you may not know about",
+      "Decscription": "Studying world leaders allows us to gain a broader perspective on global affairs, expand our cultural knowledge, develop critical thinking skills, and find inspiration for personal growth.",
+      "Example":"Ramses II, Egyptian Pharaoh - Pericles, Greek Politician - Wu Zetian Empress of China - Cyrus the Great King of Persia - Tecumseh Shawnee Chief - Mahatma Gandhi, Indian Civil Rights Activist"
+    },{
+      "id": "89",
+      "Language": "English",
+      "Title": "Learn about indigenous cultures around the world",
+      "Decscription": "There are 476 million Indigenous people all over the world, living in more than 90 countries. They have a long history and traditions that are important to their culture. We can learn a lot from their knowledge and the way they do things.",
+      "Example":"Janajatis in Nepal - Inuit in Arctic - Maori in New Zealand - Maya Mesoamerica Yanomami in Amazon rainforest"
+    },{
+      "id": "90",
+      "Language": "English",
+      "Title": "Learn 5 Facts about animals that you may not know about",
+      "Decscription": "",
+      "Example":"You can learn about snail - Blue Whales - crocodiles - seahorse - spiders - Giraffes"
+    },{
+      "id": "91",
+      "Language": "English",
+      "Title": "learn 3 interesting facts about the milky way",
+      "Decscription": "Learning about the Milky Way expands our knowledge of the universe, contributes to scientific progress, and has practical implications for technology and innovation.",
+      "Example":"Size and Structure - Galactic Center - Stellar Population - Spiral Arms - Dark Matter"
+    },{
+      "id": "92",
+      "Language": "English",
+      "Title": "Learn how to compost",
+      "Decscription": "Composting is a way to recycle things like leaves and food scraps into a special kind of plant food. It's good for the environment because it reduces the amount of waste that goes to landfills and helps prevent pollution. You can start composting by collecting things like fruit and vegetable peels, coffee grounds, and eggshells. Put them in a pile or a container and let them break down over time. After about a year, you'll have compost that you can use to make your plants grow better.",
+      "Example":""
+    },{
+      "id": "93",
+      "Language": "English",
+      "Title": "Take Care of your Skin, Hair and Nail",
+      "Decscription": "To care for your skin, hair, and nails, remember these daily habits: apply sunscreen, drink plenty of water, avoid sugary drinks, prioritize sleep, and steer clear of tobacco products. For a healthy diet, focus on consuming eggs, nuts, beans, whole grains, avocados, berries, carrots, spinach, pumpkin, milk, citrus fruits, kiwi, cashews, mushrooms, and seafood. These choices can benefit your overall well-being.",
+      "Example":""
+    },{
+      "id": "94",
+      "Language": "English",
+      "Title": "Take care of the environment",
+      "Decscription": "The environment is not just where we live, but everything that keeps us alive. It includes things like the food we eat, the water we drink, the air we breathe, and our homes. Taking care of the environment is important because it helps us stay healthy and alive. It's something that should come naturally to us.",
+      "Example":"Don't throw litter on the ground - Cut down on what you throw away - Buy less plastic and bring a reusable shopping bag - Plant More Trees - Choose non-toxic chemicals in the home and office - Save Electricity - Save Water - Save Fuel - Go Paperless or Use Less Paper - Quit Smoking"
+    },{
+      "id": "95",
+      "Language": "English",
+      "Title": "Laugh for a minimum of 15 minutes a day",
+      "Decscription": "Laughing is really good for you! It helps make your immune system stronger, makes you feel happier, reduces pain, and protects you from the harmful effects of stress. So, remember to laugh often because it's great for your overall well-being!",
+      "Example":"Use other people's laughter to trigger your own - Share funny videos - Watch funny shows, movies and clips - Spend time with children"
+    },{
+      "id": "96",
+      "Language": "English",
+      "Title": " Learn about 3 famous buildings around the world that you may not know about",
+      "Decscription": "",
+      "Example":"Sagrada Familia, Empire State Building, Lotus Temple, Neuschwanstein Castle"
+    },{
+      "id": "97",
+      "Language": "English",
+      "Title": "Learn about 3 famous artists you may not have known about",
+      "Decscription": "",
+      "Example":"Michelangelo - Rembrandt - Vermeer - Claude Monet - Edvard Munch"
+    },{
+      "id": "98",
+      "Language": "English",
+      "Title": "Learn about 3 famous rivers of the world",
+      "Decscription": "",
+      "Example":"The Ganges river - The Mississippi River - The Yangtze River - The Volga River"
+    },{
+      "id": "99",
+      "Language": "English",
+      "Title": " Learn about 3 most famous paintings in the world ",
+      "Decscription": "",
+      "Example":"The Kiss - The Birth of Venus - Guernica - Whistler's Mother - Café Terrace at Night - The Two Fridas"
+    },{
+      "id": "100",
+      "Language": "English",
+      "Title": "Learn and play chess.",
+      "Decscription": "Playing chess can make your brain stronger. It can help you remember things better, plan ahead, and solve problems. It might also make some brain conditions feel better.",
+      "Example":""
+    },{
+      "id": "101",
+      "Language": "English",
+      "Title": "Learn to control your temper.",
+      "Decscription": "Sometimes, when we get really angry, it can cause problems if we start being aggressive, having big outbursts, or even getting into fights. It's important to learn how to control our anger so that we don't say or do things that we might feel sorry about later.",
+      "Example":"Count to 100 - Drink some water - Stop talking - Give yourself a break. Sit away from others - Write down what you're feeling and how you want to respond - Talk to someone you trust"
+    },{
+      "id": "102",
+      "Language": "English",
+      "Title": " Learn how to deal with personal criticism in a positive and productive way.",
+      "Decscription": "When someone gives you feedback or criticism, it's important to listen carefully to understand what they mean. Take your time to think about it before responding. You don't need to say sorry for receiving criticism. Instead, thank those who give you helpful feedback. Remember that words can't harm you, so don't let them upset you. It's important to know that criticism doesn't define your value as a person. Stay confident and keep in mind that constructive criticism can help you improve and become a better version of yourself.",
+      "Example":""
+    },{
+      "id": "103",
+      "Language": "English",
+      "Title": "Learn how to lift heavy stuff safely.",
+      "Decscription": "Lifting heavy things by yourself might seem cool, but it can hurt you if you don't do it safely. To avoid getting hurt, try lifting one corner of the object to see how heavy it is. When you lift, bend your knees and keep your back straight. Use your legs to lift the object, not your back. Walk slowly when carrying the object. And when you put it down, bend your knees again.",
+      "Example":""
+    },{
+      "id": "104",
+      "Language": "English",
+      "Title": "Write down your daily goals and to-do list.",
+      "Decscription": "Every day, make a list of the things you want to get done. Write down 1-3 goals for the day and focus on completing them. Make sure your goals are specific and doable, so you can easily imagine yourself doing them.",
+      "Example":""
+    },{
+      "id": "105",
+      "Language": "English",
+      "Title": "Take 10 minutes every day to sit quietly and imagine your dreams.",
+      "Decscription": "Taking 10 minutes daily to sit quietly and visualize our dreams helps us clarify our goals, increase motivation, and create a positive mindset. It allows us to focus on what we truly want, inspiring us to take action towards achieving our dreams. This practice also helps reduce stress and promotes a sense of calm and clarity in our daily lives.",
+      "Example":""
+    },{
+      "id": "106",
+      "Language": "English",
+      "Title": "Do an easy pencil drawing.",
+      "Decscription": "",
+      "Example":"A simple flower with overlapping petals -  A cute cartoon character with basic shapes like circles and squares - A landscape with a few trees and a winding path - A still life of a fruit bowl with a few apples and oranges."
+    },{
+      "id": "107",
+      "Language": "English",
+      "Title": "Start a new hobby.",
+      "Decscription": "Having hobbies can make life more enjoyable and give you a sense of freedom. They can help reduce stress, make you happier, and boost your confidence.",
+      "Example":"Hiking - Fishing - painting - Yoga - Scrapbooking - Knitting - Dance - Cooking - Origami - Pottery - Woodworking - Stamp or coin collecting"
+    },{
+      "id": "108",
+      "Language": "English",
+      "Title": "Leave a funny and kind message for one of your friends to make them laugh.",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "109",
+      "Language": "English",
+      "Title": "Think about your retirement",
+      "Decscription": "Begin considering small changes in your lifestyle and money choices. Moss says that the happiest retired people are skilled at traveling, playing, and exploring. They enthusiastically participate in three or more hobbies regularly.",
+      "Example":""
+    },{
+      "id": "110",
+      "Language": "English",
+      "Title": "Start a buddy read.",
+      "Decscription": "A buddy read is when you and someone else decide to read the same book at the same time so you can talk about it together. Lots of people in the book community really like doing buddy reads.",
+      "Example":""
+    },{
+      "id": "111",
+      "Language": "English",
+      "Title": "Stop complaining for at least 3 days.",
+      "Decscription": "Challenging yourself to stop complaining can have several benefits. Firstly, it helps cultivate a positive mindset by shifting your focus towards gratitude and solutions rather than dwelling on problems. Secondly, it improves your communication skills as you learn to express yourself in a constructive and solution-oriented manner. Lastly, it enhances your overall well-being by reducing stress and promoting a more optimistic outlook on life.",
+      "Example":""
+    },{
+      "id": "112",
+      "Language": "English",
+      "Title": "Learn to how to dress properly.",
+      "Decscription": "The way you look is usually the first thing people notice about you. To make a good impression, avoid wearing too many different colors in one outfit. Wear clothes that fit you well and make you look good. Try not to wear clothes with logos or flashy words on them. Choose outerwear that can be worn with different outfits. You can also read fashion websites and use apps like Pinterest website or app for style inspiration.",
+      "Example":""
+    },{
+      "id": "113",
+      "Language": "English",
+      "Title": "Watch a spectator sport.",
+      "Decscription": "Watch a spectator sport like football, handball, volleyball, basketball, ice hockey, or tennis to experience the excitement of competitive games and witness the skillful performances of athletes. It's a great way to immerse yourself in the energy of the game, cheer for your favorite team or player, and appreciate the strategic moves and athletic abilities on display. Whether you enjoy the physicality of football or the finesse of tennis, there's a spectator sport for everyone to enjoy.",
+      "Example":""
+    },{
+      "id": "114",
+      "Language": "English",
+      "Title": "Challenge yourself to NOT lie for a week.",
+      "Decscription": "Challenging ourselves to not lie for a week is beneficial for several reasons. Firstly, it promotes honesty and integrity, which are important values in building trust and maintaining healthy relationships. Secondly, it encourages self-reflection and awareness of our own communication habits. Lastly, it can lead to personal growth and improved self-esteem as we become more authentic and genuine in our interactions with others.",
+      "Example":""
+    },{
+      "id": "115",
+      "Language": "English",
+      "Title": "Volunteer as a family.",
+      "Decscription": "Volunteering is one of the most important things you can do as a family. If you want to raise kids who make the world a better place, help them find ways to serve others. It's also one of the best ways to spend quality time together.",
+      "Example":" Make and donate food to disadvantaged people. Clean up your community, Gardening and Maintenance"
+    },{
+      "id": "116",
+      "Language": "English",
+      "Title": "Go to a fair, carnival, circus, zoo or amusement park.",
+      "Decscription": "Going to a fair, carnival, circus, zoo, or amusement park can be a fun and enjoyable experience for several reasons. Firstly, it offers a break from routine and allows you to engage in recreational activities, which can help reduce stress and bring joy. Secondly, these places often provide opportunities for socializing and spending quality time with friends or family. Lastly, they offer a wide range of attractions, such as thrilling rides, entertaining shows, and unique exhibits, which can create lasting memories and provide a sense of excitement and wonder.",
+      "Example":""
+    },{
+      "id": "117",
+      "Language": "English",
+      "Title": "Listen to the sounds of nature.",
+      "Decscription": "Listening to the sounds of nature allows us to connect with the environment, find peace, and reduce stress. It helps us appreciate the beauty of the natural world and promotes mindfulness. By actively listening, we can also learn about different species and gain a deeper understanding of our surroundings.",
+      "Example":""
+    },{
+      "id": "118",
+      "Language": "English",
+      "Title": "Go to a beach, River or lake.",
+      "Decscription": "Visiting the beach, lake, or river offers a refreshing escape from daily routines, allowing us to relax and unwind. The soothing sounds of water and the beauty of nature promote a sense of calm and rejuvenation. It also provides opportunities for outdoor activities, such as swimming or picnicking, fostering physical and mental well-being.",
+      "Example":""
+    },{
+      "id": "119",
+      "Language": "English",
+      "Title": "Host a family game night.",
+      "Decscription": "Game nights can be beneficial for our health in several ways. Firstly, they provide an opportunity for social interaction and bonding with friends or family, which can improve our mental and emotional well-being. Engaging in games also stimulates our cognitive abilities, such as problem-solving, critical thinking, and memory recall. Additionally, participating in games often involves physical activity or movement, which can contribute to improved physical health and coordination. Overall, game nights offer a fun and engaging way to promote overall well-being.",
+      "Example":"Monopoly - Uno - Jenga - 20 questions - card games - musical chairs - egg and spoon race"
+    },{
+      "id": "120",
+      "Language": "English",
+      "Title": "Visit the cemetery to remember your departed loved one.",
+      "Decscription": "Visiting the cemetery can help you think seriously about the future and is a nice place to remember and spend time with family, keeping the memory of your loved one alive. It can also make you feel closer to the person you care about.",
+      "Example":""
+    },{
+      "id": "121",
+      "Language": "English",
+      "Title": "Learn the art of saying “NO” to others.",
+      "Decscription": "Saying no gives us more control over our lives, allowing us to create a satisfying and meaningful life based on our own choices. Here are some tips to help you say no: Give yourself permission to say no, try using 'LATER' instead of 'NO' practice saying no, don't feel obligated to explain yourself, suggest an alternative if possible, and show gratitude to the person while wishing them well.",
+      "Example":""
+    },{
+      "id": "122",
+      "Language": "English",
+      "Title": "List some positive qualities about yourself.",
+      "Decscription": "Recognizing and acknowledging our positive qualities can boost self-esteem, improve self-confidence, and promote a positive self-image. It can also help us appreciate our strengths and abilities, leading to a more positive outlook on life.",
+      "Example":"Organised - Strong - Ambitious - Respectful - Adventurous - Creative - Friendly - Appreciative - Diligent - Kind - Funny - Good cook - Responsible - A good friend"
+    },{
+      "id": "123",
+      "Language": "English",
+      "Title": "Improve your self confidence.",
+      "Decscription": "Feeling confident prepares us for life's challenges. When we're confident, we're more likely to embrace new experiences and opportunities instead of avoiding them. Even if things don't go well initially, confidence motivates us to give it another try.",
+      "Example":"Recognise what you're good at - Surround yourself with positive people - Stop comparing yourself to others - Practice positive self-talk - Face your fears - Be kind to yourself - Learn to be assertive - Start saying NO - Take care of your body"
+    },{
+      "id": "124",
+      "Language": "English",
+      "Title": "Try to become a better listener.",
+      "Decscription": "Being a good listener is important in every part of life. It helps us solve problems, settle arguments, and make our relationships better. Here are some tips: Be fully there when someone is talking to you. Don't interrupt them. Listen without judging or deciding things too quickly. Show that you're listening. Don't start thinking about what you want to say next. Don't force your ideas or answers on others. Stay focused and ask questions that make sense.",
+      "Example":""
+    },{
+      "id": "125",
+      "Language": "English",
+      "Title": "Wake up 15 minutes earlier to make a real breakfast.",
+      "Decscription": "Eating breakfast has been proven by many studies to be good for your health. It gives you more energy and helps you focus right away. In the long run, it can also help you manage your weight, lower the chances of getting type 2 diabetes and heart disease.",
+      "Example":""
+    },{
+      "id": "126",
+      "Language": "English",
+      "Title": "Try to remember people's names.",
+      "Decscription": "Names are important in building new relationships because they are tied to a person's identity. Using and remembering someone's name shows that you value and understand them better. Here are some tips: Don't say you're bad at remembering names, repeat the name when you meet someone new, associate the name with something familiar, and say the name again when you say goodbye.",
+      "Example":""
+    },{
+      "id": "127",
+      "Language": "English",
+      "Title": "Try to Meet new people.",
+      "Decscription": "Making friends can be difficult as adults because we often have established routines and habits. However, having close friends and social connections can help protect us from problems like ongoing stress and high blood pressure.",
+      "Example":"Take classes - Volunteer for a cause you believe in - Look into support groups - Organize something yourself"
+    },{
+      "id": "128",
+      "Language": "English",
+      "Title": "Donate your blood if you can.",
+      "Decscription": "A lot of people need blood transfusions to help with their medical problems. Blood donations are also used in emergencies and to treat cancer. Just one donation of blood can save up to 3 lives.",
+      "Example":""
+    },{
+      "id": "129",
+      "Language": "English",
+      "Title": "Start developing one good habit.",
+      "Decscription": "Developing good habits can positively impact your life by helping you achieve your goals, fostering personal and professional growth, and bringing a sense of fulfilment. By incorporating positive behaviors into your daily routine, you can create a pathway to success and a more satisfying life.",
+      "Example":"Read thoughtful books - Be physically active every day - Get enough sleep and eat breakfast - Drink water instead of soda or juice - Eat plenty of vegetables and some fruit every day - Eat less fast food - Save money"
+    },{
+      "id": "130",
+      "Language": "English",
+      "Title": "Manage your money wisely.",
+      "Decscription": "Prioritize essential needs and avoid unnecessary expenses. Allocate 60% of your monthly income to necessary expenses like housing, groceries, utilities, insurance, and transportation. Save and invest 20% of your income. Dedicate 10% to leisure activities and entertainment. Allocate 5% towards learning and education and 5% towards donations and charities.",
+      "Example":""
+    },{
+      "id": "131",
+      "Language": "English",
+      "Title": "Take a cold shower.",
+      "Decscription": "Taking cold showers, where you lower the water temperature below 60 degrees for two to three minutes at a time, can have several benefits. It can help strengthen your immune system, improve blood flow, increase metabolism, reduce inflammation, prevent muscle soreness, and provide relief from localized pain.",
+      "Example":""
+    },{
+      "id": "132",
+      "Language": "English",
+      "Title": "Do some sport",
+      "Decscription": "Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles.",
+      "Example":"Football - Cricket and Table tennis - Badminton - Swimming - Cycling - Push-ups and Squats - Yoga or Pilates - Dancing or Aerobics"
+    },{
+      "id": "133",
+      "Language": "English",
+      "Title": "Try something you've always wanted to Try.",
+      "Decscription": "Take that new class - Ask a friend to teach you to do something you don’t know how to do - Think of something you'd enjoy creating: a blanket, a song, or a small piece of furniture",
+      "Example":""
+    },{
+      "id": "134",
+      "Language": "English",
+      "Title": "Improve your lip reading skill.",
+      "Decscription": "Watch TV and pay attention to how people's lips move when they talk. Look at yourself in the mirror and practice saying the alphabet. Watch a familiar movie without sound to practice understanding the story through visual cues.",
+      "Example":""
+    },{
+      "id": "135",
+      "Language": "English",
+      "Title": "Create items for yourself or your loved ones, such as clothes, shoes, hats, bags, jewelry, or anything else that can be used.",
+      "Decscription": "",
+      "Example":"Sew your own dresses, shirts, skirts, or pants using patterns and fabric - Customize and decorate plain shoes using paint, fabric or create an simple slippers - Crochet or knit your own hats using yarn and a pattern, or decorate a plain hat with ribbons, flowers, or other accessories - Sew your own tote bags, backpacks, or purses using fabric and a sewing machine, or repurpose old materials like jeans or t-shirts to create unique bags - You can make earrings, necklaces, bracelets, or rings using beads, wire, or other material"
+    },{
+      "id": "136",
+      "Language": "English",
+      "Title": "Try to say the alphabet backwards.",
+      "Decscription": "Reciting the alphabet backwards requires mental effort and concentration. It can serve as a mental exercise to improve memory, focus, and cognitive skills.",
+      "Example":""
+    },{
+      "id": "137",
+      "Language": "English",
+      "Title": "Learn a few funny jokes.",
+      "Decscription": "Humor has various positive effects on our well-being, such as reducing stress, improving mood, and fostering social connections. Sharing jokes can help create a lighthearted atmosphere and strengthen relationships with others. However, it's important to be mindful of the context and audience when telling jokes to ensure they are appropriate and well-received.",
+      "Example":""
+    },{
+      "id": "138",
+      "Language": "English",
+      "Title": "Memorise your favourite song lyric.",
+      "Decscription": "Memorizing lyrics can improve your language skills, vocabulary, and memory retention. Additionally, it can be a fun and engaging activity that you can share with others during karaoke sessions or sing-alongs. However, it's important to note that the decision to memorize song lyrics is a personal preference, and not everyone may find it necessary or enjoyable.",
+      "Example":""
+    },{
+      "id": "139",
+      "Language": "English",
+      "Title": "Try to eat with your opposition hand.",
+      "Decscription": "Trying to eat with your non-dominant hand can help improve coordination and dexterity in your non-dominant hand, which can be useful in various activities. Additionally, it can challenge your brain by engaging different neural pathways and promoting mental flexibility. However, it may initially feel awkward or challenging, so it's important to start slowly and be patient with yourself",
+      "Example":""
+    },{
+      "id": "140",
+      "Language": "English",
+      "Title": "Track every penny you spend for 30 days.",
+      "Decscription": "Tracking every penny you spend allows you to gain a clear understanding of your spending habits and helps you identify areas where you may be overspending or where you can make adjustments to save money. By tracking your expenses, you can develop a budget, set financial goals, and make informed decisions about your spending. It promotes financial awareness and can lead to better money management in the long run.",
+      "Example":""
+    },{
+      "id": "141",
+      "Language": "English",
+      "Title": "Say “thank you” instead of “I'm sorry.",
+      "Decscription": "When we switch from apologizing to expressing gratitude, we can make the other person feel happier and closer to us. This can also make us feel more confident about ourselves.",
+      "Example":""
+    },{
+      "id": "142",
+      "Language": "English",
+      "Title": "Try to sit up straight",
+      "Decscription": "When you sit or stand with good posture, it helps reduce stress on your muscles and bones. Sitting or standing straight instead of slouching prevents strain on your hips, shoulders, neck, back, and torso. This means less pressure on your bones, joints, and ligaments.",
+      "Example":""
+    },{
+      "id": "143",
+      "Language": "English",
+      "Title": "Create a list of things that you love about yourself.",
+      "Decscription": "Creating a list of things that we love about ourselves can helps to boost our self-esteem and self-confidence by focusing on our positive qualities and strengths. It reminds us of our worth and value as individuals. Additionally, it can serve as a helpful reminder during times of self-doubt or negativity. Reflecting on the things we love about ourselves can also promote self-acceptance and a healthier self-image.",
+      "Example":""
+    },{
+      "id": "144",
+      "Language": "English",
+      "Title": "Walk 5,000/8,000/10,000 steps a day.",
+      "Decscription": "Walking improves cardiovascular fitness, strengthens muscles, and helps maintain a healthy weight. It lowers the risk of chronic conditions like heart disease, diabetes, and certain cancers. Walking releases mood-boosting endorphins, reducing stress, anxiety, and symptoms of depression. It increases energy levels, combats fatigue, and is gentle on the joints. Walking strengthens bones, improves balance, and reduces the risk of osteoporosis and arthritis. It burns calories, aids in weight loss or maintenance, and supports a healthy lifestyle. Remember, 5,000 steps is a general guideline, and individual needs may vary. It's always a good idea to consult with a healthcare professional for personalized advice on physical activity.",
+      "Example":""
+    },{
+      "id": "145",
+      "Language": "English",
+      "Title": "Purge your phone.",
+      "Decscription": "Backup your mobile first! - Delete useless apps - Manage photos and music - Clean up contact list - Delete old text and messages.",
+      "Example":""
+    },{
+      "id": "146",
+      "Language": "English",
+      "Title": "Drink more water.",
+      "Decscription": "The recommended amount of liquid intake can indeed vary based on factors like age, activity level, and overall health. As a general guideline, men are advised to consume around 10 cups of fluids per day, while women are recommended to have approximately 8 cups. It's important to note that various beverages, including water, lower-fat milk, and sugar-free drinks like tea and coffee, contribute to your daily fluid intake.",
+      "Example":""
+    },{
+      "id": "147",
+      "Language": "English",
+      "Title": "Learn to forgive others.",
+      "Decscription": "Forgiving can make you feel better, improve your relationships, and reduce stress. It can also help you let go of harmful anger, which can cause stress, tense muscles, weakened immune system, and heart problems. Remember, forgiveness is your choice and doesn't mean forgetting or approving of what others did. It's about finding inner peace and moving forward.",
+      "Example":"One quick technique to forgive others is to practice empathy. Try to put yourself in the other person's shoes and understand their perspective. Remind yourself that everyone makes mistakes and has their own struggles. Focus on the positive aspects of the situation or the person, and try to let go of any resentment or anger. It may also be helpful to communicate your feelings calmly and openly with the person involved, if appropriate. Remember, forgiveness is a process that takes time, so be patient with yourself."
+    },{
+      "id": "148",
+      "Language": "English",
+      "Title": "Drink more green tea and herbal teas.",
+      "Decscription": "Green tea has lots of good things called antioxidants and anti-inflammatory stuff that can help fight cancer, cholesterol, and obesity. It can also make your brain work better and lower your chances of getting brain problems. Herbal tea can stop the flu and heart problems, and it can also help prevent issues from diabetes.",
+      "Example":""
+    },{
+      "id": "149",
+      "Language": "English",
+      "Title": " Create a list of of tangible things that bring you joy, and make sure to do at least one thing from that list every day.",
+      "Decscription": "",
+      "Example":"Reading a favorite book - Looking at cherished photos of loved ones - Listening to uplifting or favorite songs - Being in nature, whether it's a walk in the park or spending time in a garden, can bring a sense of peace and happiness - Viewing or creating art, such as paintings, sculptures, or crafts - Enjoying delicious meals or treats - Engaging in activities like gardening, playing a musical instrument, or crafting - Exploring new places and experiencing different cultures"
+    },{
+      "id": "150",
+      "Language": "English",
+      "Title": "Improve your nighttime sleep.",
+      "Decscription": "Getting a good night's sleep helps us feel happier, more awake, and full of energy. To improve your sleep, avoid drinking caffeine 4 to 6 hours before going to bed, avoid alcohol 3 hours before bedtime, and turn off electronic screens 1 hour before bedtime. Invest in a supportive mattress, pillows, and bedding that suit your preferences. Make sure your bedroom is cool, dark, and quiet. Engage in calming activities before bed, such as reading a book, taking a warm bath, or practicing relaxation techniques like deep breathing or meditation. Try to go to bed and wake up at the same time every day, even on weekends. This helps regulate your body's internal clock and promotes better sleep.",
+      "Example":""
+    },{
+      "id": "75",
+      "Language": "English",
+      "Title": "Go birdwatching",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "75",
+      "Language": "English",
+      "Title": "Go birdwatching",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "75",
+      "Language": "English",
+      "Title": "Go birdwatching",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "75",
+      "Language": "English",
+      "Title": "Go birdwatching",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "75",
+      "Language": "English",
+      "Title": "Go birdwatching",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "75",
+      "Language": "English",
+      "Title": "Go birdwatching",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "75",
+      "Language": "English",
+      "Title": "Go birdwatching",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "75",
+      "Language": "English",
+      "Title": "Go birdwatching",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "75",
+      "Language": "English",
+      "Title": "Go birdwatching",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "75",
+      "Language": "English",
+      "Title": "Go birdwatching",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "75",
+      "Language": "English",
+      "Title": "Go birdwatching",
+      "Decscription": "",
+      "Example":""
+    },{
+      "id": "75",
+      "Language": "English",
+      "Title": "Go birdwatching",
       "Decscription": "",
       "Example":""
     },
