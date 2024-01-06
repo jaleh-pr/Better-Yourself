@@ -305,7 +305,7 @@
       "Language": "English",
       "Title": "Make a list of your wishes",
       "Decscription": "When creating a wish list, you can write down anything you want, even if it's not realistic. Imagine your perfect situation and set a timer for 5-10 minutes. Write down everything that comes to your mind without holding back. It's helpful to be detailed and specific because the more specific you are, the better!",
-      "Example":"Travel related wishes – Buying a house - Life milestones - Personal finances - Quality time with loved ones - Buying an instrument"
+      "Example":"Travel related wishes - Buying a house - Life milestones - Personal finances - Quality time with loved ones - Buying an instrument"
     },{
       "id": "52",
       "Language": "English",
@@ -901,75 +901,129 @@
       "Decscription": "Getting a good night's sleep helps us feel happier, more awake, and full of energy. To improve your sleep, avoid drinking caffeine 4 to 6 hours before going to bed, avoid alcohol 3 hours before bedtime, and turn off electronic screens 1 hour before bedtime. Invest in a supportive mattress, pillows, and bedding that suit your preferences. Make sure your bedroom is cool, dark, and quiet. Engage in calming activities before bed, such as reading a book, taking a warm bath, or practicing relaxation techniques like deep breathing or meditation. Try to go to bed and wake up at the same time every day, even on weekends. This helps regulate your body's internal clock and promotes better sleep.",
       "Example":""
     },{
-      "id": "75",
+      "id": "151",
       "Language": "English",
-      "Title": "Go birdwatching",
+      "Title": "Limit your contact with toxic people and practice using kind words with yourself.",
+      "Decscription": "Surround yourself with positive influences and supportive relationships. Practice self-care and engage in activities that boost self-esteem. Develop assertiveness skills to navigate difficult conversations. Be mindful of your thoughts and replace negative self-talk with positive affirmations.",
+      "Example":""
+    },{
+      "id": "152",
+      "Language": "English",
+      "Title": "Take yourself out for lunch.",
+      "Decscription": "",
+      "Example":"Create yourself a little picnic to enjoy in the park or if you prefer, visit a local bakery, café or restaurant."
+    },{
+      "id": "153",
+      "Language": "English",
+      "Title": "Bake something.",
+      "Decscription": "",
+      "Example":"Cake - Cookies - Brownies - Muffins - Pie - Bread"
+    },{
+      "id": "154",
+      "Language": "English",
+      "Title": "Watch a funny movie or a stand- up comedy and try to just laugh.",
       "Decscription": "",
       "Example":""
     },{
-      "id": "75",
+      "id": "155",
       "Language": "English",
-      "Title": "Go birdwatching",
+      "Title": "Plant some vegetable",
+      "Decscription": "",
+      "Example":"Potato - Tomato - Radishes -  Lettuce - Green beans - Zucchini"
+    },{
+      "id": "156",
+      "Language": "English",
+      "Title": "Take a professional selfie of yourself.",
+      "Decscription": "Find natural light or well-lit areas to avoid shadows and enhance your features. Choose a clean and visually appealing background that doesn't distract from your face. Avoid screen flash. Hide from the shadows. Relax and let your natural smile shine through. Play with different camera angles. Try portrait mode.  Use a timer.",
+      "Example":""
+    },{
+      "id": "157",
+      "Language": "English",
+      "Title": "Overcome one of your fears",
+      "Decscription": "Take time to recognize and acknowledge your fear. Understand what triggers it and how it affects you. Learn more about your fear. Gathering information and understanding the facts can help demystify it and reduce its power over you. Begin by facing your fear in small, manageable steps. Gradually expose yourself to situations or stimuli related to your fear, starting with less intimidating ones. Reach out to supportive friends, family, or professionals who can provide encouragement and guidance throughout your journey. Learn and practice relaxation techniques, such as deep breathing or meditation, to help manage anxiety and stress associated with your fear. Acknowledge and celebrate each step forward, no matter how small.",
+      "Example":""
+    },{
+      "id": "158",
+      "Language": "English",
+      "Title": "Learn to whistle or learn to use chopsticks or learn how to tie knots in rope.",
       "Decscription": "",
       "Example":""
     },{
-      "id": "75",
+      "id": "159",
       "Language": "English",
-      "Title": "Go birdwatching",
+      "Title": "Master a really yummy sauce recipe that goes with everything.",
+      "Decscription": "",
+      "Example":"Bechamel - Andalouse - Alfredo - Tzatziki - BBQ - Ranch Dressing - Thousand Island Dressing "
+    },{
+      "id": "160",
+      "Language": "English",
+      "Title": "Listen to one TED talk every day",
+      "Decscription": "",
+      "Example":"Brené Brown: Known for her talks on vulnerability, courage, and empathy. - Simon Sinek: Focuses on leadership, motivation, and finding purpose. - Elizabeth Gilbert: Talks about creativity, inspiration, and pursuing passions. -  Amy Cuddy: Discusses body language, presence, and personal empowerment. - Dan Pink: Explores motivation, behavioral science, and the changing world of work."
+    },{
+      "id": "161",
+      "Language": "English",
+      "Title": "Write down one of your wishes in detail every day for 21 days.",
+      "Decscription": "Choose a goal that you desire and write it down as if it is currently happening. Include specific details about what you want and why you want it. Additionally, describe in great detail how you will feel once you have achieved this goal. Writing down your wishes in this manner can help clarify your intentions, keep you focused, and motivate you to take action towards achieving them.",
+      "Example":""
+    },{
+      "id": "162",
+      "Language": "English",
+      "Title": "Use the 369 technique to help manifest your desires.",
+      "Decscription": "The 369 Manifesting Technique is a popular method that some individuals believe can help manifest their desires. It involves writing down your intention three times in the morning, six times in the afternoon, and nine times in the evening for 33 days. While many people claim to have had positive experiences with this technique, it's important to note that the effectiveness of manifestation techniques can vary from person to person. The success of any manifestation practice depends on various factors, including mindset, belief system, and consistent effort.",
+      "Example":""
+    },{
+      "id": "163",
+      "Language": "English",
+      "Title": "Make a list of things you want to do before you die, called a bucket list. Then, go out and work towards accomplishing those things.",
+      "Decscription": "Traveling to a specific country or city you've always wanted to visit - Learning a new skill or hobby, like playing a musical instrument or painting - Trying adventurous activities like skydiving or bungee jumping - Volunteering for a cause that is important to you - Writing a book or starting a business.",
+      "Example":""
+    },{
+      "id": "164",
+      "Language": "English",
+      "Title": "Imagine your perfect day from morning to night.",
+      "Decscription": "Ask yourself these questions: How do you feel when you wake up? What routines do you follow? Who do you spend time with? What scents, flavors, and sounds do you experience? How do you spend your day? How do you feel as the day goes on? Before going to bed, how do you feel when you think about your day? Why is this day fulfilling for you?",
+      "Example":""
+    },{
+      "id": "165",
+      "Language": "English",
+      "Title": "For one week, try to stay away from packaged food and enjoy your meals without any electronic distractions.",
       "Decscription": "",
       "Example":""
     },{
-      "id": "75",
+      "id": "166",
       "Language": "English",
-      "Title": "Go birdwatching",
-      "Decscription": "",
+      "Title": "Build a Self-Sustaining Terrariu",
+      "Decscription": "Choose a glass container and fill it with a layer of small rocks or pebbles for drainage. Add a layer of activated charcoal to keep the soil fresh. Plant a variety of small succulents in the soil, arranging them creatively. Finish by adding decorative elements like small rocks or figurines.",
+      "Example":"Succulent Terrarium - Moss Terrarium - Air Plant Terrarium"
+    },{
+      "id": "167",
+      "Language": "English",
+      "Title": "Challenge yourself to learn a new, easy skill in less than one month.",
+      "Decscription": "Learn Photography - Learn Touch typing - Learn  Speed writing - Learn Crochet - Learn  Cooking -Learn Coding - Learn  Photo editing - Learn Morse code -Learn about investing",
       "Example":""
     },{
-      "id": "75",
+      "id": "168",
       "Language": "English",
-      "Title": "Go birdwatching",
-      "Decscription": "",
+      "Title": "No gossip challenge for one week",
+      "Decscription": " Gossip can often be harmful, leading to misunderstandings, negativity, and strained relationships. By consciously avoiding gossip for a week, you can promote a more positive and respectful environment. It can also help you develop better communication skills, encourage empathy, and foster healthier relationships. Remember to communicate your intentions to others and encourage them to join you in this challenge for a more collective and impactful experience.",
       "Example":""
     },{
-      "id": "75",
+      "id": "169",
       "Language": "English",
-      "Title": "Go birdwatching",
-      "Decscription": "",
+      "Title": "Wear nice house clothes",
+      "Decscription": "Wearing nice house clothes can help boost your mood and overall well-being. When you dress in clothes that make you feel good, it can positively impact your mindset and productivity, even when you're at home.",
       "Example":""
     },{
-      "id": "75",
+      "id": "170",
       "Language": "English",
-      "Title": "Go birdwatching",
-      "Decscription": "",
+      "Title": "Keep a notebook next to your bed and write down one thing that made you happy today.",
+      "Decscription": "When you write down something that made you happy, you're showing gratitude for that experience or moment. Keeping a record of these happy moments can be inspiring and motivating, especially when you're facing difficult times.",
       "Example":""
     },{
-      "id": "75",
+      "id": "171",
       "Language": "English",
-      "Title": "Go birdwatching",
-      "Decscription": "",
-      "Example":""
-    },{
-      "id": "75",
-      "Language": "English",
-      "Title": "Go birdwatching",
-      "Decscription": "",
-      "Example":""
-    },{
-      "id": "75",
-      "Language": "English",
-      "Title": "Go birdwatching",
-      "Decscription": "",
-      "Example":""
-    },{
-      "id": "75",
-      "Language": "English",
-      "Title": "Go birdwatching",
-      "Decscription": "",
-      "Example":""
-    },{
-      "id": "75",
-      "Language": "English",
-      "Title": "Go birdwatching",
+      "Title": "",
       "Decscription": "",
       "Example":""
     },
