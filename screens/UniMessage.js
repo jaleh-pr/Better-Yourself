@@ -13,7 +13,7 @@ const UniMessageData = require("../Data/UniMessageData.json");
         props.onScreenNum(MyScreenNum);
     }
 
-    let content = <Text> To see your today’s message 
+    let content = <Text> To see your today's message 
     click the Start button. Watch a video
     until universe prepare your 
     message. Please note that you can not get more than 2 . messages."

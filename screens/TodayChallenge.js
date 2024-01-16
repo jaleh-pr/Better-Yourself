@@ -12,10 +12,12 @@ const TodayChalleng = (props) => {
 
   const challengesData = require("../Data/challengEnglish.json");
   const [myNumArray, setMyNumArray] = useState([]);
+  const [theTitle, setTheTitle ] = useState("");
   const [theMessage, setTheMessage ] = useState("");
+  const [theExample, setTheExample ] = useState("");
   const [myArrayLen, setMyArrayLen] = useState();
 
-  
+
 //let initialRndNum = Math.floor(0 + Math.random()* 4 );
 
 const generateRandomNum = () => {
@@ -23,12 +25,12 @@ const generateRandomNum = () => {
     setChallengeMessage(rndNum);
     setMyNumArray(myNumArray => [...myNumArray, rndNum]);
 
-  if (myNumArray.indexOf(rndNum) < 0 && myArrayLen <8 ){
+  if (myNumArray.indexOf(rndNum) < 0 ){
       setChallengeMessage(rndNum);
       setMyNumArray(myNumArray => [...myNumArray, rndNum]);
       
      // setMyArrayLen(myArrayLen+1);
-  } else if (myNumArray.indexOf(rndNum) > 0 && myArrayLen<8 ){
+  } else if (myNumArray.indexOf(rndNum) > 0  ){
      
          setChallengeMessage(rndNum+1);
         setMyNumArray(myNumArray => [...myNumArray, rndNum+1]);
@@ -45,8 +47,11 @@ const generateRandomNum = () => {
 
 const setChallengeMessage = (selectedNumber) => {
   const chaD = JSON.stringify(challengesData[selectedNumber].Decscription);
+  const chaT = JSON.stringify(challengesData[selectedNumber].Title);
+  const chaE = JSON.stringify(challengesData[selectedNumber].Example);
   setTheMessage(chaD.replace(/['"]+/g, ""));
-  
+  setTheTitle(chaT.replace(/['"]+/g, ""));
+  setTheExample(chaE.replace(/['"]+/g, ""))
 } ;
 
 
@@ -69,17 +74,21 @@ const setChallengeMessage = (selectedNumber) => {
                 </TouchableOpacity>
 
                 <View>
+                  <Text>{theTitle}</Text>
                    <Text>{theMessage}</Text>
+                   <Text>Example: {theExample}</Text>
                 </View>
-           
-          
-            <TouchableOpacity
-                     onPress={() => onLanNumProps(0)}
+                <TouchableOpacity
+                     onPress={() => generateRandomNum()}
+                     style={styles.button}
                 >
                     <View>
-                        <Text>Back</Text> 
+                        <Text>Change Your Challenge</Text> 
+                        
                     </View>
                 </TouchableOpacity>
+          
+        
     </View>
   );
 };
