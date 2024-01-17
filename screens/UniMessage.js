@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 import MainSection from '../components/MainSection';
@@ -8,17 +8,9 @@ const UniMessage = (props) => {
 
 const UniMessageData = require("../Data/UniMessageData.json");
 
-    const onLanNumProps = (MyScreenNum) => {
-        props.onLanguageName("English");
-        props.onScreenNum(MyScreenNum);
-    }
+const [stageNum, setStageNum] = useState(0);
 
-    let content = <Text> To see your today's message 
-    click the Start button. Watch a video
-    until universe prepare your 
-    message. Please note that you can not get more than 2 . messages."
-    </Text>
-
+if(stageNum === 0){
   return (
     <View style={styles.mainScreen}>
 
@@ -26,6 +18,15 @@ const UniMessageData = require("../Data/UniMessageData.json");
             
     </View>
   );
+}else if (stageNum >= 3){
+  return(
+    <View style={styles.mainScreen}>
+
+    <Text>You are done for today</Text>
+    
+</View>
+  )
+}
 };
 
 const styles = StyleSheet.create({

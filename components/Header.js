@@ -1,6 +1,7 @@
 
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Dimensions, Image} from 'react-native';
+import MessageHistory from './MessageHistory';
 
 const ScrHeight = Dimensions.get('window').height;
 const ScrWidth = Dimensions.get('window').width;
@@ -26,6 +27,7 @@ const Header = (props) => {
                     style={{width: ScrWidth / 10 , height: ScrHeight /10 , resizeMode: 'contain',}}
                 ></Image>
             </TouchableOpacity>
+           
     </View>
   );
 };
