@@ -9,13 +9,14 @@ import MessageHistory from './MessageHistory';
 const ScrHeight = Dimensions.get('window').height;
 const ScrWidth = Dimensions.get('window').width;
 
-const MainSection = (props) => {
+const UniMessageMainSection = (props) => {
    
     const {myData}  = props;
     
     const [myNumArray, setMyNumArray] = useState([]);
     const [theTitle, setTheTitle] = useState("Your Today Message From Universe:")
     const [theMessage, setTheMessage ] = useState("Click start to see your universe message");
+    const [theId, setTheId ] = useState();
     const [myArrayLen, setMyArrayLen] = useState();
     const [stageNum, setStageNum] = useState(0);
     const [lastMessage, setLastMessage] = useState('');
@@ -27,9 +28,9 @@ const MainSection = (props) => {
         setUniverseMessage(rndNum);
         setStageNum(stageNum+1);
         setSelectedNum(rndNum);
-       
+        setMyNumArray(myNumArray => [...myNumArray, rndNum]);
         if (myNumArray.indexOf(rndNum) < 0 && myArrayLen < 100){
-            setMyNumArray(myNumArray => [...myNumArray, rndNum]);
+          //  setMyNumArray(myNumArray => [...myNumArray, rndNum]);
             setUniverseMessage(rndNum);
             setMyArrayLen(myArrayLen+1);
             
@@ -42,9 +43,13 @@ const MainSection = (props) => {
         generatLastMessage();
     };
 
+   
+
     const setUniverseMessage = (selectedNumber) => {
         const ms = JSON.stringify(myData[selectedNumber].message);
+        const mi = JSON.stringify(myData[selectedNumber].id);
         setTheMessage(ms.replace(/['"]+/g, ""));
+        setTheId(mi.replace(/['"]+/g, ""));
     } ;
 
     const generatLastMessage = () =>{
@@ -75,15 +80,16 @@ if (stageNum === 0){
         <SafeAreaView>
             
              
-            <View style={styles.mainScreen}>
+            <View style={styles.mainSection}>
                
             <ScrollView vertical > 
                 <Text style={styles.title}>{theTitle}</Text>    
                 <Text style={styles.content}>{theMessage}</Text>
-                <Text>{myArrayLen}</Text>
+                <Text>id: {theId}</Text>
+                <Text>num: {selectedNum}</Text>
                 <Text>stage number: {stageNum}</Text>
-                </ScrollView>
-               </View> 
+             </ScrollView>
+            </View> 
             
             <View style={styles.buttonCon}>
                 <TouchableOpacity
@@ -99,10 +105,21 @@ if (stageNum === 0){
 }else {
     return(
     <SafeAreaView>
-         {/* <StatusBar style="auto" /> */}
-         <View style={styles.historySec}>
+       
+         {/* <View style={styles.historySec}>
+                <Text>{myNumArray}</Text>
+                <Text style={styles.content}>{theMessage}</Text>
                 <MessageHistory messageNums={selectedNum}/>
-            </View>
+        </View> */}
+        <View>
+
+            <TouchableOpacity
+                            onPress={() => props.changeStage(5)}
+                            style={[styles.button, styles.NewMessageBtn]}
+                        >
+                                <Text>Save Your messages</Text> 
+                </TouchableOpacity> 
+        </View>
            
      </SafeAreaView>
     );
@@ -111,7 +128,7 @@ if (stageNum === 0){
 
 
 const styles = StyleSheet.create({
-    mainScreen:{
+    mainSection:{
         flex:1,
         justifyContent: 'center',
         alignItems: 'center',
@@ -123,7 +140,7 @@ const styles = StyleSheet.create({
         height: ScrHeight* 0.2,
     },
     historySec:{
-        height:ScrHeight* 0.7,
+        height:ScrHeight* 0.5,
     },
     button:{
        
@@ -162,4 +179,4 @@ const styles = StyleSheet.create({
         fontWeight:'bold' 
     }
 })
-export default MainSection;
+export default UniMessageMainSection;

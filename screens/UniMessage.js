@@ -2,32 +2,31 @@
 import React, { useState } from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
-import MainSection from '../components/MainSection';
+import UniMessageMainSection from '../components/UniMessageMainSection';
 
 const UniMessage = (props) => {
 
 const UniMessageData = require("../Data/UniMessageData.json");
+const [stage, setStage] = useState(0);
 
-const [stageNum, setStageNum] = useState(0);
-
-if(stageNum === 0){
+if(stage === 0){
   return (
     <View style={styles.mainScreen}>
 
-            <MainSection myData={UniMessageData}/>
+            <UniMessageMainSection myData={UniMessageData} changeStage = {stage => setStage(stage)}/>
             
     </View>
   );
-}else if (stageNum >= 3){
+}else if (stage === 5){
   return(
-    <View style={styles.mainScreen}>
+    <View style={styles.FinishScreen}>
 
-    <Text>You are done for today</Text>
+      <Text>You are done for today</Text>
     
 </View>
-  )
-}
+  );
 };
+}
 
 const styles = StyleSheet.create({
     mainScreen:{
@@ -36,6 +35,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         color: "black",
         paddingTop: 10,
+    },
+    FinishScreen:{
+      backgroundColor:'pink',
     }
 })
 export default UniMessage;
