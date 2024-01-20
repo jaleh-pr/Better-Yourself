@@ -1,6 +1,9 @@
 
 import React, { useState } from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Dimensions} from 'react-native';
+
+const ScrHeight = Dimensions.get('window').height;
+const ScrWidth = Dimensions.get('window').width;
 
 
 
@@ -45,10 +48,16 @@ const DiskTest = (props) => {
     };
 
     const getValueHandler = (selectedValue) =>{
-        if (selectedValue === radioProps[4]){
-            setMyValue(5)
-        }else if (selectedValue === radioProps[3]){
+        if (selectedValue === radioProps[0]){
+            setMyValue(1)
+        } else if (selectedValue === radioProps[1]){
+            setMyValue(2)
+        } else if (selectedValue === radioProps[2]){
+            setMyValue(3)
+        } else if (selectedValue === radioProps[3]){
             setMyValue(4)
+        } else if (selectedValue === radioProps[4]){
+            setMyValue(5)
         }
     }; 
 
@@ -94,36 +103,38 @@ if(pageNum === 0 ){
         <View style={styles.mainScreen} >
             
         <View>
-           <View>
-                <Text>
+           <View style={styles.questionCon}>
+                <Text style={styles.questionText}>
                 {theQuestion}
                 </Text>
             </View> 
-            <View>
-                <TouchableOpacity>
-                    <Text>{radioProps[0]}</Text>  
-                </TouchableOpacity>
-            </View> 
-            <View>
-                <TouchableOpacity>
-                    <Text>{radioProps[1]}</Text>  
-                </TouchableOpacity>
-            </View> 
-            <View>
-                <TouchableOpacity>
-                    <Text>{radioProps[2]}</Text>  
-                </TouchableOpacity>
-            </View> 
-            <View>
-                <TouchableOpacity onPress={getValueHandler.bind(this, radioProps[3])}>
-                    <Text>{radioProps[3]}</Text>  
-                </TouchableOpacity>
-            </View> 
-            <View>
-                <TouchableOpacity onPress={getValueHandler.bind(this, radioProps[4])}>
-                    <Text>{radioProps[4]}</Text>  
-                </TouchableOpacity>
-            </View> 
+            <View style={styles.answerBtnCon}>
+                <View >
+                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[0])}>
+                        <Text>{radioProps[0]}</Text>  
+                    </TouchableOpacity>
+                </View> 
+                <View >
+                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[1])}>
+                        <Text>{radioProps[1]}</Text>  
+                    </TouchableOpacity>
+                </View> 
+                <View >
+                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[2])}>
+                        <Text>{radioProps[2]}</Text>  
+                    </TouchableOpacity>
+                </View> 
+                <View>
+                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[3])}>
+                        <Text>{radioProps[3]}</Text>  
+                    </TouchableOpacity>
+                </View> 
+                <View>
+                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[4])}>
+                        <Text>{radioProps[4]}</Text>  
+                    </TouchableOpacity>
+                </View> 
+            </View>
            <View>
             <Text>scoreD = {scoreD}</Text>
             <Text>scoreI = {scoreI}</Text>
@@ -163,6 +174,25 @@ const styles = StyleSheet.create({
         borderRadius:10,
         borderWidth:1,
         backgroundColor:'#55c2da'
+    },
+    answerBtn:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding:5,
+        marginTop:10,
+        borderColor:'#55c2da',
+        borderRadius:10,
+        borderWidth:1,
+        width: ScrWidth * 0.5,
+    },
+    answerBtnCon:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin:15
+    },
+    questionCon:{
+        width:  ScrWidth * 0.8,  
+        paddingLeft: ScrWidth * 0.05,  
     }
 })
 export default DiskTest;

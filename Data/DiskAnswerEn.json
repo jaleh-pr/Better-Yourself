@@ -1,0 +1,57 @@
+[
+
+    {
+        "id": "1",
+        "language": "English",
+        "personType": "D",
+        "Description": " 'D's are straightforward and decisive. They take risks and solve problems. They prioritize completing tasks and winning over seeking approval from others. While their strong drive may make them less sensitive to those around them, they are not afraid to question the established norms and they excel at creating new things. They require discipline to succeed and respond well to direct confrontation. The biggest fear for 'D's is being taken advantage of. Despite some potential weaknesses such as a dislike for routine, a tendency to exceed their authority, being argumentative, and taking on too much, they highly value time and use their innovative thinking to accomplish difficult tasks and overcome challenges."
+    },
+    {
+        "id": "2",
+        "language": "English",
+        "personType": "I",
+        "Description": "'I's are inspiring and impressive. They are enthusiastic, optimistic, impulsive, and emotional. They are often creative problem solvers and great at encouraging others. They tend to have many friends, but sometimes they prioritize seeking approval and popularity over achieving results. The biggest fear for 'I's is rejection, but they excel at motivating others. Their positive sense of humor helps them resolve conflicts. While they may struggle with paying attention to details and being good listeners, they can be excellent peacemakers and effective team players when they control their emotions and minimize their desire to entertain and be the center of attention. They highly value human connection and touch."
+    },
+    {
+        "id": "3",
+        "language": "English",
+        "personType": "S",
+        "Description": "'S's are steady and more reserved. They prefer stability and dislike change, thriving in secure and non-threatening environments. They are often friendly, understanding, and good listeners. They are loyal workers who are content with consistently doing the same job. They have a remarkable ability to forgive and make great friends. However, their biggest fear is losing their sense of security. Some possible weaknesses of 'S's include resistance to change and difficulty adjusting to it. They can also be sensitive to criticism and struggle with setting priorities. To avoid being taken advantage of, 'S's need to be assertive and learn to say 'no.' They prefer to stay out of the spotlight, but when given the chance to genuinely help others, they willingly step up. They feel most valued when they have made a meaningful difference in someone's life."
+        }, 
+    {
+        "id": "4",
+        "language": "English",
+        "personType": "C",
+        "Description": "'C's are compliant and analytical. They are careful and logical in their thinking and prioritize accuracy. They have high standards and prefer systematic approaches to solving problems. While they excel at finding solutions, they often overlook the emotions of others and can be critical and grumpy. Expressing their own feelings is challenging for them, but when they are not overwhelmed by details and have clear boundaries, they can be valuable team members by providing realistic assessments. The biggest fear for 'C's is criticism, and their pursuit of perfectionism can be a weakness. They also tend to give in during arguments. However, they are thorough in their activities and bring a conscientious and even-tempered presence to the team, providing stability. Being correct is highly important to them."
+    }, {
+        "id": "5",
+        "language": "English",
+        "personType": "DI",
+        "Description": "'D/I's are curious and focused on achieving their goals. They prioritize results over inspiration, but their high expectations and standards often have a strong impact on others, motivating them to follow. They have many interests and may get distracted by taking on too many projects. It is important for them to concentrate, prioritize, and take things slower at times. Since 'D/I's thrive on being active and moving forward, they prefer to accomplish tasks with the help of a large group of people."
+    }, {
+        "id": "6",
+        "language": "English",
+        "personType": "D",
+        "Description": ""
+    }, {
+        "id": "6",
+        "language": "English",
+        "personType": "D",
+        "Description": ""
+    }, {
+        "id": "6",
+        "language": "English",
+        "personType": "D",
+        "Description": ""
+    }, {
+        "id": "6",
+        "language": "English",
+        "personType": "D",
+        "Description": ""
+    }, {
+        "id": "6",
+        "language": "English",
+        "personType": "D",
+        "Description": ""
+    }
+]
