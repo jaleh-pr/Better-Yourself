@@ -24,6 +24,8 @@ const DiskTest = (props) => {
     const [scoreI, setScoreI] = useState(0);
     const [scoreC, setScoreC] = useState(0);
     const [scoreS, setScoreS] = useState(0);
+    const [theScores, setTheScores] = useState([]);
+    const [personType, setPersonType] = useState("");
     const [myValue, setMyValue] = useState(0);
 
     const StartExam = () => {
@@ -32,6 +34,7 @@ const DiskTest = (props) => {
     };
     const NextQuestion = (myQuestionNum) => {
         let theValue = myValue;
+        setPageNum(pageNum + 1);
         if(radioProps[5] === "D"){
             setScoreD(scoreD + theValue);
         }else if(radioProps[5] === "I"){
@@ -79,6 +82,19 @@ const DiskTest = (props) => {
     } ;
     const radioProps = [option1, option2, option3, option4, option5, questionSec]
 
+const resultFunction = () =>{
+   // setTheScores(theScores => [...theScores, rndNum]);
+    if(scoreD > scoreI && scoreD > scoreS && scoreD > scoreC){
+        setPersonType("D");
+    }else if (scoreI > scoreD && scoreI > scoreS && scoreI > scoreC ){
+        setPersonType("I");
+    }else if (scoreS > scoreD && scoreS > scoreI && scoreS > scoreC ){
+        setPersonType("S");
+    }else if (scoreC > scoreD && scoreC > scoreI && scoreC > scoreS ){
+        setPersonType("C");
+    }
+}
+
 if(pageNum === 0 ){
   return (
     <View  style={styles.mainScreen}>
@@ -98,7 +114,7 @@ if(pageNum === 0 ){
             </View>
     </View>
   );
-  } else if (pageNum === 1){
+  } else if (pageNum <= 20){
     return(
         <View style={styles.mainScreen} >
             
@@ -135,15 +151,7 @@ if(pageNum === 0 ){
                     </TouchableOpacity>
                 </View> 
             </View>
-           <View>
-            <Text>scoreD = {scoreD}</Text>
-            <Text>scoreI = {scoreI}</Text>
-            <Text>scoreS = {scoreS}</Text>
-            <Text>scoreC = {scoreC}</Text>
-            <Text>myValue = {myValue}</Text>
-            <Text>questionNum = {questionSec}</Text>
-            
-           </View>
+       
             <TouchableOpacity
                         onPress={() => NextQuestion()}
                         style={styles.button}
@@ -154,6 +162,32 @@ if(pageNum === 0 ){
         </View>
 </View>
     )
+  }else{
+    return(
+        <View>
+            <Text>You have finished the test</Text>
+            <View>
+                <Text>scoreD = {scoreD}</Text>
+                <Text>scoreI = {scoreI}</Text>
+                <Text>scoreS = {scoreS}</Text>
+                <Text>scoreC = {scoreC}</Text>
+                <Text>myValue = {myValue}</Text>
+                <Text>questionNum = {questionSec}</Text>             
+           </View>
+           <View>
+           <TouchableOpacity
+                        onPress={() => resultFunction()}
+                        style={styles.button}
+                    >
+                            <Text>See The Result</Text> 
+            </TouchableOpacity> 
+            <View>
+                <Text>Person Type: {personType}</Text>
+            </View>
+           </View>
+        </View>
+    )
+   
   }
 };
 
