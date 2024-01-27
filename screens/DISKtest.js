@@ -27,12 +27,16 @@ const DiskTest = (props) => {
     const [theScores, setTheScores] = useState([]);
     const [personType, setPersonType] = useState("");
     const [myValue, setMyValue] = useState(0);
+    const [maxNum, setMaxNum] = useState();
+    const [secondMaxNum, setSecondMaxNum] = useState();
 
     const StartExam = () => {
         setPageNum(pageNum + 1);
         setQuestionAnswers(questionNum);
+       // setQuestionNum(1);
+       setPersonType("");
     };
-    const NextQuestion = (myQuestionNum) => {
+    const NextQuestion = () => {
         let theValue = myValue;
         setPageNum(pageNum + 1);
         if(radioProps[5] === "D"){
@@ -47,7 +51,7 @@ const DiskTest = (props) => {
         setMyValue(0);
         //setScoreD(scoreD + theValue);
         setQuestionNum(questionNum + 1);
-        setQuestionAnswers(questionNum);
+        setQuestionAnswers(questionNum+1);
     };
 
     const getValueHandler = (selectedValue) =>{
@@ -83,16 +87,25 @@ const DiskTest = (props) => {
     const radioProps = [option1, option2, option3, option4, option5, questionSec]
 
 const resultFunction = () =>{
-   // setTheScores(theScores => [...theScores, rndNum]);
-    if(scoreD > scoreI && scoreD > scoreS && scoreD > scoreC){
-        setPersonType("D");
-    }else if (scoreI > scoreD && scoreI > scoreS && scoreI > scoreC ){
-        setPersonType("I");
-    }else if (scoreS > scoreD && scoreS > scoreI && scoreS > scoreC ){
-        setPersonType("S");
-    }else if (scoreC > scoreD && scoreC > scoreI && scoreC > scoreS ){
-        setPersonType("C");
-    }
+   const myList = [{name:'D',score:scoreD},{name:"I",score:scoreI}, {name:"S",score:scoreS}, {name:"C",score:scoreC}];
+  // const myMax = Math.max(scoreD, scoreI, scoreS, scoreC);
+   myList.sort((a, b) => (a.score > b.score) ? -1 : 1);
+   console.log(myList);
+   if (myList[0].score >12 ){
+    setMaxNum(myList[0].name);
+        if(myList[1].score >12){
+            setSecondMaxNum(myList[1].name);
+            setPersonType([myList[0].name,myList[1].name ]);
+        }else{
+            setSecondMaxNum("");
+            setPersonType([myList[0].name ])
+        };
+       
+   }else{
+        setMaxNum("Do the test again")
+   };
+
+
 }
 
 if(pageNum === 0 ){
@@ -114,7 +127,7 @@ if(pageNum === 0 ){
             </View>
     </View>
   );
-  } else if (pageNum <= 20){
+  } else if (pageNum < 21){
     return(
         <View style={styles.mainScreen} >
             
@@ -151,12 +164,21 @@ if(pageNum === 0 ){
                     </TouchableOpacity>
                 </View> 
             </View>
-       
+            <Text>myValue = {myValue}</Text>
+            <View>
+                <Text>scoreD = {scoreD}</Text>
+                <Text>scoreI = {scoreI}</Text>
+                <Text>scoreS = {scoreS}</Text>
+                <Text>scoreC = {scoreC}</Text>
+               
+                <Text>questionNum = {questionSec}</Text>             
+           </View>
             <TouchableOpacity
                         onPress={() => NextQuestion()}
                         style={styles.button}
                     >
                             <Text>Next</Text> 
+                            
             </TouchableOpacity> 
            
         </View>
@@ -166,14 +188,7 @@ if(pageNum === 0 ){
     return(
         <View>
             <Text>You have finished the test</Text>
-            <View>
-                <Text>scoreD = {scoreD}</Text>
-                <Text>scoreI = {scoreI}</Text>
-                <Text>scoreS = {scoreS}</Text>
-                <Text>scoreC = {scoreC}</Text>
-                <Text>myValue = {myValue}</Text>
-                <Text>questionNum = {questionSec}</Text>             
-           </View>
+           
            <View>
            <TouchableOpacity
                         onPress={() => resultFunction()}
@@ -183,6 +198,8 @@ if(pageNum === 0 ){
             </TouchableOpacity> 
             <View>
                 <Text>Person Type: {personType}</Text>
+                <Text>Max Num: {maxNum}</Text>
+                <Text>Second Max: {secondMaxNum}</Text>
             </View>
            </View>
         </View>
