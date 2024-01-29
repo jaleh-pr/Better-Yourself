@@ -10,6 +10,7 @@ const ScrWidth = Dimensions.get('window').width;
 const DiskTest = (props) => {
 
     const DiskTestData = require("../Data/DiskTestEn.json");
+    const DiskAnswerData = require("../Data/DiskAnswerEn.json");
 
     const [pageNum , setPageNum ] = useState(0);
     const [questionNum , setQuestionNum ] = useState(0);
@@ -29,6 +30,8 @@ const DiskTest = (props) => {
     const [myValue, setMyValue] = useState(0);
     const [maxNum, setMaxNum] = useState();
     const [secondMaxNum, setSecondMaxNum] = useState();
+    const [typeAnalysis, SetTypeAnalysis] = useState();
+    const [myNum , setMyNum ] = useState(0);
 
     const StartExam = () => {
         setPageNum(pageNum + 1);
@@ -88,25 +91,38 @@ const DiskTest = (props) => {
 
 const resultFunction = () =>{
    const myList = [{name:'D',score:scoreD},{name:"I",score:scoreI}, {name:"S",score:scoreS}, {name:"C",score:scoreC}];
-  // const myMax = Math.max(scoreD, scoreI, scoreS, scoreC);
    myList.sort((a, b) => (a.score > b.score) ? -1 : 1);
    console.log(myList);
    if (myList[0].score >12 ){
     setMaxNum(myList[0].name);
         if(myList[1].score >12){
             setSecondMaxNum(myList[1].name);
-            setPersonType([myList[0].name,myList[1].name ]);
+            setPersonType([myList[0].name+myList[1].name ]);
+            personTypeAnalysis([myList[0].name+myList[1].name ]);
         }else{
             setSecondMaxNum("");
-            setPersonType([myList[0].name ])
+            setPersonType([myList[0].name ]);
+            personTypeAnalysis([myList[0].name ]);
         };
-       
+        
    }else{
         setMaxNum("Do the test again")
    };
+};
 
-
-}
+const personTypeAnalysis = (personType) => {
+  
+    for (let i = 0; i < 8; i++) {
+        const personTypeList = ['D', 'I', 'S', 'C', 'DI', 'ID' , 'SD', 'CD']
+        console.log(personTypeList[i]);
+        console.log(personType);
+        if(personType == personTypeList[i]){
+            
+        const analysis = JSON.stringify(DiskAnswerData[i].Description);
+            SetTypeAnalysis(analysis.replace(/['"]+/g, ""));
+        }
+   };
+};
 
 if(pageNum === 0 ){
   return (
@@ -184,7 +200,7 @@ if(pageNum === 0 ){
         </View>
 </View>
     )
-  }else{
+  }else if(pageNum => 21) {
     return(
         <View>
             <Text>You have finished the test</Text>
@@ -200,6 +216,7 @@ if(pageNum === 0 ){
                 <Text>Person Type: {personType}</Text>
                 <Text>Max Num: {maxNum}</Text>
                 <Text>Second Max: {secondMaxNum}</Text>
+                <Text>Type analysis: {typeAnalysis}</Text>
             </View>
            </View>
         </View>

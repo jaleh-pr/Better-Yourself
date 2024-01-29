@@ -34,15 +34,15 @@
         "personType": "ID",
         "Description": "'I/D's are charismatic and dynamic persuaders. They thrive in social settings and leverage their influential abilities to gain respect and persuade others to follow their guidance. Occasionally, they may appear restless and anxious, but this stems from their desire to engage in diverse, liberating, and mobile challenges. It would be advantageous for 'I/D' s to develop the habit of considering consequences before taking action and dedicating more time to focused learning. They excel as motivating leaders and possess the skills to achieve desired outcomes by effectively working with and through others."
     }, {
-        "id": "6",
+        "id": "7",
         "language": "English",
-        "personType": "D",
-        "Description": ""
+        "personType": "SD",
+        "Description": "'S/D's are reliable and dependable leaders who prefer working in small groups rather than speaking in front of large audiences. They have a unique blend of being both sensitive and strong-willed, and they value close relationships with others without overpowering them. They find motivation in challenges, particularly those that require a systematic approach. Due to their determined nature, they thrive with encouragement and positive connections, as they persist through difficulties over time."
     }, {
-        "id": "6",
+        "id": "8",
         "language": "English",
-        "personType": "D",
-        "Description": ""
+        "personType": "CD",
+        "Description": "'C/D' s are careful and focused designers who are always focused on their tasks and are highly aware of problems. They may come across as insensitive at times, but they do care about individuals, even if they struggle to express it. They often believe that they are the only ones capable of doing a job the right way, but their organizational skills allow them to successfully implement plans for change and improvement. 'C/D' s tend to be serious and could benefit from being more positive and enthusiastic. Despite their strong drive to succeed, they should prioritize building healthy relationships and showing love towards others."
     }, {
         "id": "6",
         "language": "English",
