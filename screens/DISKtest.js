@@ -25,39 +25,78 @@ const DiskTest = (props) => {
     const [scoreI, setScoreI] = useState(0);
     const [scoreC, setScoreC] = useState(0);
     const [scoreS, setScoreS] = useState(0);
-    const [theScores, setTheScores] = useState([]);
     const [personType, setPersonType] = useState("");
     const [myValue, setMyValue] = useState(0);
     const [maxNum, setMaxNum] = useState();
     const [secondMaxNum, setSecondMaxNum] = useState();
     const [typeAnalysis, SetTypeAnalysis] = useState();
-    const [myNum , setMyNum ] = useState(0);
+    const [myArray, setMyArray] = useState([]);
+    const [btnAct , setBtnAct] = useState(0);
+    const [nextDisable , setNextDisable] = useState(true);
+
+    const btnActive = () => {
+        return{
+            backgroundColor: "#ccc",
+            borderStyle: "solid",
+            margin:10,
+            padding:15,
+            borderWidth:1,
+        };
+    };
+
+    const btnDeactive = () => {
+        return{
+            backgroundColor: "#ccc",
+            margin:10,
+            padding:15,
+           disabled:"disabled",
+           opacity: 0.5,
+        };
+    };
+
+    const generateRandomNum = () => {
+        const rndNum = Math.floor(Math.random() * 20 ) ;
+        if(myArray.indexOf(rndNum) < 0 ){
+            setMyArray((myArray) => [...myArray , rndNum]);
+            setQuestionNum(rndNum);
+            setQuestionAnswers(rndNum);   
+        } else {
+            generateRandomNum();
+        }
+    };
 
     const StartExam = () => {
         setPageNum(pageNum + 1);
-        setQuestionAnswers(questionNum);
-       // setQuestionNum(1);
+        generateRandomNum();
        setPersonType("");
     };
     const NextQuestion = () => {
         let theValue = myValue;
-        setPageNum(pageNum + 1);
-        if(radioProps[5] === "D"){
-            setScoreD(scoreD + theValue);
-        }else if(radioProps[5] === "I"){
-            setScoreI(scoreI + theValue);
-        }else if(radioProps[5] === "S"){
-            setScoreS(scoreS + theValue);
-        }else if(radioProps[5] === "C"){
-            setScoreC(scoreC + theValue);
+        
+        if(pageNum < 20){
+            setPageNum(pageNum + 1);
+            generateRandomNum();
+            if(radioProps[5] === "D"){
+                setScoreD(scoreD + theValue);
+            }else if(radioProps[5] === "I"){
+                setScoreI(scoreI + theValue);
+            }else if(radioProps[5] === "S"){
+                setScoreS(scoreS + theValue);
+            }else if(radioProps[5] === "C"){
+                setScoreC(scoreC + theValue);
+            }
+            setMyValue(0);
+            setBtnAct(0);
+            setNextDisable(true);
+        }else{
+            setPageNum(100)
         }
-        setMyValue(0);
-        //setScoreD(scoreD + theValue);
-        setQuestionNum(questionNum + 1);
-        setQuestionAnswers(questionNum+1);
+    
     };
 
     const getValueHandler = (selectedValue) =>{
+        setBtnAct(1);
+        setNextDisable(false);
         if (selectedValue === radioProps[0]){
             setMyValue(1)
         } else if (selectedValue === radioProps[1]){
@@ -90,6 +129,7 @@ const DiskTest = (props) => {
     const radioProps = [option1, option2, option3, option4, option5, questionSec]
 
 const resultFunction = () =>{
+    setPageNum(101);
    const myList = [{name:'D',score:scoreD},{name:"I",score:scoreI}, {name:"S",score:scoreS}, {name:"C",score:scoreC}];
    myList.sort((a, b) => (a.score > b.score) ? -1 : 1);
    console.log(myList);
@@ -114,8 +154,6 @@ const personTypeAnalysis = (personType) => {
   
     for (let i = 0; i < 8; i++) {
         const personTypeList = ['D', 'I', 'S', 'C', 'DI', 'ID' , 'SD', 'CD']
-        console.log(personTypeList[i]);
-        console.log(personType);
         if(personType == personTypeList[i]){
             
         const analysis = JSON.stringify(DiskAnswerData[i].Description);
@@ -143,7 +181,7 @@ if(pageNum === 0 ){
             </View>
     </View>
   );
-  } else if (pageNum < 21){
+  } else if (pageNum <21){
     return(
         <View style={styles.mainScreen} >
             
@@ -187,11 +225,20 @@ if(pageNum === 0 ){
                 <Text>scoreS = {scoreS}</Text>
                 <Text>scoreC = {scoreC}</Text>
                
-                <Text>questionNum = {questionSec}</Text>             
+                <Text>questionNum = {questionSec}</Text>    
+                <Text>{pageNum}</Text>         
            </View>
             <TouchableOpacity
+                       
+                        disabled={nextDisable}
                         onPress={() => NextQuestion()}
-                        style={styles.button}
+                       // style={styles.button}
+                        style = {
+                          btnAct === 1
+                            ? btnActive()
+                            : btnDeactive()
+                            
+                        }
                     >
                             <Text>Next</Text> 
                             
@@ -200,25 +247,31 @@ if(pageNum === 0 ){
         </View>
 </View>
     )
-  }else if(pageNum => 21) {
+  }else if(pageNum === 100) {
     return(
         <View>
-            <Text>You have finished the test</Text>
-           
            <View>
-           <TouchableOpacity
-                        onPress={() => resultFunction()}
-                        style={styles.button}
-                    >
-                            <Text>See The Result</Text> 
-            </TouchableOpacity> 
-            <View>
+                 <Text>You have finished the test</Text>
+           </View>
+           <View>
+                <TouchableOpacity
+                            onPress={() => resultFunction()}
+                            style={styles.button}
+                        >
+                                <Text>See The Result</Text> 
+                </TouchableOpacity>  
+           </View>
+        </View>
+    )
+   
+  }else if(pageNum === 101) {
+    return(
+        <View>
                 <Text>Person Type: {personType}</Text>
                 <Text>Max Num: {maxNum}</Text>
                 <Text>Second Max: {secondMaxNum}</Text>
                 <Text>Type analysis: {typeAnalysis}</Text>
-            </View>
-           </View>
+     
         </View>
     )
    

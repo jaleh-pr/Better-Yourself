@@ -18,6 +18,7 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
   const [ZoNum, setZoNum] = useState(12);
   const [theTitle, setTheTitle] = useState('Title');
   const [theMessage, setTheMessage] = useState('The Message');
+  const [pageNum, setPageNum] = useState(0)
 
   const setContent = (ZoNum) => {
   const ZoMT = JSON.stringify(ZodiacMonthData[ZoNum].title);
@@ -28,6 +29,7 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
   setTheTitle(ZoMT.replace(/['"]+/g, ""));
   setTheMessage(ZoM1.replace(/['"]+/g, "")+"\n"+ ZoM2.replace(/['"]+/g, "")+"\n"+ ZoM3.replace(/['"]+/g, "")+"\n"+ZoM4.replace(/['"]+/g, ""));
   }
+
   const checkBirthdayHandler = () =>{
     if((monthValue == 3 && birthdayDate > 20 )||( monthValue == 4 && birthdayDate <= 19 )){
         setZoNum(0);
@@ -68,43 +70,20 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
     }else{
         setZoNum(12)
         setContent(12);
+
     }
-    
+    setPageNum(1)
   }
 
-
+  if(pageNum === 0 ){
   return (
 
     <View style={styles.mainScreen}>
             
-          <Text style={styles.header}> Your Month Zodiac</Text> 
+          <Text style={styles.header}> Zodiac</Text> 
           <Text  > Enter your Date Of Birth</Text>
-          {/* <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20 }}>
-             {selectedDate ? new Date(myDate).toLocaleDateString('en-US') : 'No date selected'}
-            </Text>
-           <Text>
-            {showPicker && (
-            <DateTimePicker
-                date = {selectedDate}
-                mode="date"
-                onConfirm={handleConfirm}
-                onCancel={hideDatePicker}
-                value={date} 
-                onChange={(event, value) => handleConfirm(value)}
-            />
-            )}
-           </Text> */}
-           {/* <View>
-             <TextInput
-                style={styles.input}
-               // onChangeText={handleChange}
-                onChangeText={(value) => setBirthdayDate(value)}
-                value={number}
-                placeholder="Enter Date"
-                keyboardType="numeric"
-            />
-            </View> */}
-           <View style={styles.input}>
+         
+            <View style={styles.input}>
                 <Text>Your month of birth:</Text>
                 <RNPickerSelect
                     placeholder={{
@@ -129,7 +108,7 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
                     ]}
              />
              </View>
-             <View style={styles.input}>
+            <View style={styles.input}>
                 <Text>Your date of birth:</Text>
                 <RNPickerSelect
                     placeholder={{
@@ -173,23 +152,26 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
                         
                     ]}
                 />
-         </View>
-         <View style={styles.center}>
-         <TouchableOpacity
+             </View>
+            <View style={styles.center}>
+            <TouchableOpacity
                         onPress={() => checkBirthdayHandler()}
                         style={styles.button}
                     >
                             <Text>Confirm</Text> 
             </TouchableOpacity> 
+             </View>
+    </View>
+  )
+} else if ( pageNum ===1 ){
+    return(
          <View style= {styles.article}> 
             <Text style= {styles.title}>{theTitle}</Text>
             <Text>{theMessage}</Text>
         </View>
-         </View>
-         
-    </View>
-  );
+  )
 };
+}
 
 const styles = StyleSheet.create({
     mainScreen:{

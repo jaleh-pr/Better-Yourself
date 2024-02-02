@@ -13,7 +13,7 @@ const Zodic = (props) => {
   return (
     <View style={styles.mainScreen}>
             
-            <View>
+          
                 <Text>
                 Zodic
                 </Text>
@@ -23,26 +23,10 @@ const Zodic = (props) => {
                      style={styles.button}
                 >
                     <View>
-                        <Text>Month Zodiac</Text> 
+                        <Text>Start</Text> 
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity
-                     onPress={() => onLanNumProps(12)}
-                     style={styles.button}
-                >
-                    <View>
-                        <Text>Year Zodiac</Text> 
-                    </View>
-                </TouchableOpacity>
-            </View>
-                <TouchableOpacity
-                     onPress={() => onLanNumProps(0)}
-                     style={styles.button}
-                >
-                    <View>
-                        <Text>Back</Text> 
-                    </View>
-                </TouchableOpacity>
+               
     </View>
   );
 };

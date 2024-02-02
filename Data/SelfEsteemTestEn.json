@@ -10,7 +10,7 @@
     {
         "id": "2",
         "language": "English",
-        "question": "2. I’m pretty sure of myself.",
+        "question": "2. I'm pretty sure of myself.",
         "options":["Like me", "Unlike me"],
         "answer": "Like me"
     },
@@ -24,7 +24,7 @@
     {
         "id": "4",
         "language": "English",
-        "question": "4. I’m easy to like.",
+        "question": "4. I'm easy to like.",
         "options":["Like me", "Unlike me"],
         "answer": "Like me"
     },
@@ -59,7 +59,7 @@
     {
         "id": "9",
         "language": "English",
-        "question": "9. There are lots of things about myself I’d change if I could. ",
+        "question": "9. There are lots of things about myself I would change if I could. ",
         "options":["Like me", "Unlike me"],
         "answer": "Unlike me"
     },
@@ -73,7 +73,7 @@
     {
         "id": "11",
         "language": "English",
-        "question": "11. I’m a lot of fun to be with.",
+        "question": "11. I am a lot of fun to be with.",
         "options":["Like me", "Unlike me"],
         "answer": "Like me"
     },
@@ -93,13 +93,13 @@
     },{
         "id": "14",
         "language": "English",
-        "question": "14. I’m proud of my work. ",
+        "question": "14. I am proud of my work. ",
         "options":["Like me", "Unlike me"],
         "answer": "Like me"
     },{
         "id": "15",
         "language": "English",
-        "question": "15. Someone always has to tell me what to do",
+        "question": "15. Someone always has to tell me what to do.",
         "options":["Like me", "Unlike me"],
         "answer": "Unlike me"
     },{
@@ -189,7 +189,7 @@
     },{
         "id": "30",
         "language": "English",
-        "question": "30. It’s pretty tough to be me",
+        "question": "30. It’s pretty tough to be me.",
         "options":["Like me", "Unlike me"],
         "answer": "Unlike me"
     },{
@@ -231,7 +231,7 @@
     },{
         "id": "37",
         "language": "English",
-        "question": "37. I really don’t like being a man/woman.",
+        "question": "37. I really don't like being a man/woman.",
         "options":["Like me", "Unlike me"],
         "answer": "Unlike me"
     },{
@@ -243,13 +243,13 @@
     },{
         "id": "39",
         "language": "English",
-        "question": "39. I don’t like to be with other people. ",
+        "question": "39. I don't like to be with other people. ",
         "options":["Like me", "Unlike me"],
         "answer": "Unlike me"
     },{
         "id": "40",
         "language": "English",
-        "question": "40. There are many times when I’d like to leave home. ",
+        "question": "40. There are many times when I'd like to leave home. ",
         "options":["Like me", "Unlike me"],
         "answer": "Unlike me"
     },{
@@ -273,7 +273,7 @@
     },{
         "id": "44",
         "language": "English",
-        "question": "44. I’m not as nice­looking as most people.",
+        "question": "44. I’m not as nice looking as most people.",
         "options":["Like me", "Unlike me"],
         "answer": "Unlike me"
     },{
@@ -303,13 +303,13 @@
     },{
         "id": "49",
         "language": "English",
-        "question": "49. My employer or supervisor makes me feel I’m not good enough. ",
+        "question": "49. My employer or supervisor makes me feel I’m not good enough.",
         "options":["Like me", "Unlike me"],
         "answer": "Unlike me"
     },{
         "id": "50",
         "language": "English",
-        "question": "50. I don’t care what happens to me",
+        "question": "50. I don’t care what happens to me.",
         "options":["Like me", "Unlike me"],
         "answer": "Unlike me"
     },{
@@ -351,13 +351,13 @@
     },{
         "id": "57",
         "language": "English",
-        "question": "57. Things usually don’t bother me.",
+        "question": "57. Things usually don't bother me.",
         "options":["Like me", "Unlike me"],
         "answer": "Like me"
     },{
         "id": "58",
         "language": "English",
-        "question": "58. I can’t be depended on.",
+        "question": "58. I cannot be relied upon.",
         "options":["Like me", "Unlike me"],
         "answer": "Unlike me"
     }
