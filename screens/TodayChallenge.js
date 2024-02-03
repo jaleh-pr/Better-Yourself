@@ -1,13 +1,16 @@
 
-import React ,{ useState } from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ScrollView, Dimensions} from 'react-native';
+import React ,{ useState , useEffect} from 'react';
+import {StyleSheet, Text, View, TouchableOpacity,TextInput, SafeAreaView, ScrollView, Dimensions} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const ScrHeight = Dimensions.get('window').height;
 const ScrWidth = Dimensions.get('window').width;
 
 
 const TodayChalleng = (props) => {
-
+  const [name , setName] = useState("");
+  // const [savedChallenge, setSavedChallenge] = useState("");
+  // const [mySavedChallenge, setMySavedChallenge] = useState("");
   const [stageNum, setStageNum] = useState(0);
   const challengesData = require("../Data/challengEnglish.json");
   const [myNumArray, setMyNumArray] = useState([]);
@@ -17,7 +20,41 @@ const TodayChalleng = (props) => {
   const [myArrayLen, setMyArrayLen] = useState();
 
 
-//let initialRndNum = Math.floor(0 + Math.random()* 4 );
+const save = async () => {
+  try{
+    await AsyncStorage.setItem( "MyName" , name);
+
+   } catch(err) {
+       alert(err);
+   }
+};
+
+const laod = async () => {
+  try{
+    let name = await AsyncStorage.getItem("MyName");
+
+    if(name !== null){
+      setName(name);
+    }
+  } catch (err){
+    alert(err);
+  }
+};
+
+const remove = async () => {
+  try{
+    await AsyncStorage.removeItem ("MyName");
+  } catch (err) {
+    alert(err)
+  }finally{
+    setName("");
+  }
+};
+
+useEffect(() => {
+  laod();
+}, []
+);
 
 const generateRandomNum = () => {
     let rndNum = Math.floor(0 + Math.random()* 7 );
@@ -50,7 +87,9 @@ const setChallengeMessage = (selectedNumber) => {
   const chaE = JSON.stringify(challengesData[selectedNumber].Example);
   setTheMessage(chaD.replace(/['"]+/g, ""));
   setTheTitle(chaT.replace(/['"]+/g, ""));
-  setTheExample(chaE.replace(/['"]+/g, ""))
+  setTheExample(chaE.replace(/['"]+/g, ""));
+
+  //setSavedChallenge(chaT.replace(/['"]+/g, ""));
 } ;
 
 if (stageNum === 0){
@@ -94,7 +133,14 @@ if (stageNum === 0){
                    <Text style={styles.Dec}>{theMessage}</Text>
                    <Text style={styles.Example}>Examples: {theExample}</Text>
                </ScrollView>
+              
         </View>
+        <View>
+          <Text>Your Name:</Text>
+          <TextInput style={styles.input} onChangeText={(text) => setName(text)} />
+
+        </View>
+        
         <View style={styles.buttonCon}>
                <TouchableOpacity
                      onPress={() => generateRandomNum()}
@@ -102,6 +148,21 @@ if (stageNum === 0){
                 >
                         <Text>Change Your Challenge</Text> 
                 </TouchableOpacity>
+                <TouchableOpacity
+                     onPress={() => save()}
+                     style={[styles.button, styles.ChangeChallengeBtn]}
+                >
+                        <Text>Save Your Challenge</Text> 
+                </TouchableOpacity>
+                <TouchableOpacity
+                     onPress={() => remove()}
+                     style={[styles.button, styles.ChangeChallengeBtn]}
+                >
+                        <Text>Remove Your Challenge</Text> 
+                </TouchableOpacity>
+        </View>
+        <View>
+          <Text>{name}</Text>
         </View>
     </SafeAreaView>
      );
@@ -119,7 +180,7 @@ if (stageNum === 0){
           </View>
           <View style={styles.buttonCon}>
               <TouchableOpacity
-                        //  onPress={() => generateRandomNum()}
+                          onPress={() => save()}
                           style={styles.button}
                       >
                           
@@ -154,7 +215,7 @@ content:{
       justifyContent: 'center',
       alignItems: 'center',
       padding:12,
-      marginTop:35,
+      marginTop:5,
       borderColor:'#55c2da',
       borderRadius:10,
       borderWidth:1,
@@ -165,6 +226,16 @@ content:{
     alignItems: 'center',
     height: ScrHeight* 0.2,
 
+  },
+  input:{
+      borderWidth:1,
+      borderColor:"black",
+      alignSelf:"stretch",
+    //  margin:32,
+     // height:64,
+      width:200,
+    //  paddingHorizontal:16,
+      fontSize:18
   },
   ChangeChallengeBtn:{
 

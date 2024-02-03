@@ -1,7 +1,8 @@
 
-import React, { useState } from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Dimensions, Image, StatusBar, SafeAreaView, ScrollView} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import {StyleSheet, Text, View, TouchableOpacity, Dimensions, Image, StatusBar, SafeAreaView, ScrollView, TextInput} from 'react-native';
 import colors from '../constant/colors';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import MessageHistory from './MessageHistory';
 
@@ -21,12 +22,75 @@ const UniMessageMainSection = (props) => {
     const [stageNum, setStageNum] = useState(0);
     const [lastMessage, setLastMessage] = useState('');
     const [selectedNum, setSelectedNum] = useState();
-  
+    const [btnAct , setBtnAct] = useState(1);
+    
+    const [dispalyMode, setDispalyMode] = useState('block');
+    const [name , setName] = useState("");
+
+    const btnActive = () => {
+        return{
+
+             marginTop:30,
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: ScrHeight* 0.2,
+            display:"block"
+        };
+    };
+
+    const btnDeactive = () => {
+        return{
+            marginTop:30,
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: ScrHeight* 0.2,
+           display:"none",
+        };
+    };
+
+    const save = async () => {
+       // setStageNum(1);
+    try{
+        await AsyncStorage.setItem( "TheMessage" , theMessage);
+
+    } catch(err) {
+        alert(err);
+    }
+    };
+
+    const laod = async () => {
+    try{
+        let theMessage = await AsyncStorage.getItem("TheMessage");
+
+        if(theMessage !== null){
+        setTheMessage(theMessage);
+        }
+    } catch (err){
+        alert(err);
+    }
+    };
+
+    const remove = async () => {
+    try{
+        await AsyncStorage.removeItem ("TheMessage");
+    } catch (err) {
+        alert(err)
+    }finally{
+        setTheMessage("");
+    }
+    };
+
+    useEffect(() => {
+    laod();
+    }, []
+    );
+    
     const generateMessage = () => {
         let rndNum = Math.floor(0 + Math.random()* 100 );
+        setBtnAct(0);
         setMyArrayLen(myNumArray.length);
         setUniverseMessage(rndNum);
-        setStageNum(stageNum+1);
+       // setStageNum(stageNum+1);
         setSelectedNum(rndNum);
         setMyNumArray(myNumArray => [...myNumArray, rndNum]);
         if (myNumArray.indexOf(rndNum) < 0 && myArrayLen < 100){
@@ -58,19 +122,49 @@ const UniMessageMainSection = (props) => {
  
 if (stageNum === 0){
   return (
-    <View>
-        <View style={styles.mainScreen}>      
+    <View style={styles.mainScreen}>
+        <View >      
             <Text style={styles.content}>{theMessage}</Text>
-            {/* <UniMessHistory/> */}
-            
         </View>
-        <View style={styles.buttonCon}>
+        <View   style = {
+                            btnAct === 1
+                              ? btnActive()
+                              : btnDeactive()
+                              
+                          } >
             <TouchableOpacity
+                       
                         onPress={generateMessage}
                         style={styles.button}
+                      
                     >
                             <Text>START</Text> 
             </TouchableOpacity> 
+        </View>
+        <View style = { btnAct === 0
+                              ? btnActive()
+                              : btnDeactive()
+                              
+                          } >
+               <TouchableOpacity
+                     onPress={() => save()}
+                     style={[styles.button, styles.ChangeChallengeBtn]}
+                >
+                        <Text>Save</Text> 
+                </TouchableOpacity>
+            <TouchableOpacity
+                     onPress={() => remove()}
+                     style={[styles.button, styles.ChangeChallengeBtn]}
+                >
+                        <Text>Remove</Text> 
+            </TouchableOpacity>
+            <TouchableOpacity
+                            onPress={generateMessage}
+                            style={[styles.button, styles.NewMessageBtn]}
+                        >
+                                <Text>Get Another Message</Text> 
+                </TouchableOpacity> 
+           
         </View>
         
     </View>
@@ -98,6 +192,21 @@ if (stageNum === 0){
                         >
                                 <Text>Get Another Message</Text> 
                 </TouchableOpacity> 
+            </View>
+
+            <View>
+            <TouchableOpacity
+                     onPress={() => save()}
+                     style={[styles.button, styles.ChangeChallengeBtn]}
+                >
+                        <Text>Save</Text> 
+                </TouchableOpacity>
+                <TouchableOpacity
+                     onPress={() => remove()}
+                     style={[styles.button, styles.ChangeChallengeBtn]}
+                >
+                        <Text>Remove</Text> 
+                </TouchableOpacity>
             </View>
             
         </SafeAreaView>
@@ -155,11 +264,27 @@ const styles = StyleSheet.create({
         backgroundColor:'#55c2da',
         fontWeight:'bold'
     },
+    startButtonCon:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: ScrHeight* 0.2,
+        display:'block',
+    },
     buttonCon:{
         justifyContent: 'center',
         alignItems: 'center',
         height: ScrHeight* 0.2,
     
+    },
+    input:{
+        borderWidth:1,
+        borderColor:"black",
+        alignSelf:"stretch",
+      //  margin:32,
+       // height:64,
+        width:200,
+      //  paddingHorizontal:16,
+        fontSize:18
     },
     NewMessageBtn:{
     //  marginBottom: ScrHeight* 0.2,
