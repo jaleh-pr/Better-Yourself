@@ -85,6 +85,9 @@ const UniMessageMainSection = (props) => {
     }, []
     );
     
+    const startGenerator =()=>{
+        setStageNum(1);
+    }
     const generateMessage = () => {
         let rndNum = Math.floor(0 + Math.random()* 100 );
         setBtnAct(0);
@@ -124,7 +127,7 @@ if (stageNum === 0){
   return (
     <View style={styles.mainScreen}>
         <View >      
-            <Text style={styles.content}>{theMessage}</Text>
+            <Text style={styles.content}>Close your eyes and concentrate on the question you seek the answer from the universe</Text>
         </View>
         <View   style = {
                             btnAct === 1
@@ -134,37 +137,12 @@ if (stageNum === 0){
                           } >
             <TouchableOpacity
                        
-                        onPress={generateMessage}
+                        onPress={startGenerator}
                         style={styles.button}
                       
                     >
                             <Text>START</Text> 
             </TouchableOpacity> 
-        </View>
-        <View style = { btnAct === 0
-                              ? btnActive()
-                              : btnDeactive()
-                              
-                          } >
-               <TouchableOpacity
-                     onPress={() => save()}
-                     style={[styles.button, styles.ChangeChallengeBtn]}
-                >
-                        <Text>Save</Text> 
-                </TouchableOpacity>
-            <TouchableOpacity
-                     onPress={() => remove()}
-                     style={[styles.button, styles.ChangeChallengeBtn]}
-                >
-                        <Text>Remove</Text> 
-            </TouchableOpacity>
-            <TouchableOpacity
-                            onPress={generateMessage}
-                            style={[styles.button, styles.NewMessageBtn]}
-                        >
-                                <Text>Get Another Message</Text> 
-                </TouchableOpacity> 
-           
         </View>
         
     </View>
@@ -192,10 +170,7 @@ if (stageNum === 0){
                         >
                                 <Text>Get Another Message</Text> 
                 </TouchableOpacity> 
-            </View>
-
-            <View>
-            <TouchableOpacity
+                <TouchableOpacity
                      onPress={() => save()}
                      style={[styles.button, styles.ChangeChallengeBtn]}
                 >
@@ -273,7 +248,7 @@ const styles = StyleSheet.create({
     buttonCon:{
         justifyContent: 'center',
         alignItems: 'center',
-        height: ScrHeight* 0.2,
+        height: ScrHeight* 0.3,
     
     },
     input:{
