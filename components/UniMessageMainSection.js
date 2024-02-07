@@ -16,13 +16,14 @@ const UniMessageMainSection = (props) => {
     
     const [myNumArray, setMyNumArray] = useState([]);
     const [theTitle, setTheTitle] = useState("Your Today Message From Universe:")
-    const [theMessage, setTheMessage ] = useState("Click start to see your universe message");
+    const [theMessage, setTheMessage ] = useState("");
     const [theId, setTheId ] = useState();
     const [myArrayLen, setMyArrayLen] = useState();
     const [stageNum, setStageNum] = useState(0);
     const [lastMessage, setLastMessage] = useState('');
     const [selectedNum, setSelectedNum] = useState();
     const [btnAct , setBtnAct] = useState(1);
+    const [timePassed, setTimePassed] = useState (true);
     
     const [dispalyMode, setDispalyMode] = useState('block');
     const [name , setName] = useState("");
@@ -49,13 +50,16 @@ const UniMessageMainSection = (props) => {
     };
 
     const save = async () => {
-       // setStageNum(1);
+        console.log(theMessage);
+        setStageNum(1);
+      
     try{
         await AsyncStorage.setItem( "TheMessage" , theMessage);
 
     } catch(err) {
         alert(err);
     }
+   
     };
 
     const laod = async () => {
@@ -81,12 +85,16 @@ const UniMessageMainSection = (props) => {
     };
 
     useEffect(() => {
+       
     laod();
+    generateMessage();
     }, []
     );
     
     const startGenerator =()=>{
         setStageNum(1);
+        setTimePassed(false);
+        setTimeout(() => setTimePassed(true), 25000);
     }
     const generateMessage = () => {
         let rndNum = Math.floor(0 + Math.random()* 100 );
@@ -130,14 +138,14 @@ if (stageNum === 0){
             <Text style={styles.content}>Close your eyes and concentrate on the question you seek the answer from the universe</Text>
         </View>
         <View   style = {
-                            btnAct === 1
+                            timePassed === true
                               ? btnActive()
                               : btnDeactive()
                               
                           } >
             <TouchableOpacity
                        
-                        onPress={startGenerator}
+                       onPress={() => save()}
                         style={styles.button}
                       
                     >
@@ -165,23 +173,24 @@ if (stageNum === 0){
             
             <View style={styles.buttonCon}>
                 <TouchableOpacity
-                            onPress={generateMessage}
+                           // onPress={() => save()}
+                           onPress={generateMessage}
                             style={[styles.button, styles.NewMessageBtn]}
                         >
                                 <Text>Get Another Message</Text> 
                 </TouchableOpacity> 
-                <TouchableOpacity
+              {/* <TouchableOpacity
                      onPress={() => save()}
                      style={[styles.button, styles.ChangeChallengeBtn]}
                 >
                         <Text>Save</Text> 
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 <TouchableOpacity
                      onPress={() => remove()}
                      style={[styles.button, styles.ChangeChallengeBtn]}
                 >
-                        <Text>Remove</Text> 
-                </TouchableOpacity>
+                        <Text>Remove</Text>  
+                </TouchableOpacity> 
             </View>
             
         </SafeAreaView>

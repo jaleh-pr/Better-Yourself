@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { StyleSheet, Text, View, ActivityIndicator, Dimensions} from 'react-native';
+import { StyleSheet,ImageBackground, Text, View, ActivityIndicator, Dimensions} from 'react-native';
 
 import LanguageSelection from "./screens/LanguageSelection";
 import WarningE  from './screens/WarningE';
@@ -22,20 +22,25 @@ export default function App() {
   const [ScreenName, setScreenName] = useState();
   const [LanguageName, setLanguageName] = useState("");
   const [ScreenNum, setScreenNum] = useState (0);
+  const [theSectionName, setTheSectionName] = useState(0);
 
   const LanguageNameHandler = (selectedLanguage) =>{
     setLanguageName (selectedLanguage);
   }
 
   const ScreenNumberHandler = (theScreenNum) => {
-    setScreenNum (theScreenNum)
+    setScreenNum (theScreenNum);
+  }
+
+  const SectionNameHandler = (theSectionName) => {
+    setTheSectionName (theSectionName)
   }
 
   let content = < LanguageSelection onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   if(LanguageName === "English" && ScreenNum === 1){
     content = <WarningE onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   } else if (LanguageName === "English" && ScreenNum === 2){
-    content = <HomePage onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+    content = <HomePage onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler} onSectionName={SectionNameHandler}/>
   }else if (LanguageName === "English" && ScreenNum === 3){
     content = <UniMessage onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   }else if (LanguageName === "English" && ScreenNum === 4){
@@ -56,7 +61,7 @@ export default function App() {
 
   let footer;
   if (ScreenNum > 2){
-    footer = <Footer onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+    footer = <Footer onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler} theSectionName = {theSectionName}/>
   }
 
   let header;
@@ -65,14 +70,18 @@ export default function App() {
   }
 
   return (
+    
     <View style={styles.container}>
+      
       <View style={styles.header}>{header}</View>
       <View style={styles.content}>{content}</View>
       <View style={styles.footer}>{footer}</View>
       
       {/* <Text style={styles.LN}>{LanguageName}</Text> 
       <Text style={styles.SN}>{ScreenNum}</Text> */}
+       
     </View>
+   
   );
 }
 

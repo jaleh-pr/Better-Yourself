@@ -1,8 +1,10 @@
 
 import React, { useState , useEffect} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, ImageBackground} from 'react-native';
 
 import UniMessageMainSection from '../components/UniMessageMainSection';
+//source={require('../assets/icons8-mail-50.png')}
+
 
 const UniMessage = (props) => {
 
@@ -12,11 +14,13 @@ const [stage, setStage] = useState(0);
 
 if(stage === 0){
   return (
+   // <ImageBackground source={require('../assets/flowers.jpg')}>
     <View style={styles.mainScreen}>
-
+      
             <UniMessageMainSection myData={UniMessageData} changeStage = {stage => setStage(stage)}/>
     
     </View>
+   // </ImageBackground>
   );
 }else if (stage === 5){
   return(
@@ -36,6 +40,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         color: "black",
         paddingTop: 10,
+        
     },
     FinishScreen:{
       backgroundColor:'pink',

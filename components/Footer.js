@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Dimensions, Image} from 'react-native';
 
 
@@ -9,6 +9,7 @@ const ScrWidth = Dimensions.get('window').width;
 
 const Footer = (props) => {
 
+    const {theSectionName}  = props;
     const [sectionName, setSectionName] = useState(0);
     
     const btnActive = () => {
@@ -39,10 +40,27 @@ const Footer = (props) => {
         };
     };
 
+    useEffect(() => {
+        myStart();
+        }, []
+        );
+
+    const myStart = () => {
+        if( theSectionName == 11){
+            setSectionName(11)
+        }else if (theSectionName ==12){
+            setSectionName(12)
+        }else if (theSectionName ==13){
+            setSectionName(13)
+        }else{
+            setSectionName(14)
+        }
+    };
     const onLanNumProps = (MyScreenNum,sectionName) => {
         props.onLanguageName("English");
         props.onScreenNum(MyScreenNum);
         setSectionName(sectionName);
+       theSectionName == 0 ;
     }
 
   return (
@@ -52,7 +70,7 @@ const Footer = (props) => {
                 <TouchableOpacity
                     onPress={() => onLanNumProps(3,11)}
                     style = {
-                        sectionName === 11
+                        (sectionName === 11)
                           ? btnActive()
                           : btnDeactive()
                           
@@ -70,7 +88,7 @@ const Footer = (props) => {
                 <TouchableOpacity
                      onPress={() => onLanNumProps(4,12)}
                      style = {
-                        sectionName === 12
+                        (sectionName=== 12 )
                           ? btnActive()
                           : btnDeactive()
                           
@@ -85,7 +103,7 @@ const Footer = (props) => {
                 <TouchableOpacity
                      onPress={() => onLanNumProps(5,13)}
                      style = {
-                        sectionName === 13
+                        (sectionName === 13 )
                           ? btnActive()
                           : btnDeactive()
                           
@@ -100,7 +118,7 @@ const Footer = (props) => {
                 <TouchableOpacity
                      onPress={() => onLanNumProps(6,14)}
                      style = {
-                        sectionName === 14
+                        (sectionName === 14 )
                           ? btnActive()
                           : btnDeactive()
                           

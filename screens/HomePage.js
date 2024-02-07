@@ -5,9 +5,10 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 
 const HomePage = (props) => {
-    const onLanNumProps = (MyScreenNum) => {
+    const onLanNumProps = (MyScreenNum,theSectionName) => {
         props.onLanguageName("English");
         props.onScreenNum(MyScreenNum);
+        props.onSectionName(theSectionName);
     }
 
   return (
@@ -23,7 +24,7 @@ const HomePage = (props) => {
             </View>
             <View>
                 <TouchableOpacity
-                     onPress={() => onLanNumProps(3)}
+                     onPress={() => onLanNumProps(3,11)}
                      style={styles.button}
                 >
                     <View>
@@ -31,7 +32,7 @@ const HomePage = (props) => {
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity
-                     onPress={() => onLanNumProps(4)}
+                     onPress={() => onLanNumProps(4,12)}
                      style={styles.button}
                 >
                     <View>
@@ -39,7 +40,7 @@ const HomePage = (props) => {
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity
-                     onPress={() => onLanNumProps(5)}
+                     onPress={() => onLanNumProps(5,13)}
                      style={styles.button}
                 >
                     <View>
@@ -47,7 +48,7 @@ const HomePage = (props) => {
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity
-                     onPress={() => onLanNumProps(6)}
+                     onPress={() => onLanNumProps(6,14)}
                      style={styles.button}
                 >
                     <View>
