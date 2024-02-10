@@ -19,7 +19,7 @@ const Footer = (props) => {
             padding:12,
             paddingBottom:110,
             margin:5,
-            borderColor:'#55c2da',
+            borderColor:'#ABBA72',
             borderRadius:10,
             borderWidth:1,
             backgroundColor:'#fff'
@@ -33,10 +33,10 @@ const Footer = (props) => {
             padding:12,
             paddingBottom:110,
             margin:5,
-            borderColor:'#55c2da',
+            borderColor:'#ABBA72',
             borderRadius:10,
             borderWidth:1,
-            backgroundColor:'#55c2da'
+            backgroundColor:'#ABBA72'
         };
     };
 

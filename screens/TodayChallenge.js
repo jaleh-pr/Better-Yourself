@@ -17,12 +17,48 @@ const TodayChalleng = (props) => {
   const [theTitle, setTheTitle ] = useState("");
   const [theMessage, setTheMessage ] = useState("");
   const [theExample, setTheExample ] = useState("");
-  const [myArrayLen, setMyArrayLen] = useState();
+  const [myArrayLen, setMyArrayLen] = useState(0);
 
+
+// const save = async () => {
+//   try{
+//     await AsyncStorage.setItem( "MyName" , name);
+
+//    } catch(err) {
+//        alert(err);
+//    }
+// };
+
+// const laod = async () => {
+//   try{
+//     let name = await AsyncStorage.getItem("MyName");
+
+//     if(name !== null){
+//       setName(name);
+//     }
+//   } catch (err){
+//     alert(err);
+//   }
+// };
+
+// const remove = async () => {
+//   try{
+//     await AsyncStorage.removeItem ("MyName");
+//   } catch (err) {
+//     alert(err)
+//   }finally{
+//     setName("");
+//   }
+// };
+
+// useEffect(() => {
+//   laod();
+// }, []
+// );
 
 const save = async () => {
   try{
-    await AsyncStorage.setItem( "MyName" , name);
+    await AsyncStorage.setItem( '@MySuperStore:key' ,JSON.stringify( myNumArray));
 
    } catch(err) {
        alert(err);
@@ -31,10 +67,11 @@ const save = async () => {
 
 const laod = async () => {
   try{
-    let name = await AsyncStorage.getItem("MyName");
+    let myNumArray = await AsyncStorage.getItem('@MySuperStore:key');
 
-    if(name !== null){
-      setName(name);
+    if(myNumArray !== null){
+     setMyNumArray(JSON.parse(myNumArray));
+     console.log(JSON.parse(myNumArray));
     }
   } catch (err){
     alert(err);
@@ -43,11 +80,11 @@ const laod = async () => {
 
 const remove = async () => {
   try{
-    await AsyncStorage.removeItem ("MyName");
+    await AsyncStorage.removeItem ("@MySuperStore:key");
   } catch (err) {
     alert(err)
   }finally{
-    setName("");
+    setMyNumArray("");
   }
 };
 
@@ -56,29 +93,30 @@ useEffect(() => {
 }, []
 );
 
+const startGenerator = () => {
+  setStageNum(stageNum+1);
+  generateRandomNum();
+}
 const generateRandomNum = () => {
+  const theArrayL = myNumArray.length;
     let rndNum = Math.floor(0 + Math.random()* 7 );
     setChallengeMessage(rndNum);
-    setMyNumArray(myNumArray => [...myNumArray, rndNum]);
-    setStageNum(stageNum+1);
+
   if (myNumArray.indexOf(rndNum) < 0 ){
       setChallengeMessage(rndNum);
       setMyNumArray(myNumArray => [...myNumArray, rndNum]);
-      
-     // setMyArrayLen(myArrayLen+1);
-  } else if (myNumArray.indexOf(rndNum) > 0  ){
-     
-         setChallengeMessage(rndNum+1);
-        setMyNumArray(myNumArray => [...myNumArray, rndNum+1]);
-
-  }else if (myNumArray.indexOf(rndNum) > 0 && myArrayLen >= 8){
+      console.log("my array",myNumArray); 
+  } else if (myNumArray.indexOf(rndNum) > 0 && theArrayL < 7){
+    generateRandomNum();
+  }else if (myNumArray.indexOf(rndNum) > 0 && theArrayL >= 7){
 
       setMyNumArray ([]);
       setMyNumArray(myNumArray => [...myNumArray, rndNum]);
   }
   setMyArrayLen(myNumArray.length);
-  console.log(myNumArray);
+  
   console.log(rndNum);
+  console.log("length:",theArrayL)
 };
 
 const setChallengeMessage = (selectedNumber) => {
@@ -88,9 +126,16 @@ const setChallengeMessage = (selectedNumber) => {
   setTheMessage(chaD.replace(/['"]+/g, ""));
   setTheTitle(chaT.replace(/['"]+/g, ""));
   setTheExample(chaE.replace(/['"]+/g, ""));
-
-  //setSavedChallenge(chaT.replace(/['"]+/g, ""));
 } ;
+
+const savedChallenges = () => {
+
+ setMyArrayLen(myNumArray.length);
+const lastArray = myNumArray[myArrayLen];
+setStageNum(2);
+setChallengeMessage(lastArray);
+};
+
 
 if (stageNum === 0){
 
@@ -103,23 +148,14 @@ if (stageNum === 0){
                 </Text>
             </View>
             <TouchableOpacity
-                     onPress={() => generateRandomNum()}
+                     onPress={() => startGenerator()}
                      style={styles.button}
                 >
                     <View>
                         <Text>Start</Text> 
                         
                     </View>
-                </TouchableOpacity>
-
-                {/* <View>
-                  <Text>{theTitle}</Text>
-                   <Text>{theMessage}</Text>
-                   <Text>Example: {theExample}</Text>
-                </View>
-                 */}
-          
-        
+                </TouchableOpacity> 
     </View>
   );
 }else if (stageNum === 1){
@@ -134,11 +170,6 @@ if (stageNum === 0){
                    <Text style={styles.Example}>Examples: {theExample}</Text>
                </ScrollView>
               
-        </View>
-        <View>
-          <Text>Your Name:</Text>
-          <TextInput style={styles.input} onChangeText={(text) => setName(text)} />
-
         </View>
         
         <View style={styles.buttonCon}>
@@ -160,9 +191,15 @@ if (stageNum === 0){
                 >
                         <Text>Remove Your Challenge</Text> 
                 </TouchableOpacity>
+                <TouchableOpacity
+                     onPress={savedChallenges}
+                     style={[styles.button, styles.ChangeChallengeBtn]}
+                >
+                        <Text>See Your pervious Challenges</Text> 
+                </TouchableOpacity>
         </View>
         <View>
-          <Text>{name}</Text>
+          <Text>{myNumArray}</Text>
         </View>
     </SafeAreaView>
      );
@@ -178,15 +215,7 @@ if (stageNum === 0){
                    <Text style={styles.Example}>Examples: {theExample}</Text>
                </ScrollView>
           </View>
-          <View style={styles.buttonCon}>
-              <TouchableOpacity
-                          onPress={() => save()}
-                          style={styles.button}
-                      >
-                          
-                              <Text>Save your challenge</Text> 
-              </TouchableOpacity>
-          </View>
+         
      </SafeAreaView>
      );
     }

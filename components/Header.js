@@ -47,10 +47,10 @@ const styles = StyleSheet.create({
        // paddingBottom:70,
         
         marginTop:35,
-        borderColor:'#55c2da',
+        borderColor:'#ABBA72',
         borderRadius:10,
         borderWidth:1,
-        backgroundColor:'#55c2da'
+        backgroundColor:'#ABBA72'
     }
 })
 export default Header;

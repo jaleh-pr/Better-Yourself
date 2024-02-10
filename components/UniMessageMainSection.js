@@ -4,8 +4,6 @@ import {StyleSheet, Text, View, TouchableOpacity, Dimensions, Image, StatusBar, 
 import colors from '../constant/colors';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import MessageHistory from './MessageHistory';
-
 
 const ScrHeight = Dimensions.get('window').height;
 const ScrWidth = Dimensions.get('window').width;
@@ -20,42 +18,36 @@ const UniMessageMainSection = (props) => {
     const [theId, setTheId ] = useState();
     const [myArrayLen, setMyArrayLen] = useState();
     const [stageNum, setStageNum] = useState(0);
-    const [lastMessage, setLastMessage] = useState('');
     const [selectedNum, setSelectedNum] = useState();
     const [btnAct , setBtnAct] = useState(1);
     const [timePassed, setTimePassed] = useState (true);
     
-    const [dispalyMode, setDispalyMode] = useState('block');
-    const [name , setName] = useState("");
-
     const btnActive = () => {
         return{
-
-             marginTop:30,
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: ScrHeight* 0.2,
+            //  marginTop:30,
+            // justifyContent: 'center',
+            // alignItems: 'center',
+            // height: ScrHeight* 0.2,
             display:"block"
         };
     };
 
     const btnDeactive = () => {
         return{
-            marginTop:30,
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: ScrHeight* 0.2,
+            // marginTop:30,
+            // justifyContent: 'center',
+            // alignItems: 'center',
+            // height: ScrHeight* 0.2,
            display:"none",
         };
     };
 
     const save = async () => {
-        console.log(theMessage);
-        setStageNum(1);
-      
+        console.log(stageNum);
+       setStageNum(stageNum+1);
     try{
         await AsyncStorage.setItem( "TheMessage" , theMessage);
-
+    
     } catch(err) {
         alert(err);
     }
@@ -65,7 +57,6 @@ const UniMessageMainSection = (props) => {
     const laod = async () => {
     try{
         let theMessage = await AsyncStorage.getItem("TheMessage");
-
         if(theMessage !== null){
         setTheMessage(theMessage);
         }
@@ -73,6 +64,7 @@ const UniMessageMainSection = (props) => {
         alert(err);
     }
     };
+
 
     const remove = async () => {
     try{
@@ -82,40 +74,43 @@ const UniMessageMainSection = (props) => {
     }finally{
         setTheMessage("");
     }
+    setStageNum(stageNum+1);
     };
 
+
     useEffect(() => {
-       
-    laod();
-    generateMessage();
+
+        laod();
+        generateMessage();
+        setTimeout(() => remove(), 36000000);
+       // setTimeout(() => setTimePassed(true), 35000);
+    
     }, []
     );
     
-    const startGenerator =()=>{
-        setStageNum(1);
-        setTimePassed(false);
-        setTimeout(() => setTimePassed(true), 25000);
+    const nextGenerator = () => {
+        generateMessage();
+        setTimePassed(false);   
     }
+
     const generateMessage = () => {
         let rndNum = Math.floor(0 + Math.random()* 100 );
         setBtnAct(0);
         setMyArrayLen(myNumArray.length);
         setUniverseMessage(rndNum);
-       // setStageNum(stageNum+1);
         setSelectedNum(rndNum);
         setMyNumArray(myNumArray => [...myNumArray, rndNum]);
+
         if (myNumArray.indexOf(rndNum) < 0 && myArrayLen < 100){
-          //  setMyNumArray(myNumArray => [...myNumArray, rndNum]);
             setUniverseMessage(rndNum);
             setMyArrayLen(myArrayLen+1);
-            
         } else if (myNumArray.indexOf(rndNum) > 0 && myArrayLen < 100){
             generateMessage();
         }else if (myNumArray.indexOf(rndNum) > 0 && myArrayLen >= 100){
             setMyNumArray ([]);
             generateMessage();
         }
-        generatLastMessage();
+
     };
 
    
@@ -127,9 +122,7 @@ const UniMessageMainSection = (props) => {
         setTheId(mi.replace(/['"]+/g, ""));
     } ;
 
-    const generatLastMessage = () =>{
-        setLastMessage(theMessage);
-    }
+ 
  
 if (stageNum === 0){
   return (
@@ -137,16 +130,11 @@ if (stageNum === 0){
         <View >      
             <Text style={styles.content}>Close your eyes and concentrate on the question you seek the answer from the universe</Text>
         </View>
-        <View   style = {
-                            timePassed === true
-                              ? btnActive()
-                              : btnDeactive()
-                              
-                          } >
+        <View  style={styles.buttonCon} >
             <TouchableOpacity
                        
                        onPress={() => save()}
-                        style={styles.button}
+                       style={[styles.button, styles.NewMessageBtn]}
                       
                     >
                             <Text>START</Text> 
@@ -174,17 +162,21 @@ if (stageNum === 0){
             <View style={styles.buttonCon}>
                 <TouchableOpacity
                            // onPress={() => save()}
-                           onPress={generateMessage}
-                            style={[styles.button, styles.NewMessageBtn]}
+                           onPress={nextGenerator}
+                           style = {[
+                            timePassed == true
+                              ? btnActive()
+                              : btnDeactive()   
+                          , styles.button]}
                         >
                                 <Text>Get Another Message</Text> 
                 </TouchableOpacity> 
-              {/* <TouchableOpacity
+              <TouchableOpacity
                      onPress={() => save()}
                      style={[styles.button, styles.ChangeChallengeBtn]}
                 >
                         <Text>Save</Text> 
-                </TouchableOpacity> */}
+                </TouchableOpacity>
                 <TouchableOpacity
                      onPress={() => remove()}
                      style={[styles.button, styles.ChangeChallengeBtn]}
@@ -195,24 +187,11 @@ if (stageNum === 0){
             
         </SafeAreaView>
       );
-}else {
+}else if(stageNum ==4 ){
     return(
     <SafeAreaView>
        
-         {/* <View style={styles.historySec}>
-                <Text>{myNumArray}</Text>
-                <Text style={styles.content}>{theMessage}</Text>
-                <MessageHistory messageNums={selectedNum}/>
-        </View> */}
-        <View>
-
-            <TouchableOpacity
-                            onPress={() => props.changeStage(5)}
-                            style={[styles.button, styles.NewMessageBtn]}
-                        >
-                                <Text>Save Your messages</Text> 
-                </TouchableOpacity> 
-        </View>
+        <Text>You have seen all your messages for today</Text>
            
      </SafeAreaView>
     );

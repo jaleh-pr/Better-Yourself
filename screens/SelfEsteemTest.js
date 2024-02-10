@@ -234,17 +234,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding:12,
         marginTop:35,
-        borderColor:'#55c2da',
+        borderColor:'#FBB651',
         borderRadius:10,
         borderWidth:1,
-        backgroundColor:'#55c2da'
+        backgroundColor:'#FBB651'
     },
     answerBtn:{
         justifyContent: 'center',
         alignItems: 'center',
         padding:5,
         marginTop:10,
-        borderColor:'#55c2da',
+        borderColor:'#FBB651',
         borderRadius:10,
         borderWidth:1,
         width: ScrWidth * 0.5,
