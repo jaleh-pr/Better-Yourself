@@ -8,12 +8,13 @@ const ScrWidth = Dimensions.get('window').width;
 
 
 const TodayChalleng = (props) => {
-  const [name , setName] = useState("");
-  // const [savedChallenge, setSavedChallenge] = useState("");
+  const [theDate , setTheDate] = useState("");
+   const [savedChallengeNum, setSavedChallengeNum] = useState();
   // const [mySavedChallenge, setMySavedChallenge] = useState("");
   const [stageNum, setStageNum] = useState(0);
   const challengesData = require("../Data/challengEnglish.json");
   const [myNumArray, setMyNumArray] = useState([]);
+  const [theSavedArray, setTheSavedArray] = useState([]);
   const [theTitle, setTheTitle ] = useState("");
   const [theMessage, setTheMessage ] = useState("");
   const [theExample, setTheExample ] = useState("");
@@ -57,8 +58,9 @@ const TodayChalleng = (props) => {
 // );
 
 const save = async () => {
+  
   try{
-    await AsyncStorage.setItem( '@MySuperStore:key' ,JSON.stringify( myNumArray));
+    await AsyncStorage.setItem( '@MySuperStore:key' ,JSON.stringify( theSavedArray));
 
    } catch(err) {
        alert(err);
@@ -67,11 +69,11 @@ const save = async () => {
 
 const laod = async () => {
   try{
-    let myNumArray = await AsyncStorage.getItem('@MySuperStore:key');
+    let theSavedArray = await AsyncStorage.getItem('@MySuperStore:key');
 
-    if(myNumArray !== null){
-     setMyNumArray(JSON.parse(myNumArray));
-     console.log(JSON.parse(myNumArray));
+    if(theSavedArray !== null){
+     setTheSavedArray(JSON.parse(theSavedArray));
+     console.log(JSON.parse(theSavedArray));
     }
   } catch (err){
     alert(err);
@@ -84,27 +86,37 @@ const remove = async () => {
   } catch (err) {
     alert(err)
   }finally{
-    setMyNumArray("");
+    setTheSavedArray("");
   }
 };
 
 useEffect(() => {
+  
   laod();
+ // save();
 }, []
 );
 
 const startGenerator = () => {
   setStageNum(stageNum+1);
   generateRandomNum();
+  dateGenerator();
+ 
 }
+const dateGenerator = () => {
+  const today = JSON.stringify(new Date().getDate());
+  setTheDate(today);
+};
+
 const generateRandomNum = () => {
   const theArrayL = myNumArray.length;
     let rndNum = Math.floor(0 + Math.random()* 7 );
     setChallengeMessage(rndNum);
-
+    setSavedChallengeNum(rndNum);
   if (myNumArray.indexOf(rndNum) < 0 ){
       setChallengeMessage(rndNum);
       setMyNumArray(myNumArray => [...myNumArray, rndNum]);
+      
       console.log("my array",myNumArray); 
   } else if (myNumArray.indexOf(rndNum) > 0 && theArrayL < 7){
     generateRandomNum();
@@ -115,7 +127,7 @@ const generateRandomNum = () => {
   }
   setMyArrayLen(myNumArray.length);
   
-  console.log(rndNum);
+  console.log("random num:",savedChallengeNum);
   console.log("length:",theArrayL)
 };
 
@@ -128,10 +140,15 @@ const setChallengeMessage = (selectedNumber) => {
   setTheExample(chaE.replace(/['"]+/g, ""));
 } ;
 
+const saveGenerator = () => {
+  setTheSavedArray(theSavedArray => [...theSavedArray,savedChallengeNum]);
+  save(); 
+};
+
 const savedChallenges = () => {
 
- setMyArrayLen(myNumArray.length);
-const lastArray = myNumArray[myArrayLen];
+ setMyArrayLen(theSavedArray.length);
+const lastArray = theSavedArray[myArrayLen];
 setStageNum(2);
 setChallengeMessage(lastArray);
 };
@@ -180,7 +197,7 @@ if (stageNum === 0){
                         <Text>Change Your Challenge</Text> 
                 </TouchableOpacity>
                 <TouchableOpacity
-                     onPress={() => save()}
+                     onPress={saveGenerator}
                      style={[styles.button, styles.ChangeChallengeBtn]}
                 >
                         <Text>Save Your Challenge</Text> 
@@ -199,7 +216,9 @@ if (stageNum === 0){
                 </TouchableOpacity>
         </View>
         <View>
-          <Text>{myNumArray}</Text>
+          <Text>Current:{savedChallengeNum}</Text>
+          <Text>saved array:{theSavedArray}</Text>
+          <Text>Date: {theDate}</Text>
         </View>
     </SafeAreaView>
      );
