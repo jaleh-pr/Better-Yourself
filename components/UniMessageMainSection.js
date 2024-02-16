@@ -258,8 +258,6 @@ const styles = StyleSheet.create({
         fontSize:16,
         textAlign:'justify',
         overflow:'scroll',
-      
-      
     },
     title:{
        

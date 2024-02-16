@@ -33,7 +33,7 @@ const PersonalTest = (props) => {
                         onPress={() => onLanNumProps(9)}
                         style={styles.button}
                     >
-                            <Text>MBTI Test</Text> 
+                            <Text>Introvert/Extrovert</Text> 
             </TouchableOpacity> 
         </View>
             <View>

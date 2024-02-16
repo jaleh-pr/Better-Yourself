@@ -9,7 +9,7 @@ const ScrWidth = Dimensions.get('window').width;
 
 const TodayChalleng = (props) => {
   const [theDate , setTheDate] = useState("");
-   const [savedChallengeNum, setSavedChallengeNum] = useState();
+   const [savedChallengeNum, setSavedChallengeNum] = useState("");
   // const [mySavedChallenge, setMySavedChallenge] = useState("");
   const [stageNum, setStageNum] = useState(0);
   const challengesData = require("../Data/challengEnglish.json");
@@ -20,47 +20,15 @@ const TodayChalleng = (props) => {
   const [theExample, setTheExample ] = useState("");
   const [myArrayLen, setMyArrayLen] = useState(0);
 
+  const [savedTitle, setSavedTitle ] = useState("");
 
-// const save = async () => {
-//   try{
-//     await AsyncStorage.setItem( "MyName" , name);
 
-//    } catch(err) {
-//        alert(err);
-//    }
-// };
 
-// const laod = async () => {
-//   try{
-//     let name = await AsyncStorage.getItem("MyName");
-
-//     if(name !== null){
-//       setName(name);
-//     }
-//   } catch (err){
-//     alert(err);
-//   }
-// };
-
-// const remove = async () => {
-//   try{
-//     await AsyncStorage.removeItem ("MyName");
-//   } catch (err) {
-//     alert(err)
-//   }finally{
-//     setName("");
-//   }
-// };
-
-// useEffect(() => {
-//   laod();
-// }, []
-// );
 
 const save = async () => {
-  
-  try{
-    await AsyncStorage.setItem( '@MySuperStore:key' ,JSON.stringify( theSavedArray));
+//  setTheSavedArray(theSavedArray => [...theSavedArray,savedChallengeNum]);
+try{
+    await AsyncStorage.setItem( 'SavedArray' ,JSON.stringify( theSavedArray));
 
    } catch(err) {
        alert(err);
@@ -69,7 +37,7 @@ const save = async () => {
 
 const laod = async () => {
   try{
-    let theSavedArray = await AsyncStorage.getItem('@MySuperStore:key');
+    let theSavedArray = await AsyncStorage.getItem('SavedArray');
 
     if(theSavedArray !== null){
      setTheSavedArray(JSON.parse(theSavedArray));
@@ -82,7 +50,7 @@ const laod = async () => {
 
 const remove = async () => {
   try{
-    await AsyncStorage.removeItem ("@MySuperStore:key");
+    await AsyncStorage.removeItem ("SavedArray");
   } catch (err) {
     alert(err)
   }finally{
@@ -91,18 +59,25 @@ const remove = async () => {
 };
 
 useEffect(() => {
-  
+  generateRandomNum();
   laod();
- // save();
 }, []
 );
 
+const saveGenerator = () => {
+ // setTheSavedArray(theSavedArray => [...theSavedArray,savedChallengeNum]);
+  save();
+  setMyArrayLen(theSavedArray.length);
+};
+
 const startGenerator = () => {
+  
   setStageNum(stageNum+1);
-  generateRandomNum();
-  dateGenerator();
- 
-}
+  setTheSavedArray(theSavedArray => [...theSavedArray,savedChallengeNum]);
+  
+};
+
+
 const dateGenerator = () => {
   const today = JSON.stringify(new Date().getDate());
   setTheDate(today);
@@ -112,23 +87,20 @@ const generateRandomNum = () => {
   const theArrayL = myNumArray.length;
     let rndNum = Math.floor(0 + Math.random()* 7 );
     setChallengeMessage(rndNum);
-    setSavedChallengeNum(rndNum);
   if (myNumArray.indexOf(rndNum) < 0 ){
       setChallengeMessage(rndNum);
       setMyNumArray(myNumArray => [...myNumArray, rndNum]);
-      
       console.log("my array",myNumArray); 
   } else if (myNumArray.indexOf(rndNum) > 0 && theArrayL < 7){
     generateRandomNum();
   }else if (myNumArray.indexOf(rndNum) > 0 && theArrayL >= 7){
-
       setMyNumArray ([]);
       setMyNumArray(myNumArray => [...myNumArray, rndNum]);
   }
   setMyArrayLen(myNumArray.length);
-  
+  setSavedChallengeNum(rndNum);
   console.log("random num:",savedChallengeNum);
-  console.log("length:",theArrayL)
+  console.log("theSavedArray", theSavedArray)
 };
 
 const setChallengeMessage = (selectedNumber) => {
@@ -140,19 +112,23 @@ const setChallengeMessage = (selectedNumber) => {
   setTheExample(chaE.replace(/['"]+/g, ""));
 } ;
 
-const saveGenerator = () => {
-  setTheSavedArray(theSavedArray => [...theSavedArray,savedChallengeNum]);
-  save(); 
-};
-
+const backFunction = () => {
+  setStageNum(1);
+}
 const savedChallenges = () => {
+  setStageNum(2);
+ console.log("theSavedArrayLength", theSavedArray.length);
+const lastArray = theSavedArray[theSavedArray.length-2];
 
- setMyArrayLen(theSavedArray.length);
-const lastArray = theSavedArray[myArrayLen];
-setStageNum(2);
-setChallengeMessage(lastArray);
+
+ const savedT = JSON.stringify(challengesData[lastArray].Title);
+    setSavedTitle(savedT.replace(/['"]+/g, ""));
+
+// for (let i = 0; i < theSavedArray.length-1; i++) {
+//   const savedT = JSON.stringify(challengesData[0].Title);
+//   setSavedTitle(savedT.replace(/['"]+/g, ""));
+//   };  
 };
-
 
 if (stageNum === 0){
 
@@ -165,7 +141,7 @@ if (stageNum === 0){
                 </Text>
             </View>
             <TouchableOpacity
-                     onPress={() => startGenerator()}
+                     onPress={startGenerator}
                      style={styles.button}
                 >
                     <View>
@@ -200,14 +176,9 @@ if (stageNum === 0){
                      onPress={saveGenerator}
                      style={[styles.button, styles.ChangeChallengeBtn]}
                 >
-                        <Text>Save Your Challenge</Text> 
+                        <Text>Accept the challenge</Text> 
                 </TouchableOpacity>
-                <TouchableOpacity
-                     onPress={() => remove()}
-                     style={[styles.button, styles.ChangeChallengeBtn]}
-                >
-                        <Text>Remove Your Challenge</Text> 
-                </TouchableOpacity>
+               
                 <TouchableOpacity
                      onPress={savedChallenges}
                      style={[styles.button, styles.ChangeChallengeBtn]}
@@ -229,11 +200,38 @@ if (stageNum === 0){
           <View style={styles.content}>  
                 
           <ScrollView vertical > 
-                    <Text style={styles.title}>{theTitle}</Text>
-                   <Text style={styles.Dec}> {theMessage}</Text>
-                   <Text style={styles.Example}>Examples: {theExample}</Text>
+                    <Text style={styles.title}>{savedTitle}</Text>
+                  
                </ScrollView>
           </View>
+          <TouchableOpacity
+                     onPress={() => remove()}
+                     style={[styles.button, styles.ChangeChallengeBtn]}
+                >
+                        <Text>Remove Your Challenge</Text> 
+          </TouchableOpacity>
+          <TouchableOpacity
+                     onPress={backFunction}
+                     style={[styles.button, styles.ChangeChallengeBtn]}
+                >
+                        <Text>Back to your today challenge</Text> 
+          </TouchableOpacity>
+         
+     </SafeAreaView>
+     );
+    }else if (stageNum === 3){
+      return(
+      <SafeAreaView style={styles.mainSection}>
+         <Text>You have saved your challenge</Text>
+          <View style={styles.content}>  
+          <TouchableOpacity
+                     onPress={savedChallenges}
+                     style={[styles.button, styles.ChangeChallengeBtn]}
+                >
+                        <Text>OK</Text> 
+                </TouchableOpacity>
+        </View>
+        
          
      </SafeAreaView>
      );
@@ -261,15 +259,18 @@ content:{
 },
     button:{
       justifyContent: 'center',
+      width: ScrWidth*0.3,
+      alignItems: 'flex-start',
       alignItems: 'center',
       padding:12,
       marginTop:5,
-      borderColor:'#55c2da',
+      borderColor:'#FBB651',
       borderRadius:10,
       borderWidth:1,
-      backgroundColor:'#55c2da'
+      backgroundColor:'#FBB651'
   },
   buttonCon:{
+  
     justifyContent: 'center',
     alignItems: 'center',
     height: ScrHeight* 0.2,
