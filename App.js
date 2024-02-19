@@ -8,13 +8,13 @@ import HomePage from './screens/HomePage';
 import UniMessage from './screens/UniMessage';
 import TodayChalleng from './screens/TodayChallenge';
 import PersonalTest from './screens/PersonalTest';
-import Zodic from './screens/Zodic';
+import Zodiac from './screens/Zodiac';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import DISKtest from './screens/DISKtest';
 import SelfEsteemTest from './screens/SelfEsteemTest';
 import IntrovertExtrovert from './screens/IntrovertExtrovert';
-import ZodiacMonth from './screens/ZodiacMonth';
+//import ZodiacMonth from './screens/ZodiacMonth';
 
 const ScrHeight = Dimensions.get('window').height;
 const ScrWidth = Dimensions.get('window').width;
@@ -49,16 +49,17 @@ export default function App() {
   }else if (LanguageName === "English" && ScreenNum === 5){
     content = <PersonalTest onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   }else if (LanguageName === "English" && ScreenNum === 6){
-    content = <Zodic onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+    content = <Zodiac onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   }else if (LanguageName === "English" && ScreenNum === 7){
     content = <DISKtest onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   }else if (LanguageName === "English" && ScreenNum === 8){
     content = <SelfEsteemTest onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   }else if (LanguageName === "English" && ScreenNum === 9){
     content = <IntrovertExtrovert onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
-  } else if (LanguageName === "English" && ScreenNum === 11){
-    content = <ZodiacMonth onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   }
+    // } else if (LanguageName === "English" && ScreenNum === 11){
+  //   content = <ZodiacMonth onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+  // }
 
   
 

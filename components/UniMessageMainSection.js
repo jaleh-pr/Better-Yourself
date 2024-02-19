@@ -1,8 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Dimensions, Image, StatusBar, SafeAreaView, ScrollView, TextInput} from 'react-native';
-import colors from '../constant/colors';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const ScrHeight = Dimensions.get('window').height;
@@ -24,76 +22,71 @@ const UniMessageMainSection = (props) => {
     
     const btnActive = () => {
         return{
-            //  marginTop:30,
-            // justifyContent: 'center',
-            // alignItems: 'center',
-            // height: ScrHeight* 0.2,
             display:"block"
         };
     };
 
     const btnDeactive = () => {
         return{
-            // marginTop:30,
-            // justifyContent: 'center',
-            // alignItems: 'center',
-            // height: ScrHeight* 0.2,
            display:"none",
         };
     };
 
-    const save = async () => {
-        console.log(stageNum);
-       setStageNum(stageNum+1);
-    try{
-        await AsyncStorage.setItem( "TheMessage" , theMessage);
+    // const save = async () => {
+    //     console.log(stageNum);
+    //    setStageNum(3);
+    //     try{
+    //         await AsyncStorage.setItem( "TheMessage" , theMessage);
+    //     // generateMessage();
+        
+    //     } catch(err) {
+    //         alert(err);
+    //     }
+    // };
+
+    // const laod = async () => {
+    // try{
+    //     let theMessage = await AsyncStorage.getItem("TheMessage");
+    //     if(theMessage !== null){
+    //     setTheMessage(theMessage);
+    //     }
+    // } catch (err){
+    //     alert(err);
+    // }
+    // };
+
+
+    // const remove = async () => {
+    // try{
+    //     await AsyncStorage.removeItem ("TheMessage");
+    // } catch (err) {
+    //     alert(err)
+    // }finally{
+    //     setTheMessage("");
+    // }
+    // setStageNum(stageNum+1);
+    // };
+
+
+    // useEffect(() => {
+
+    //     laod();
+    //     generateMessage();
+    //    // setTimeout(() => save(), 10000);
+    //    // setTimeout(() => setTimePassed(true), 35000);
     
-    } catch(err) {
-        alert(err);
-    }
-   
-    };
-
-    const laod = async () => {
-    try{
-        let theMessage = await AsyncStorage.getItem("TheMessage");
-        if(theMessage !== null){
-        setTheMessage(theMessage);
-        }
-    } catch (err){
-        alert(err);
-    }
-    };
-
-
-    const remove = async () => {
-    try{
-        await AsyncStorage.removeItem ("TheMessage");
-    } catch (err) {
-        alert(err)
-    }finally{
-        setTheMessage("");
-    }
-    setStageNum(stageNum+1);
-    };
-
-
-    useEffect(() => {
-
-        laod();
-        generateMessage();
-        setTimeout(() => remove(), 36000000);
-       // setTimeout(() => setTimePassed(true), 35000);
-    
-    }, []
-    );
+    // }, []
+    // );
     
     const nextGenerator = () => {
         generateMessage();
-        setTimePassed(false);   
-    }
+       // setTimePassed(false);  
+    };
+
+
 
     const generateMessage = () => {
+        setStageNum(2);
         let rndNum = Math.floor(0 + Math.random()* 100 );
         setBtnAct(0);
         setMyArrayLen(myNumArray.length);
@@ -126,52 +119,52 @@ const UniMessageMainSection = (props) => {
  
 if (stageNum === 0){
   return (
-    <View style={styles.mainScreen}>
-        <View >      
-            <Text style={styles.content}>Close your eyes and concentrate on the question you seek the answer from the universe</Text>
+    <SafeAreaView>
+        <View style={styles.firstMainScreen}>
+                 <Text style={styles.mainHeaderText}> Universe Message</Text> 
+                <Text style={styles.secondHeaderText}>Close your eyes and concentrate on the question you seek the answer from the universe</Text>
+        
         </View>
         <View  style={styles.buttonCon} >
+       
             <TouchableOpacity
                        
-                       onPress={() => save()}
-                       style={[styles.button, styles.NewMessageBtn]}
+                       onPress={generateMessage}
+                       style={styles.button}
                       
                     >
-                            <Text>START</Text> 
+                            <Text style={styles.buttonText}>start</Text> 
             </TouchableOpacity> 
         </View>
-        
-    </View>
+    </SafeAreaView>
   );
-}else if (stageNum <=3) {
+}else if (stageNum ==2 ) {
     return (
         <SafeAreaView>
-            
-             
-            <View style={styles.mainSection}>
-               
-            <ScrollView vertical > 
-                <Text style={styles.title}>{theTitle}</Text>    
-                <Text style={styles.content}>{theMessage}</Text>
-                <Text>id: {theId}</Text>
-                <Text>num: {selectedNum}</Text>
-                <Text>stage number: {stageNum}</Text>
-             </ScrollView>
+            <View style={styles.mainScreen}>
+                <Text style={styles.secondHeaderText}>{theTitle}</Text>  
+                <ScrollView vertical style={styles.scrollView} >   
+                    <Text style= {styles.paragraphText}>{theMessage}</Text>
+                    {/* <Text>id: {theId}</Text>
+                    <Text>num: {selectedNum}</Text>
+                    <Text>stage number: {stageNum}</Text> */}
+                </ScrollView>
             </View> 
             
             <View style={styles.buttonCon}>
                 <TouchableOpacity
                            // onPress={() => save()}
-                           onPress={nextGenerator}
-                           style = {[
-                            timePassed == true
-                              ? btnActive()
-                              : btnDeactive()   
-                          , styles.button]}
+                           onPress={generateMessage}
+                           style={styles.button}
+                        //    style = {[
+                        //     timePassed == true
+                        //       ? btnActive()
+                        //       : btnDeactive()   
+                        //   , styles.button]}
                         >
-                                <Text>Get Another Message</Text> 
+                                <Text style={styles.buttonText}>Get Another Message</Text> 
                 </TouchableOpacity> 
-              <TouchableOpacity
+              {/* <TouchableOpacity
                      onPress={() => save()}
                      style={[styles.button, styles.ChangeChallengeBtn]}
                 >
@@ -182,12 +175,12 @@ if (stageNum === 0){
                      style={[styles.button, styles.ChangeChallengeBtn]}
                 >
                         <Text>Remove</Text>  
-                </TouchableOpacity> 
+                </TouchableOpacity>  */}
             </View>
             
         </SafeAreaView>
       );
-}else if(stageNum ==4 ){
+}else if(stageNum ==3 ){
     return(
     <SafeAreaView>
        
@@ -200,69 +193,61 @@ if (stageNum === 0){
 
 
 const styles = StyleSheet.create({
-    mainSection:{
-        flex:1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        color: "black",
-        margin: 30,
-        marginTop:70,
-        overflow: 'scroll',
-       // backgroundColor:"yellow",
-        height: ScrHeight* 0.2,
+    mainScreen:{
+          height:ScrHeight * 0.5,
+          marginTop:30,
+          marginBottom:10,
+          padding: 20,
+      },
+      firstMainScreen:{
+         height:ScrHeight * 0.3,
+         marginTop:30,
+         marginBottom:10,
+         padding: 20,
+      },
+      mainHeaderText:{
+        marginTop:25,
+        textAlign:'center',
+        fontWeight:'bold',
+        fontSize:24,
     },
-    historySec:{
-        height:ScrHeight* 0.5,
+    secondHeaderText:{
+        marginTop:25,
+        marginBottom:10,
+        fontSize:16,
+        fontWeight:'bold',
+        textAlign:'center',
     },
-    button:{
-       
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: ScrWidth * 0.6,
-        padding:12,
-        marginBottom:25,
-        borderColor:'#55c2da',
-        borderRadius:10,
-        borderWidth:1,
-        backgroundColor:'#55c2da',
-        fontWeight:'bold'
-    },
-    startButtonCon:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: ScrHeight* 0.2,
-        display:'block',
+    paragraphText:{
+        fontSize:15,
+        textAlign:'justify',
+        padding:20,
     },
     buttonCon:{
+       height: ScrHeight * 0.2,
+         justifyContent: 'center',
+         alignItems: 'center', 
+       },
+    button:{
+        width:ScrWidth * 0.6,
         justifyContent: 'center',
         alignItems: 'center',
-        height: ScrHeight* 0.3,
-    
-    },
-    input:{
+        padding:20,
+        fontWeight:'bold',
+        borderColor:'#FBB651',
+        borderRadius:10,
         borderWidth:1,
-        borderColor:"black",
-        alignSelf:"stretch",
-      //  margin:32,
-       // height:64,
-        width:200,
-      //  paddingHorizontal:16,
-        fontSize:18
+        backgroundColor:'#FBB651'
     },
-    NewMessageBtn:{
-    //  marginBottom: ScrHeight* 0.2,
-    
-    },
-    content:{
-        padding:15,
-        fontSize:16,
-        textAlign:'justify',
-        overflow:'scroll',
-    },
-    title:{
+    buttonText:{
+        fontWeight:'bold',
+        fontSize: 16
+      },
+    scrollView:{
+        backgroundColor: '#F5F5F5',
        
-        fontSize:16,
-        fontWeight:'bold' 
-    }
+      }
+
+
 })
 export default UniMessageMainSection;
