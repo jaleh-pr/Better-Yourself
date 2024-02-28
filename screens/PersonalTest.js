@@ -21,7 +21,7 @@ const PersonalTest = (props) => {
                         onPress={() => onLanNumProps(7)}
                         style={styles.button}
                     >
-                            <Text>DISK Test</Text> 
+                            <Text>Personality Test</Text> 
             </TouchableOpacity> 
             <TouchableOpacity
                        onPress={() => onLanNumProps(8)}

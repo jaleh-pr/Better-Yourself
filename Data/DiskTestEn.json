@@ -4,125 +4,125 @@
         "id": "1",
         "language": "English",
         "section": "D",
-        "question": "1. I am confident, firm, and I am able to make decisions easily.",
+        "question": "I am confident, firm, and I am able to make decisions easily.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     },
     {
         "id": "2",
         "language": "English",
         "section": "D",
-        "question": "2. I enjoy doing multiple tasks at the same time.",
+        "question": "I enjoy doing multiple tasks at the same time.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     },
     {
         "id": "3",
         "language": "English",
         "section": "D",
-        "question": "3. I do well in an environment that presents challenges.",
+        "question": "I do well in an environment that presents challenges.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
         }, 
     {
         "id": "4",
         "language": "English",
         "section": "D",
-        "question": "4. I prioritize my tasks above everything else, including myself.",
+        "question": "I prioritize my tasks above everything else, including myself.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
            
     }, {
         "id": "5",
         "language": "English",
         "section": "D",
-        "question": "5. I am driven by achieving goals and having control.",
+        "question": "I am driven by achieving goals and having control.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "6",
         "language": "English",
         "section": "I",
-        "question": "6. I find joy in motivating and encouraging others..",
+        "question": "I find joy in motivating and encouraging others.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "7",
         "language": "English",
         "section": "I",
-        "question": "7. I have a positive outlook on other people.",
+        "question": "I have a positive outlook on other people.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "8",
         "language": "English",
         "section": "I",
-        "question": "8. I usually bring a lot of energy and fun to social gatherings.",
+        "question": "I usually bring a lot of energy and fun to social gatherings.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "9",
         "language": "English",
         "section": "I",
-        "question": "9. I consider ways to inspire and encourage others.",
+        "question": "I consider ways to inspire and encourage others.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "10",
         "language": "English",
         "section": "I",
-        "question": "10. I feel encouraged and driven when I receive recognition and approval.",
+        "question": "I feel encouraged and driven when I receive recognition and approval.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "11",
         "language": "English",
         "section": "S",
-        "question": "11. I prefer stable environments rather than ones that constantly change.",
+        "question": "I prefer stable environments rather than ones that constantly change.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "12",
         "language": "English",
         "section": "S",
-        "question": "12. I like to have detailed information rather than general statements.",
+        "question": "I like to have detailed information rather than general statements.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "13",
         "language": "English",
         "section": "S",
-        "question": "13. I enjoy small groups of people.",
+        "question": "I enjoy small groups of people.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "14",
         "language": "English",
         "section": "S",
-        "question": "14. I like being part of a team more than being in charge of the team.",
+        "question": "I like being part of a team more than being in charge of the team.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "15",
         "language": "English",
         "section": "S",
-        "question": "15. I feel encouraged and driven when things are stable and I have support.",
+        "question": "I feel encouraged and driven when things are stable and I have support.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "16",
         "language": "English",
         "section": "C",
-        "question": "16. I usually avoid taking big risks.",
+        "question": "I usually avoid taking big risks.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "17",
         "language": "English",
         "section": "C",
-        "question": "17. I really enjoy tasks that involve organization and paying attention to details.",
+        "question": "I really enjoy tasks that involve organization and paying attention to details.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "18",
         "language": "English",
         "section": "C",
-        "question": "18. I am right most of the time.",
+        "question": "I am right most of the time.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "19",
         "language": "English",
         "section": "C",
-        "question": "19. I follow rules that are clearly stated and defined.",
+        "question": "I follow rules that are clearly stated and defined.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     }, {
         "id": "20",
         "language": "English",
         "section": "C",
-        "question": "20. I am motivated by the desire for things to be of high quality and accuracy.",
+        "question": "I am motivated by the desire for things to be of high quality and accuracy.",
         "options":["Never", "Rarely", "Sometimes", "Often", "Always"]
     },{
         "id": "21",

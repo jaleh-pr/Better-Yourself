@@ -227,7 +227,7 @@ if(pageNum === 0 ){
             <View style={styles.resultCon}>
                 <Text>{theContent}</Text>
             </View>
-            <Text>realistic value: {realisticScore}</Text>
+           
         </SafeAreaView>
     )
   }

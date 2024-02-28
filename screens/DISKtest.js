@@ -152,8 +152,8 @@ const resultFunction = () =>{
 
 const personTypeAnalysis = (personType) => {
   
-    for (let i = 0; i < 8; i++) {
-        const personTypeList = ['D', 'I', 'S', 'C', 'DI', 'ID' , 'SD', 'CD']
+    for (let i = 0; i < 15; i++) {
+        const personTypeList = ['D', 'I', 'S', 'C', 'DI', 'ID' , 'SD', 'CD', 'DS', 'IS', 'SI', 'CI', 'DC', 'IC', 'SC', 'CS'];
         if(personType == personTypeList[i]){
             
         const analysis = JSON.stringify(DiskAnswerData[i].Description);

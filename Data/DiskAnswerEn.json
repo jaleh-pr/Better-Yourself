@@ -4,54 +4,84 @@
         "id": "1",
         "language": "English",
         "personType": "D",
-        "Description": " 'D's are straightforward and decisive. They take risks and solve problems. They prioritize completing tasks and winning over seeking approval from others. While their strong drive may make them less sensitive to those around them, they are not afraid to question the established norms and they excel at creating new things. They require discipline to succeed and respond well to direct confrontation. The biggest fear for 'D's is being taken advantage of. Despite some potential weaknesses such as a dislike for routine, a tendency to exceed their authority, being argumentative, and taking on too much, they highly value time and use their innovative thinking to accomplish difficult tasks and overcome challenges."
+        "Description": " ’D’s are straightforward and decisive. They take risks and solve problems. They prioritize completing tasks and winning over seeking approval from others. While their strong drive may make them less sensitive to those around them, they are not afraid to question the established norms and they excel at creating new things. They require discipline to succeed and respond well to direct confrontation. The biggest fear for ’D’s is being taken advantage of. Despite some potential weaknesses such as a dislike for routine, a tendency to exceed their authority, being argumentative, and taking on too much, they highly value time and use their innovative thinking to accomplish difficult tasks and overcome challenges."
     },
     {
         "id": "2",
         "language": "English",
         "personType": "I",
-        "Description": "'I's are inspiring and impressive. They are enthusiastic, optimistic, impulsive, and emotional. They are often creative problem solvers and great at encouraging others. They tend to have many friends, but sometimes they prioritize seeking approval and popularity over achieving results. The biggest fear for 'I's is rejection, but they excel at motivating others. Their positive sense of humor helps them resolve conflicts. While they may struggle with paying attention to details and being good listeners, they can be excellent peacemakers and effective team players when they control their emotions and minimize their desire to entertain and be the center of attention. They highly value human connection and touch."
+        "Description": "’I’s are inspiring and impressive. They are enthusiastic, optimistic, impulsive, and emotional. They are often creative problem solvers and great at encouraging others. They tend to have many friends, but sometimes they prioritize seeking approval and popularity over achieving results. The biggest fear for ’I’s is rejection, but they excel at motivating others. Their positive sense of humor helps them resolve conflicts. While they may struggle with paying attention to details and being good listeners, they can be excellent peacemakers and effective team players when they control their emotions and minimize their desire to entertain and be the center of attention. They highly value human connection and touch."
     },
     {
         "id": "3",
         "language": "English",
         "personType": "S",
-        "Description": "'S's are steady and more reserved. They prefer stability and dislike change, thriving in secure and non-threatening environments. They are often friendly, understanding, and good listeners. They are loyal workers who are content with consistently doing the same job. They have a remarkable ability to forgive and make great friends. However, their biggest fear is losing their sense of security. Some possible weaknesses of 'S's include resistance to change and difficulty adjusting to it. They can also be sensitive to criticism and struggle with setting priorities. To avoid being taken advantage of, 'S's need to be assertive and learn to say 'no.' They prefer to stay out of the spotlight, but when given the chance to genuinely help others, they willingly step up. They feel most valued when they have made a meaningful difference in someone's life."
+        "Description": "’S’s are steady and more reserved. They prefer stability and dislike change, thriving in secure and non-threatening environments. They are often friendly, understanding, and good listeners. They are loyal workers who are content with consistently doing the same job. They have a remarkable ability to forgive and make great friends. However, their biggest fear is losing their sense of security. Some possible weaknesses of ’S’s include resistance to change and difficulty adjusting to it. They can also be sensitive to criticism and struggle with setting priorities. To avoid being taken advantage of, ’S’s need to be assertive and learn to say ’no.’ They prefer to stay out of the spotlight, but when given the chance to genuinely help others, they willingly step up. They feel most valued when they have made a meaningful difference in someone’s life."
         }, 
     {
         "id": "4",
         "language": "English",
         "personType": "C",
-        "Description": "'C's are compliant and analytical. They are careful and logical in their thinking and prioritize accuracy. They have high standards and prefer systematic approaches to solving problems. While they excel at finding solutions, they often overlook the emotions of others and can be critical and grumpy. Expressing their own feelings is challenging for them, but when they are not overwhelmed by details and have clear boundaries, they can be valuable team members by providing realistic assessments. The biggest fear for 'C's is criticism, and their pursuit of perfectionism can be a weakness. They also tend to give in during arguments. However, they are thorough in their activities and bring a conscientious and even-tempered presence to the team, providing stability. Being correct is highly important to them."
+        "Description": "’C’s are compliant and analytical. They are careful and logical in their thinking and prioritize accuracy. They have high standards and prefer systematic approaches to solving problems. While they excel at finding solutions, they often overlook the emotions of others and can be critical and grumpy. Expressing their own feelings is challenging for them, but when they are not overwhelmed by details and have clear boundaries, they can be valuable team members by providing realistic assessments. The biggest fear for ’C’s is criticism, and their pursuit of perfectionism can be a weakness. They also tend to give in during arguments. However, they are thorough in their activities and bring a conscientious and even-tempered presence to the team, providing stability. Being correct is highly important to them."
     }, {
         "id": "5",
         "language": "English",
         "personType": "DI",
-        "Description": "'D/I's are curious and focused on achieving their goals. They prioritize results over inspiration, but their high expectations and standards often have a strong impact on others, motivating them to follow. They have many interests and may get distracted by taking on too many projects. It is important for them to concentrate, prioritize, and take things slower at times. Since 'D/I's thrive on being active and moving forward, they prefer to accomplish tasks with the help of a large group of people."
+        "Description": "’D/I’s are curious and focused on achieving their goals. They prioritize results over inspiration, but their high expectations and standards often have a strong impact on others, motivating them to follow. They have many interests and may get distracted by taking on too many projects. It is important for them to concentrate, prioritize, and take things slower at times. Since ’D/I’s thrive on being active and moving forward, they prefer to accomplish tasks with the help of a large group of people."
     }, {
         "id": "6",
         "language": "English",
         "personType": "ID",
-        "Description": "'I/D's are charismatic and dynamic persuaders. They thrive in social settings and leverage their influential abilities to gain respect and persuade others to follow their guidance. Occasionally, they may appear restless and anxious, but this stems from their desire to engage in diverse, liberating, and mobile challenges. It would be advantageous for 'I/D' s to develop the habit of considering consequences before taking action and dedicating more time to focused learning. They excel as motivating leaders and possess the skills to achieve desired outcomes by effectively working with and through others."
+        "Description": "’I/D’s are charismatic and dynamic persuaders. They thrive in social settings and leverage their influential abilities to gain respect and persuade others to follow their guidance. Occasionally, they may appear restless and anxious, but this stems from their desire to engage in diverse, liberating, and mobile challenges. It would be advantageous for ’I/D’ s to develop the habit of considering consequences before taking action and dedicating more time to focused learning. They excel as motivating leaders and possess the skills to achieve desired outcomes by effectively working with and through others."
     }, {
         "id": "7",
         "language": "English",
         "personType": "SD",
-        "Description": "'S/D's are reliable and dependable leaders who prefer working in small groups rather than speaking in front of large audiences. They have a unique blend of being both sensitive and strong-willed, and they value close relationships with others without overpowering them. They find motivation in challenges, particularly those that require a systematic approach. Due to their determined nature, they thrive with encouragement and positive connections, as they persist through difficulties over time."
+        "Description": "’S/D’s are reliable and dependable leaders who prefer working in small groups rather than speaking in front of large audiences. They have a unique blend of being both sensitive and strong-willed, and they value close relationships with others without overpowering them. They find motivation in challenges, particularly those that require a systematic approach. Due to their determined nature, they thrive with encouragement and positive connections, as they persist through difficulties over time."
     }, {
         "id": "8",
         "language": "English",
         "personType": "CD",
-        "Description": "'C/D' s are careful and focused designers who are always focused on their tasks and are highly aware of problems. They may come across as insensitive at times, but they do care about individuals, even if they struggle to express it. They often believe that they are the only ones capable of doing a job the right way, but their organizational skills allow them to successfully implement plans for change and improvement. 'C/D' s tend to be serious and could benefit from being more positive and enthusiastic. Despite their strong drive to succeed, they should prioritize building healthy relationships and showing love towards others."
+        "Description": "’C/D’ s are careful and focused designers who are always focused on their tasks and are highly aware of problems. They may come across as insensitive at times, but they do care about individuals, even if they struggle to express it. They often believe that they are the only ones capable of doing a job the right way, but their organizational skills allow them to successfully implement plans for change and improvement. ’C/D’ s tend to be serious and could benefit from being more positive and enthusiastic. Despite their strong drive to succeed, they should prioritize building healthy relationships and showing love towards others."
     }, {
         "id": "9",
         "language": "English",
         "personType": "DS",
-        "Description": "'D/S' s are individuals who excel at reaching their goals and achieving success. They have a strong ability to persevere and overcome challenges. They are generally more proactive than passive, but they also possess a calm sensitivity and stability that makes them effective leaders. While they are oriented towards people, they can sometimes be dominant and decisive when it comes to tasks and planning projects. They have a fierce determination driven by their internal motivation to accomplish their goals. However, they could benefit from taking time for thoughtful and cautious thinking, as well as investing more effort into building relationships."
+        "Description": "’D/S’ s are individuals who excel at reaching their goals and achieving success. They have a strong ability to persevere and overcome challenges. They are generally more proactive than passive, but they also possess a calm sensitivity and stability that makes them effective leaders. While they are oriented towards people, they can sometimes be dominant and decisive when it comes to tasks and planning projects. They have a fierce determination driven by their internal motivation to accomplish their goals. However, they could benefit from taking time for thoughtful and cautious thinking, as well as investing more effort into building relationships."
     }, {
-        "id": "6",
+        "id": "10",
         "language": "English",
-        "personType": "D",
-        "Description": ""
+        "personType": "IS",
+        "Description": "’I/S’ personalities are caring and influential advisors who enjoy being around people, and it’s no wonder that people are fond of them. They strive to make others happy and are attentive listeners. They value appearance and uplifting others, as well as being reliable and obedient. While they may struggle with organization, they prioritize relationships over tasks. They excel in both leading and supporting roles, particularly in guiding and assisting others."
+    }, {
+        "id": "11",
+        "language": "English",
+        "personType": "SI",
+        "Description": "’S/I’ personalities are encouraging advisors who show kindness and empathy. They are accepting and understanding, which helps them build many friendships as they relate well to others. Their friendly and adaptable nature can sometimes lead them to be too accommodating and avoid conflict. To improve, ’S/I’ individuals should focus more on tasks and be more attentive to specifics. They are gentle and thoughtful, involving others and motivating them to join in. Positive words of encouragement are highly valued by this personality type, and with proper encouragement, they can be valuable team members."
+    }, {
+        "id": "12",
+        "language": "English",
+        "personType": "CI",
+        "Description": "’C/I’ individuals are good at noticing small details and like to do things correctly to impress others and make situations more stable. They are not aggressive or pushy and feel comfortable in both big and small groups. While they work well with others, they can be sensitive to criticism and may worry too much about what people think of them and their work. It would be helpful for them to be more confident and motivated. They are good at judging people's character and trust those who meet their standards. They appreciate genuine praise and clear, logical explanations."
+    }, {
+        "id": "13",
+        "language": "English",
+        "personType": "DC",
+        "Description": "’D/C’ individuals are strong-willed and can be either dedicated learners or stubborn critics. They value being in control and are not concerned about others' opinions as long as they achieve their goals. They have good foresight and carefully consider all options to find the best solution, often preferring to work independently. While they may worry about failing or not having enough influence, they thrive on challenges and can excel in leadership roles. They could improve by learning to unwind and focusing more on interpersonal relationships."
+    }, {
+        "id": "14",
+        "language": "English",
+        "personType": "IC",
+        "Description": "’I/C’ individuals are motivating but careful evaluators who are great at communicating due to their attentive understanding and respect for others. They are skilled at finding ways to enhance productivity. They can be impatient and critical, and sometimes they are too forceful and overly focused on winning. ’I/C’ individuals prefer to stick to traditional methods and could improve by being more open to new experiences and caring less about others' opinions. They often have a talent for teaching and are reliable in paying attention to details and completing tasks."
+    }, {
+        "id": "15",
+        "language": "English",
+        "personType": "SC",
+        "Description": "’S/C’ individuals are diplomatic, reliable, and pay attention to details. They are steady and thoughtful, preferring to analyze evidence and gather facts to reach a logical decision. They take their time, especially when decisions involve others. They may struggle with sensitivity and criticism, and should be mindful of how they interact with others. They excel in specific, meaningful projects and can act as peacemakers, making them loyal team members and friends."
+    }, {
+        "id": "16",
+        "language": "English",
+        "personType": "CS",
+        "Description": "’C/S’ individuals are organized and reliable. They prefer to focus on one task at a time and ensure it is done correctly. They are reserved and careful, preferring to work in the background to stay on course. They are not inclined to take risks or try new things and are uncomfortable with sudden changes in their surroundings. They are very detail-oriented and value accuracy, often fearing criticism as a form of failure. They are hardworking and find motivation in helping others."
     }
 ]

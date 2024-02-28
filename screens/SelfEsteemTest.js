@@ -86,9 +86,10 @@ const SelfEsteemTest = (props) => {
     const getValueHandler = (selectedValue) =>{
    
        // if (selectedValue === radioProps[2]){
-        if( questionNum == 0 || questionNum == 5 ||questionNum == 12 || questionNum == 19 ||questionNum == 26 || questionNum == 33 || questionNum == 40 || questionNum == 47 ){
+        if( questionNum == 0 || questionNum == 5 ||questionNum == 12 || questionNum == 19 ||questionNum == 26 || questionNum == 33 || questionNum == 40 || questionNum == 47 ) {
+            if (selectedValue === radioProps[2]){
             setTheRealistic(1);
-
+        }
         }else{
             setTheRealistic(0);
             if (selectedValue === radioProps[2]){
@@ -119,7 +120,7 @@ const SelfEsteemTest = (props) => {
     const radioProps = [option1, option2, answerOp]
 
 const theResult = () =>{
-    if(realisticScore > 3){
+    if(realisticScore > 4){
         setTheContent("Please retake the test and provide accurate answers to the questions.") 
     }else{
         if(theScore < 32 ){

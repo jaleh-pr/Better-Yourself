@@ -153,7 +153,7 @@
     },{
         "id": "24",
         "language": "English",
-        "question": "I am quite happy. ",
+        "question": "I am quite joyful. ",
         "options":["Like me", "Unlike me"],
         "answer": "Like me"
     },{
@@ -303,7 +303,7 @@
     },{
         "id": "49",
         "language": "English",
-        "question": "My employer or supervisor makes me feel like I’m not good enough..",
+        "question": "My employer or supervisor makes me feel like I’m not good enough.",
         "options":["Like me", "Unlike me"],
         "answer": "Unlike me"
     },{
