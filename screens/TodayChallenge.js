@@ -174,7 +174,7 @@ if (stageNum === 0){
                
                     <Text style={styles.secondHeaderText}>{theTitle}</Text>
                    <Text style={styles.paragraphText}>{theMessage}</Text>
-                   <Text style={styles.paragraphText}> {theExample}</Text>
+                   <Text style={styles.paragraphText}>{theExample}</Text>
                </ScrollView>
               
         </View>

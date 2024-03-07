@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Dimensions} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Dimensions, SafeAreaView, ScrollView} from 'react-native';
 
 const ScrHeight = Dimensions.get('window').height;
 const ScrWidth = Dimensions.get('window').width;
@@ -34,25 +34,25 @@ const DiskTest = (props) => {
     const [btnAct , setBtnAct] = useState(0);
     const [nextDisable , setNextDisable] = useState(true);
 
-    const btnActive = () => {
-        return{
-            backgroundColor: "#ccc",
-            borderStyle: "solid",
-            margin:10,
-            padding:15,
-            borderWidth:1,
-        };
-    };
+    // const btnActive = () => {
+    //     return{
+    //         backgroundColor: "#ccc",
+    //         borderStyle: "solid",
+    //         margin:10,
+    //         padding:15,
+    //         borderWidth:1,
+    //     };
+    // };
 
-    const btnDeactive = () => {
-        return{
-            backgroundColor: "#ccc",
-            margin:10,
-            padding:15,
-           disabled:"disabled",
-           opacity: 0.5,
-        };
-    };
+    // const btnDeactive = () => {
+    //     return{
+    //         backgroundColor: "#ccc",
+    //         margin:10,
+    //         padding:15,
+    //        disabled:"disabled",
+    //        opacity: 0.5,
+    //     };
+    // };
 
     const generateRandomNum = () => {
         const rndNum = Math.floor(Math.random() * 20 ) ;
@@ -152,7 +152,7 @@ const resultFunction = () =>{
 
 const personTypeAnalysis = (personType) => {
   
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 17; i++) {
         const personTypeList = ['D', 'I', 'S', 'C', 'DI', 'ID' , 'SD', 'CD', 'DS', 'IS', 'SI', 'CI', 'DC', 'IC', 'SC', 'CS'];
         if(personType == personTypeList[i]){
             
@@ -164,61 +164,62 @@ const personTypeAnalysis = (personType) => {
 
 if(pageNum === 0 ){
   return (
-    <View  style={styles.mainScreen}>
+    <SafeAreaView>
             
-            <View>
-                <Text>DISK Test</Text>
-                <Text>
+            <View style={styles.secondMainScreen}>
+                <Text style={styles.mainHeaderText}>Personality Test</Text>
+                <Text style={styles.secondHeaderText} >
                 Answer each question by selecting the option that best describes you.
                 </Text>
-
+            </View>
+            <View style={styles.buttonCon}>
                 <TouchableOpacity
                         onPress={() => StartExam()}
                         style={styles.button}
                     >
-                            <Text>Start</Text> 
-            </TouchableOpacity> 
+                            <Text style={styles.buttonText}>Start</Text> 
+                </TouchableOpacity> 
             </View>
-    </View>
+    </SafeAreaView>
   );
   } else if (pageNum <21){
     return(
-        <View style={styles.mainScreen} >
+       <SafeAreaView>
             
-        <View>
+        <View style={styles.mainScreen}>
            <View style={styles.questionCon}>
-                <Text style={styles.questionText}>
-                {theQuestion}
+                <Text style={styles.secondHeaderText}>
+                {pageNum}. {theQuestion}
                 </Text>
             </View> 
-            <View style={styles.answerBtnCon}>
+            <View style={styles.optionButtonCon}>
                 <View >
-                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[0])}>
-                        <Text>{radioProps[0]}</Text>  
+                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[0])}>
+                        <Text style={styles.buttonText}>{radioProps[0]}</Text>  
                     </TouchableOpacity>
                 </View> 
                 <View >
-                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[1])}>
-                        <Text>{radioProps[1]}</Text>  
+                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[1])}>
+                        <Text style={styles.buttonText}>{radioProps[1]}</Text>  
                     </TouchableOpacity>
                 </View> 
                 <View >
-                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[2])}>
-                        <Text>{radioProps[2]}</Text>  
+                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[2])}>
+                        <Text style={styles.buttonText}>{radioProps[2]}</Text>  
                     </TouchableOpacity>
                 </View> 
                 <View>
-                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[3])}>
-                        <Text>{radioProps[3]}</Text>  
+                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[3])}>
+                        <Text style={styles.buttonText}>{radioProps[3]}</Text>  
                     </TouchableOpacity>
                 </View> 
                 <View>
-                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[4])}>
-                        <Text>{radioProps[4]}</Text>  
+                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[4])}>
+                        <Text style={styles.buttonText}>{radioProps[4]}</Text>  
                     </TouchableOpacity>
                 </View> 
             </View>
-            <Text>myValue = {myValue}</Text>
+            {/* <Text>myValue = {myValue}</Text>
             <View>
                 <Text>scoreD = {scoreD}</Text>
                 <Text>scoreI = {scoreI}</Text>
@@ -227,52 +228,55 @@ if(pageNum === 0 ){
                
                 <Text>questionNum = {questionSec}</Text>    
                 <Text>{pageNum}</Text>         
-           </View>
+           </View> */}
+           <View style={styles.buttonCon}>
             <TouchableOpacity
                        
                         disabled={nextDisable}
                         onPress={() => NextQuestion()}
-                       // style={styles.button}
-                        style = {
+                        style = {[styles.button,
                           btnAct === 1
-                            ? btnActive()
-                            : btnDeactive()
+                            ? styles.btnActive
+                            : styles.btnDeactive
                             
-                        }
+                        ]}
                     >
-                            <Text>Next</Text> 
+                            <Text style={styles.buttonText}>Next</Text> 
                             
             </TouchableOpacity> 
-           
+            </View>
         </View>
-</View>
+    </SafeAreaView>
     )
   }else if(pageNum === 100) {
     return(
-        <View>
-           <View>
-                 <Text>You have finished the test</Text>
-           </View>
-           <View>
+        <SafeAreaView>
+           <View style={styles.secondMainScreen}>
+                 <Text style={styles.secondHeaderText}>You have finished the test</Text>
+           <View style={styles.buttonCon}>
                 <TouchableOpacity
                             onPress={() => resultFunction()}
                             style={styles.button}
                         >
-                                <Text>See The Result</Text> 
+                                <Text style={styles.buttonText}>See The Result</Text> 
                 </TouchableOpacity>  
+            </View>
            </View>
-        </View>
+       </SafeAreaView>
     )
    
   }else if(pageNum === 101) {
     return(
-        <View>
-                <Text>Person Type: {personType}</Text>
-                <Text>Max Num: {maxNum}</Text>
-                <Text>Second Max: {secondMaxNum}</Text>
-                <Text>Type analysis: {typeAnalysis}</Text>
-     
-        </View>
+        <SafeAreaView>
+            <View style={styles.secondMainScreen}>
+                    <Text style={styles.secondHeaderText}>Person Type: {personType}</Text>
+                    {/* <Text>Max Num: {maxNum}</Text>
+                    <Text>Second Max: {secondMaxNum}</Text> */}
+                    
+                         <Text style={styles.paragraphText}>Type analysis: {typeAnalysis}</Text>
+                   
+            </View>
+        </SafeAreaView>
     )
    
   }
@@ -280,40 +284,103 @@ if(pageNum === 0 ){
 
 const styles = StyleSheet.create({
     mainScreen:{
-        flex:1,
+        height:ScrHeight * 0.6,
+         // flex:1,
+          // justifyContent: 'center',
+          // alignItems: 'center',
+          marginTop:30,
+          marginBottom:30,
+          padding: 20,
+      },
+       firstMainScreen:{
+         height:ScrHeight * 0.3,
+         marginTop:30,
+         marginBottom:10,
+         padding: 20,
+       // backgroundColor:"yellow",
+      },
+      secondMainScreen:{
+        height:ScrHeight * 0.4,
+        marginTop:30,
+        marginBottom:10,
+        padding: 20,
+      // backgroundColor:"yellow",
+     },
+      mainHeaderText:{
+        marginTop:25,
+       textAlign:'center',
+        fontWeight:'bold',
+        fontSize:24,
+    },
+    secondHeaderText:{
+        marginTop:25,
+        marginBottom:10,
+        fontSize:16,
+        fontWeight:'bold',
+        textAlign:'center',
+    },
+    thirdHeaderTex:{
+      marginTop:10,
+      //marginBottom:10,
+      fontSize:16,
+      fontWeight:'bold',
+      textAlign:'left',
+    },
+    paragraphText:{
+        fontSize:15,
+        textAlign:'justify',
+       // textAlign:'center',
+        padding:20,
+    },
+    buttonCon:{
+      //  height: ScrHeight * 0.2,
+        marginTop:35,
         justifyContent: 'center',
-        alignItems: 'center',
-        color: "black",
-        paddingTop: 10,
+        alignItems: 'center', 
     },
     button:{
+        width:ScrWidth * 0.6,
         justifyContent: 'center',
         alignItems: 'center',
-        padding:12,
-        marginTop:35,
-        borderColor:'#55c2da',
+        padding:20,
+        fontWeight:'bold',
+        borderColor:'#FBB651',
         borderRadius:10,
         borderWidth:1,
-        backgroundColor:'#55c2da'
+        backgroundColor:'#FBB651',
+        marginTop:10
     },
-    answerBtn:{
+    btnActive:{
+        opacity: 1,
+    },
+    btnDeactive:{
+        opacity: 0.5,
+    },
+    buttonText:{
+        fontWeight:'bold',
+        fontSize: 16
+    },
+    optionButtonCon:{
         justifyContent: 'center',
         alignItems: 'center',
-        padding:5,
-        marginTop:10,
-        borderColor:'#55c2da',
+        marginTop:20,
+        marginBottom:20,
+    },
+    optionButton:{
+        width:ScrWidth * 0.3,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding:10,
+        fontWeight:'bold',
+        borderColor:'#98DAE3',
         borderRadius:10,
-        borderWidth:1,
-        width: ScrWidth * 0.5,
+        borderWidth:2,
+       // backgroundColor:'#98DAE3',
+        marginTop:10
     },
-    answerBtnCon:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin:15
-    },
-    questionCon:{
-        width:  ScrWidth * 0.8,  
-        paddingLeft: ScrWidth * 0.05,  
+    scrollView:{
+        backgroundColor: '#F5F5F5',
+    
     }
 })
 export default DiskTest;

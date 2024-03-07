@@ -224,44 +224,90 @@ if(pageNum === 0 ){
 
 const styles = StyleSheet.create({
     mainScreen:{
-        flex:1,
+          height:ScrHeight * 0.6,
+          marginTop:30,
+          marginBottom:30,
+          padding: 20,
+      },
+       firstMainScreen:{
+         height:ScrHeight * 0.3,
+         marginTop:30,
+         marginBottom:10,
+         padding: 20,
+       // backgroundColor:"yellow",
+      },
+      secondMainScreen:{
+        height:ScrHeight * 0.4,
+        marginTop:30,
+        marginBottom:10,
+        padding: 20,
+      // backgroundColor:"yellow",
+     },
+      mainHeaderText:{
+        marginTop:25,
+       textAlign:'center',
+        fontWeight:'bold',
+        fontSize:24,
+    },
+    secondHeaderText:{
+        marginTop:25,
+        marginBottom:10,
+        fontSize:16,
+        fontWeight:'bold',
+        textAlign:'center',
+    },
+    thirdHeaderTex:{
+      marginTop:10,
+      //marginBottom:10,
+      fontSize:16,
+      fontWeight:'bold',
+      textAlign:'left',
+    },
+    paragraphText:{
+        fontSize:15,
+        textAlign:'justify',
+       // textAlign:'center',
+        padding:20,
+    },
+    buttonCon:{
+      //  height: ScrHeight * 0.2,
+        marginTop:15,
         justifyContent: 'center',
-        alignItems: 'center',
-        color: "black",
-        paddingTop: 10,
+        alignItems: 'center', 
     },
     button:{
+        width:ScrWidth * 0.6,
         justifyContent: 'center',
         alignItems: 'center',
-        padding:12,
-        marginTop:35,
+        padding:20,
+        fontWeight:'bold',
         borderColor:'#FBB651',
         borderRadius:10,
         borderWidth:1,
-        backgroundColor:'#FBB651'
+        backgroundColor:'#FBB651',
+        marginTop:10
     },
-    answerBtn:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding:5,
-        marginTop:10,
-        borderColor:'#FBB651',
-        borderRadius:10,
-        borderWidth:1,
+    buttonText:{
+        fontWeight:'bold',
+        fontSize: 16
+    },
+    inputCon:{
+        marginTop:25,
+    },
+    pickerSelectStyles:{
         width: ScrWidth * 0.5,
-    },
-    answerBtnCon:{
+        marginTop:5,
+        padding:5,
         justifyContent: 'center',
         alignItems: 'center',
-        margin:15
+        alignSelf: 'stretch',
+        borderWidth: 1,
+        borderColor:'gray',
+        borderRadius:5
     },
-    questionCon:{
-        width:  ScrWidth * 0.8,  
-        paddingLeft: ScrWidth * 0.05,  
-    },
-    resultCon:{
-        padding:15,
-        margin: 10
+    scrollView:{
+        backgroundColor: '#F5F5F5',
+    
     }
 })
 export default SelfEsteemTest;
