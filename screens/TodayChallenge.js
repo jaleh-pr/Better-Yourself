@@ -8,26 +8,17 @@ const ScrWidth = Dimensions.get('window').width;
 
 
 const TodayChalleng = (props) => {
-  const [theDate , setTheDate] = useState("");
    const [savedChallengeNum, setSavedChallengeNum] = useState("");
-  // const [mySavedChallenge, setMySavedChallenge] = useState("");
   const [stageNum, setStageNum] = useState(0);
   const challengesData = require("../Data/challengEnglish.json");
-  const [myNumArray, setMyNumArray] = useState([]);
   const [theSavedArray, setTheSavedArray] = useState([]);
   const [theTitle, setTheTitle ] = useState("");
-  const [fiveLast, setFiveLast ] = useState([]);
   const [theSavedTitle, setTheSavedTitle ] = useState([]);
   const [theMessage, setTheMessage ] = useState("");
   const [theExample, setTheExample ] = useState("");
-  const [myArrayLen, setMyArrayLen] = useState(0);
-
-  const [savedTitle, setSavedTitle ] = useState("");
-
-
-
 
 const save = async () => {
+  setTheSavedArray(theSavedArray => [...theSavedArray, savedChallengeNum]);
 try{
     await AsyncStorage.setItem( 'SavedArray' ,JSON.stringify( theSavedArray));
 
@@ -71,30 +62,27 @@ const startGenerator = () => {
   setTheSavedArray(theSavedArray => [...theSavedArray,savedChallengeNum]);
 };
 
-
 // const dateGenerator = () => {
 //   const today = JSON.stringify(new Date().getDate());
 //   setTheDate(today);
 // };
 
 const generateRandomNum = () => {
-  const theArrayL = myNumArray.length;
-    let rndNum = Math.floor(0 + Math.random()* 100 );
+  const theSavedArrayL = theSavedArray.length;
+    let rndNum = Math.floor(0 + Math.random()* 10 );
     setChallengeMessage(rndNum);
-  if (myNumArray.indexOf(rndNum) < 0 ){
+  if (theSavedArray.indexOf(rndNum) < 0 ){
       setChallengeMessage(rndNum);
-      setMyNumArray(myNumArray => [...myNumArray, rndNum]);
-      //console.log("my array",myNumArray); 
-  } else if (myNumArray.indexOf(rndNum) > 0 && theArrayL < 100){
+      setSavedChallengeNum(rndNum);
+  } else if (theSavedArray.indexOf(rndNum) > 0 && theSavedArrayL < 10){
     generateRandomNum();
-  }else if (myNumArray.indexOf(rndNum) > 0 && theArrayL >= 100){
-      setMyNumArray ([]);
-      setMyNumArray(myNumArray => [...myNumArray, rndNum]);
+  }else if (theSavedArray.indexOf(rndNum) > 0 && theSavedArrayL >= 10){
+      setTheSavedArray (theSavedArray.slice(5,10));
+     generateRandomNum();
   }
-  setMyArrayLen(myNumArray.length);
-  setSavedChallengeNum(rndNum);
-  //console.log("random num:",savedChallengeNum);
+ 
   console.log("theSavedArray", theSavedArray);
+  console.log("theSavedArrayLength", theSavedArrayL);
 };
 
 const setChallengeMessage = (selectedNumber) => {
@@ -108,16 +96,14 @@ const setChallengeMessage = (selectedNumber) => {
 
 const savedChallenges = () => {
   const AL = theSavedArray.length;
-  let anArray = theSavedArray.slice(AL-5, AL);
-  //setFiveLast(anArray);
-  console.log('five last ',fiveLast);
-
-  for (let i = 0; i < 5; i++){
-      let a = anArray[i];
-      const ST = JSON.stringify(challengesData[a].Title).replace(/['"]+/g, "");
-      setTheSavedTitle (theSavedTitle => [...theSavedTitle, ST]);
+  for (let i = 0; i < AL; i++){
+            let a = theSavedArray[i];
+            const ST = JSON.stringify(challengesData[a].Title).replace(/['"]+/g, "");
+            setTheSavedTitle (theSavedTitle => [...theSavedTitle, ST]);
   }
+  
   setStageNum(2);
+  console.log('saved Title ',theSavedTitle);
 };
 
 const backFunction = () => {
@@ -125,24 +111,6 @@ const backFunction = () => {
   setTheSavedTitle([]);
 }
 
-const removeHistory = () => {
-  setTheSavedTitle([]);
-  setTheSavedArray([]);
-}
-//const savedChallenges = () => {
-  // setStageNum(2);
-//  console.log("theSavedArrayLength", theSavedArray.length);
-// const lastArray = theSavedArray[theSavedArray.length-2];
-
-
-//  const savedT = JSON.stringify(challengesData[lastArray].Title);
-//     setSavedTitle(savedT.replace(/['"]+/g, ""));
-
-// for (let i = 0; i < theSavedArray.length-1; i++) {
-//   const savedT = JSON.stringify(challengesData[0].Title);
-//   setSavedTitle(savedT.replace(/['"]+/g, ""));
-//   };  
-//};
 
 if (stageNum === 0){
 
@@ -150,8 +118,9 @@ if (stageNum === 0){
     <SafeAreaView>
             
             <View style={styles.secondMainScreen}>
+                <Text style={styles.mainHeaderText}>Your Today's Challenge</Text>
                 <Text style={styles.secondHeaderText}>
-                See Your Challeng For Today
+                Click start to see what your challenge for today is.
                 </Text>
             </View>
             <View style= {styles.buttonCon}>
@@ -169,7 +138,7 @@ if (stageNum === 0){
     <SafeAreaView >
 
         <View style={styles.secondMainScreen}>  
-        <Text style={styles.mainHeaderText}>Your Today Challenge</Text>
+        <Text style={styles.mainHeaderText}>Your Today's Challenge</Text>
                <ScrollView vertical > 
                
                     <Text style={styles.secondHeaderText}>{theTitle}</Text>
@@ -192,12 +161,12 @@ if (stageNum === 0){
                 >
                         <Text>Accept the challenge</Text> 
                 </TouchableOpacity>
-                {/* <TouchableOpacity
+                <TouchableOpacity
                      onPress={() => remove()}
                      style={[styles.button, styles.ChangeChallengeBtn]}
                 >
                         <Text>Remove Your Challenge</Text> 
-                </TouchableOpacity> */}
+                </TouchableOpacity>
                 <TouchableOpacity
                      onPress={savedChallenges}
                      style={[styles.button, styles.ChangeChallengeBtn]}
@@ -205,11 +174,12 @@ if (stageNum === 0){
                         <Text>Your previous Challenges</Text> 
                 </TouchableOpacity>
         </View>
-        <View>
+        <Text>saved array:{theSavedArray}</Text>
+        {/* <View>
           <Text>Current:{savedChallengeNum}</Text>
-          <Text>saved array:{theSavedArray}</Text>
+          
           <Text>Date: {theDate}</Text>
-        </View>
+        </View> */}
     </SafeAreaView>
      );
     }else if (stageNum === 2){
@@ -218,21 +188,13 @@ if (stageNum === 0){
 
           <View style={styles.secondMainScreen}>  
               <ScrollView vertical > 
-              {theSavedTitle.map((SavedT,i) =>(
+                
+              {theSavedTitle.reverse().slice(0,5).map((SavedT,i) =>(
                   <Text key={i} style={styles.thirdHeaderTex}>{i+1}.{SavedT}</Text>
               ))}
-                {/* {fiveLast.map((SavedT,i) =>(
-                  <Text key={i} style={styles.thirdHeaderTex}>{i+1}.{ SavedT}</Text>
-              ))} */}
               </ScrollView>
           </View>
           <View style={styles.buttonCon}>
-             {/* <TouchableOpacity
-                        onPress={removeHistory}
-                        style={[styles.button, styles.ChangeChallengeBtn]}
-                    >
-                            <Text style={styles.buttonText}>Remove history</Text> 
-              </TouchableOpacity> */}
               <TouchableOpacity
                         onPress={backFunction}
                         style={[styles.button, styles.ChangeChallengeBtn]}
@@ -312,7 +274,7 @@ paragraphText:{
 },
 buttonCon:{
   //  height: ScrHeight * 0.2,
-    marginTop:15,
+    marginTop:-15,
     justifyContent: 'center',
     alignItems: 'center', 
 },

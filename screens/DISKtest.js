@@ -285,6 +285,7 @@ if(pageNum === 0 ){
 const styles = StyleSheet.create({
     mainScreen:{
         height:ScrHeight * 0.6,
+        width:ScrWidth * 0.8,
          // flex:1,
           // justifyContent: 'center',
           // alignItems: 'center',
@@ -313,6 +314,7 @@ const styles = StyleSheet.create({
         fontSize:24,
     },
     secondHeaderText:{
+        flex:1,
         marginTop:25,
         marginBottom:10,
         fontSize:16,
@@ -331,6 +333,10 @@ const styles = StyleSheet.create({
         textAlign:'justify',
        // textAlign:'center',
         padding:20,
+    },
+    questionCon:{
+        flex:1,
+        flexDirection:'row'
     },
     buttonCon:{
       //  height: ScrHeight * 0.2,

@@ -147,7 +147,7 @@ if(pageNum === 0 ){
             
         <View style={styles.secondMainScreen}>
             <Text style={styles.mainHeaderText}>Self Esteem Test</Text>
-            <Text style={styles.secondHeaderText} >
+            <Text style={styles.thirdHeaderText} >
                     Answer each question carefully
             </Text>
         </View>
@@ -166,6 +166,7 @@ if(pageNum === 0 ){
         <SafeAreaView>
             
         <View style={styles.mainScreen}>
+            <Text style={styles.mainHeaderText}>Self Esteem Test</Text>
            <View style={styles.questionCon}>
                 <Text style={styles.secondHeaderText}>
                 {pageNum}. {theQuestion}
@@ -185,6 +186,7 @@ if(pageNum === 0 ){
                     </TouchableOpacity>
                 </View> 
             </View>
+            </View>
            {/* <Text>{myScore}</Text>
            <Text>{theScore}</Text> */}
             <View style={styles.buttonCon}>
@@ -203,7 +205,7 @@ if(pageNum === 0 ){
                 {/* <Text>score:{theScore}</Text>
                 <Text>realistic: {realisticScore}</Text> */}
             </View>
-        </View>
+        
 </SafeAreaView>
     )
   }else if ( pageNum == 100){
@@ -236,13 +238,15 @@ if(pageNum === 0 ){
 
 const styles = StyleSheet.create({
     mainScreen:{
-        height:ScrHeight * 0.6,
+        height:ScrHeight * 0.5,
+        width:ScrWidth * 0.8,
          // flex:1,
           // justifyContent: 'center',
           // alignItems: 'center',
           marginTop:30,
           marginBottom:30,
           padding: 20,
+         // backgroundColor:'blue'
       },
        firstMainScreen:{
          height:ScrHeight * 0.3,
@@ -271,12 +275,12 @@ const styles = StyleSheet.create({
         fontSize:16,
         fontWeight:'bold',
     },
-    thirdHeaderTex:{
-      marginTop:10,
+    thirdHeaderText:{
+      marginTop:25,
       //marginBottom:10,
       fontSize:16,
       fontWeight:'bold',
-      textAlign:'left',
+      textAlign:'center',
     },
     paragraphText:{
         fontSize:15,
@@ -313,11 +317,10 @@ const styles = StyleSheet.create({
         fontSize: 16
     },
     questionCon:{
-        // textAlign:'left',
-        // justifyContent:'flex-start',
-        // alignContent:'flex-start' 
         flex:1,
-        flexDirection:'row'
+        flexDirection:'row',
+
+      //  backgroundColor:'yellow'
     },
     optionButtonCon:{
         justifyContent: 'center',

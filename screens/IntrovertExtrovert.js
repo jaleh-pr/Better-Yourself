@@ -128,6 +128,7 @@ const IntrovertExtrovert = (props) => {
     const radioProps = [option1, option2,option3,option4,option5]
 
 const theResult = () => {
+        setPageNum(101);
         if(theScore < 33 ){
             setTheContent("You are an introvert.") ;
         }else if (theScore >= 33 && theScore < 67 ){
@@ -140,92 +141,102 @@ const theResult = () => {
 
 if(pageNum === 0 ){
   return (
-    <View  style={styles.mainScreen}>
-            
-            <View>
-                <Text>Introvert, Extrovert or Ambivert</Text>
-                <Text>
-                Please answer each question carefully.
-                </Text>
-
-                <TouchableOpacity
-                        onPress={() => StartExam()}
-                        style={styles.button}
-                    >
-                            <Text>Start</Text> 
-            </TouchableOpacity> 
-            </View>
-    </View>
+    <SafeAreaView>   
+        <View style={styles.secondMainScreen}>
+            <Text style={styles.mainHeaderText}>Introvert, Extrovert or Ambivert</Text>
+            <Text style={styles.thirdHeaderText}>
+                    Please answer each question carefully.
+            </Text>
+        </View>
+        <View style={styles.buttonCon}>
+                    <TouchableOpacity
+                            onPress={() => StartExam()}
+                            style={styles.button}
+                        >
+                                <Text style={styles.buttonText}>Start</Text> 
+                </TouchableOpacity> 
+        </View>
+    </SafeAreaView>
   );
   } else if (pageNum >= 1 && pageNum <21){
     return(
-        <View style={styles.mainScreen} >
-            
-        <View>
+    <SafeAreaView>
+        <View style={styles.mainScreen}>
            <View style={styles.questionCon}>
-                <Text style={styles.questionText}>
-                {theQuestion}
+                <Text style={styles.secondHeaderText}>
+                {pageNum}. {theQuestion}
                 </Text>
             </View> 
-            <View style={styles.answerBtnCon}>
-            <View >
-                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[0])}>
+            <View style={styles.optionButtonCon}>
+                <View >
+                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[0])}>
                         <Text>{radioProps[0]}</Text>  
                     </TouchableOpacity>
                 </View> 
                 <View >
-                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[1])}>
+                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[1])}>
                         <Text>{radioProps[1]}</Text>  
                     </TouchableOpacity>
                 </View> 
                 <View >
-                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[2])}>
+                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[2])}>
                         <Text>{radioProps[2]}</Text>  
                     </TouchableOpacity>
                 </View> 
                 <View>
-                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[3])}>
+                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[3])}>
                         <Text>{radioProps[3]}</Text>  
                     </TouchableOpacity>
                 </View> 
                 <View>
-                    <TouchableOpacity style={styles.answerBtn} onPress={getValueHandler.bind(this, radioProps[4])}>
+                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[4])}>
                         <Text>{radioProps[4]}</Text>  
                     </TouchableOpacity>
                 </View> 
             </View>
            {/* <Text>{myScore}</Text>
            <Text>{theScore}</Text> */}
-           <Text>{pageNum}</Text>
-            <TouchableOpacity
-                        disabled={nextDisable}
-                        onPress={() => NextQuestion()}
-                       // style={styles.button}
-                        style = {
-                          btnAct === 1
-                            ? btnActive()
-                            : btnDeactive()
-                            
-                        }
-                    >
-                            <Text>Next</Text> 
-            </TouchableOpacity> 
-            <Text>score:{theScore}</Text>
+           </View>
+           <View style={styles.buttonCon}>
+                <TouchableOpacity
+                            disabled={nextDisable}
+                            onPress={() => NextQuestion()}
+                        // style={styles.button}
+                        style = {[styles.button,
+                            btnAct === 1
+                              ? styles.btnActive
+                              : styles.btnDeactive
+                              
+                          ]}
+                        >
+                                <Text style={styles.buttonText}>Next</Text> 
+                </TouchableOpacity> 
+            {/* <Text>score:{theScore}</Text> */}
             {/* <Text>realistic: {realisticScore}</Text> */}
            
         </View>
-</View>
+</SafeAreaView>
     )
   }else if ( pageNum == 100){
     return(
         <SafeAreaView>
-            <View style={styles.mainScreen}>
-                <TouchableOpacity onPress={() => theResult()}>
-                    <Text>See the result</Text>
-                </TouchableOpacity>
-            </View>
-            <View style={styles.resultCon}>
-                <Text>{theContent}</Text>
+             <View style={styles.secondMainScreen}>
+                    <Text style={styles.secondHeaderText}>You have finished the test</Text>
+                 </View>
+                 <View style={styles.buttonCon}>
+                    <TouchableOpacity onPress={() => theResult()}  style={styles.button}>
+                        <Text style={styles.buttonText}>See the result</Text>
+                    </TouchableOpacity>
+                 </View>
+         
+        </SafeAreaView>
+    )
+}else if ( pageNum == 101){
+    return(
+        <SafeAreaView>
+            <View style={styles.secondMainScreen}>
+                    <Text style={styles.secondHeaderText}>Your Introvert/Extrovert Test Result:</Text>
+                    <Text style={styles.paragraphText}>{theContent}</Text>
             </View>
            
         </SafeAreaView>
@@ -235,44 +246,108 @@ if(pageNum === 0 ){
 
 const styles = StyleSheet.create({
     mainScreen:{
+        height:ScrHeight * 0.6,
+        width:ScrWidth * 0.85,
+         // flex:1,
+          // justifyContent: 'center',
+          // alignItems: 'center',
+          marginTop:30,
+          marginBottom:30,
+          padding: 20,
+      },
+       firstMainScreen:{
+         height:ScrHeight * 0.3,
+         marginTop:30,
+         marginBottom:10,
+         padding: 20,
+       // backgroundColor:"yellow",
+      },
+      secondMainScreen:{
+        height:ScrHeight * 0.4,
+        marginTop:30,
+        marginBottom:10,
+        padding: 20,
+      // backgroundColor:"yellow",
+     },
+      mainHeaderText:{
+        marginTop:25,
+       textAlign:'center',
+        fontWeight:'bold',
+        fontSize:24,
+    },
+    secondHeaderText:{
         flex:1,
+        marginTop:25,
+        marginBottom:10,
+        fontSize:16,
+        fontWeight:'bold',
+    },
+    thirdHeaderText:{
+      marginTop:25,
+      //marginBottom:10,
+      fontSize:16,
+      fontWeight:'bold',
+      textAlign:'center',
+    },
+    paragraphText:{
+        fontSize:15,
+        textAlign:'justify',
+       // textAlign:'center',
+        padding:20,
+    },
+    buttonCon:{
+      //  height: ScrHeight * 0.2,
+        marginTop:5,
         justifyContent: 'center',
-        alignItems: 'center',
-        color: "black",
-        paddingTop: 10,
+        alignItems: 'center', 
     },
     button:{
+        width:ScrWidth * 0.6,
         justifyContent: 'center',
         alignItems: 'center',
-        padding:12,
-        marginTop:35,
+        padding:20,
+        fontWeight:'bold',
         borderColor:'#FBB651',
         borderRadius:10,
         borderWidth:1,
-        backgroundColor:'#FBB651'
+        backgroundColor:'#FBB651',
+       // marginTop:10
     },
-    answerBtn:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding:5,
-        marginTop:10,
-        borderColor:'#FBB651',
-        borderRadius:10,
-        borderWidth:1,
-        width: ScrWidth * 0.5,
+    btnActive:{
+        opacity: 1,
     },
-    answerBtnCon:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin:15
+    btnDeactive:{
+        opacity: 0.5,
+    },
+    buttonText:{
+        fontWeight:'bold',
+        fontSize: 16
     },
     questionCon:{
-        width:  ScrWidth * 0.8,  
-        paddingLeft: ScrWidth * 0.05,  
+        flex:1,
+        flexDirection:'row'
     },
-    resultCon:{
-        padding:15,
-        margin: 10
+    optionButtonCon:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop:20,
+        marginBottom:20,
+    },
+    optionButton:{
+        width:ScrWidth * 0.5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding:10,
+        fontWeight:'bold',
+        borderColor:'#98DAE3',
+        borderRadius:10,
+        borderWidth:2,
+       // backgroundColor:'#98DAE3',
+        marginTop:20
+    },
+    scrollView:{
+        backgroundColor: '#F5F5F5',
+    
     }
 })
 export default IntrovertExtrovert;
