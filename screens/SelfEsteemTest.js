@@ -120,6 +120,7 @@ const SelfEsteemTest = (props) => {
     const radioProps = [option1, option2, answerOp]
 
 const theResult = () =>{
+    setPageNum(101)
     if(realisticScore > 4){
         setTheContent("Please retake the test and provide accurate answers to the questions.") 
     }else{
@@ -142,89 +143,103 @@ const theResult = () =>{
 
 if(pageNum === 0 ){
   return (
-    <View  style={styles.mainScreen}>
+    <SafeAreaView>
             
-            <View>
-                <Text>Self Esteem Test</Text>
-                <Text>
-                Answer each question carefully
-                </Text>
-
+        <View style={styles.secondMainScreen}>
+            <Text style={styles.mainHeaderText}>Self Esteem Test</Text>
+            <Text style={styles.secondHeaderText} >
+                    Answer each question carefully
+            </Text>
+        </View>
+        <View style={styles.buttonCon}>
                 <TouchableOpacity
                         onPress={() => StartExam()}
                         style={styles.button}
                     >
-                            <Text>Start</Text> 
+                            <Text style={styles.buttonText}>Start</Text> 
             </TouchableOpacity> 
-            </View>
-    </View>
+        </View>
+    </SafeAreaView>
   );
   } else if (pageNum >= 1 && pageNum <59){
     return(
-        <View style={styles.mainScreen} >
+        <SafeAreaView>
             
-        <View>
+        <View style={styles.mainScreen}>
            <View style={styles.questionCon}>
-                <Text style={styles.questionText}>
-                {theQuestion}
+                <Text style={styles.secondHeaderText}>
+                {pageNum}. {theQuestion}
                 </Text>
             </View> 
-            <View style={styles.answerBtnCon}>
+            <View style={styles.optionButtonCon}>
                 <View >
                     <TouchableOpacity 
-                        onPress={getValueHandler.bind(this,radioProps[0])}>
-                        <Text>{radioProps[0]}</Text>  
+                        onPress={getValueHandler.bind(this,radioProps[0])} style={styles.optionButton}>
+                        <Text style={styles.buttonText}>{radioProps[0]}</Text>  
                     </TouchableOpacity>
                  </View> 
                 <View>
                     <TouchableOpacity 
-                        onPress={getValueHandler.bind(this,radioProps[1])}>
-                        <Text>{radioProps[1]}</Text>  
+                        onPress={getValueHandler.bind(this,radioProps[1])} style={styles.optionButton}>
+                        <Text style={styles.buttonText}>{radioProps[1]}</Text>  
                     </TouchableOpacity>
                 </View> 
             </View>
            {/* <Text>{myScore}</Text>
            <Text>{theScore}</Text> */}
-           <Text>{pageNum}</Text>
-            <TouchableOpacity
-                        disabled={nextDisable}
-                        onPress={() => NextQuestion()}
-                       // style={styles.button}
-                        style = {
-                          btnAct === 1
-                            ? btnActive()
-                            : btnDeactive()
-                            
-                        }
-                    >
-                            <Text>Next</Text> 
-            </TouchableOpacity> 
-            <Text>score:{theScore}</Text>
-            <Text>realistic: {realisticScore}</Text>
-           
+            <View style={styles.buttonCon}>
+                <TouchableOpacity
+                            disabled={nextDisable}
+                            onPress={() => NextQuestion()}
+                            style = {[styles.button,
+                                btnAct === 1
+                                  ? styles.btnActive
+                                  : styles.btnDeactive
+                                  
+                              ]}
+                        >
+                                <Text style={styles.buttonText}>Next</Text> 
+                </TouchableOpacity> 
+                {/* <Text>score:{theScore}</Text>
+                <Text>realistic: {realisticScore}</Text> */}
+            </View>
         </View>
-</View>
+</SafeAreaView>
     )
   }else if ( pageNum == 100){
     return(
         <SafeAreaView>
-            <View>
-                <TouchableOpacity onPress={() => theResult()}>
-                    <Text>See the result</Text>
-                </TouchableOpacity>
-            </View>
-            <View style={styles.resultCon}>
-                <Text>{theContent}</Text>
-            </View>
-            <Text>realistic value: {realisticScore}</Text>
+                 <View style={styles.secondMainScreen}>
+                    <Text style={styles.secondHeaderText}>You have finished the test</Text>
+                 </View>
+                 <View style={styles.buttonCon}>
+                    <TouchableOpacity onPress={() => theResult()}  style={styles.button}>
+                        <Text style={styles.buttonText}>See the result</Text>
+                    </TouchableOpacity>
+                 </View>
+         
         </SafeAreaView>
     )
+  } else if(pageNum === 101) {
+    return(
+
+        <SafeAreaView>
+             <View style={styles.secondMainScreen}>
+                    <Text style={styles.secondHeaderText}>Your Self Esteen Test Result:</Text>
+                    <Text style={styles.paragraphText}>{theContent}</Text>
+            </View>
+            {/* <Text>realistic value: {realisticScore}</Text> */}
+        </SafeAreaView>
+    );
   }
 };
 
 const styles = StyleSheet.create({
     mainScreen:{
-          height:ScrHeight * 0.6,
+        height:ScrHeight * 0.6,
+         // flex:1,
+          // justifyContent: 'center',
+          // alignItems: 'center',
           marginTop:30,
           marginBottom:30,
           padding: 20,
@@ -250,11 +265,11 @@ const styles = StyleSheet.create({
         fontSize:24,
     },
     secondHeaderText:{
+        flex:1,
         marginTop:25,
         marginBottom:10,
         fontSize:16,
         fontWeight:'bold',
-        textAlign:'center',
     },
     thirdHeaderTex:{
       marginTop:10,
@@ -271,7 +286,7 @@ const styles = StyleSheet.create({
     },
     buttonCon:{
       //  height: ScrHeight * 0.2,
-        marginTop:15,
+        marginTop:5,
         justifyContent: 'center',
         alignItems: 'center', 
     },
@@ -285,25 +300,42 @@ const styles = StyleSheet.create({
         borderRadius:10,
         borderWidth:1,
         backgroundColor:'#FBB651',
-        marginTop:10
+       // marginTop:10
+    },
+    btnActive:{
+        opacity: 1,
+    },
+    btnDeactive:{
+        opacity: 0.5,
     },
     buttonText:{
         fontWeight:'bold',
         fontSize: 16
     },
-    inputCon:{
-        marginTop:25,
+    questionCon:{
+        // textAlign:'left',
+        // justifyContent:'flex-start',
+        // alignContent:'flex-start' 
+        flex:1,
+        flexDirection:'row'
     },
-    pickerSelectStyles:{
-        width: ScrWidth * 0.5,
-        marginTop:5,
-        padding:5,
+    optionButtonCon:{
         justifyContent: 'center',
         alignItems: 'center',
-        alignSelf: 'stretch',
-        borderWidth: 1,
-        borderColor:'gray',
-        borderRadius:5
+        marginTop:20,
+        marginBottom:20,
+    },
+    optionButton:{
+        width:ScrWidth * 0.3,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding:10,
+        fontWeight:'bold',
+        borderColor:'#98DAE3',
+        borderRadius:10,
+        borderWidth:2,
+       // backgroundColor:'#98DAE3',
+        marginTop:10
     },
     scrollView:{
         backgroundColor: '#F5F5F5',
