@@ -17,14 +17,17 @@ const TodayChalleng = (props) => {
   const [theMessage, setTheMessage ] = useState("");
   const [theExample, setTheExample ] = useState("");
 
+
+
 const save = async () => {
-  setTheSavedArray(theSavedArray => [...theSavedArray, savedChallengeNum]);
+  
 try{
     await AsyncStorage.setItem( 'SavedArray' ,JSON.stringify( theSavedArray));
 
    } catch(err) {
        alert(err);
-   }
+   };
+  
 };
 
 const laod = async () => {
@@ -49,17 +52,22 @@ const remove = async () => {
   }
 };
 
+
 useEffect(() => {
   generateRandomNum();
   laod();
 }, []
 );
 
+const saveHandler = () =>{
+  setTheSavedArray(theSavedArray => [...theSavedArray, savedChallengeNum]);
+  save();
+ };
 
 const startGenerator = () => {
-  
+  generateRandomNum();
   setStageNum(stageNum+1);
-  setTheSavedArray(theSavedArray => [...theSavedArray,savedChallengeNum]);
+ // setTheSavedArray(theSavedArray => [...theSavedArray,savedChallengeNum]);
 };
 
 // const dateGenerator = () => {
@@ -67,13 +75,20 @@ const startGenerator = () => {
 //   setTheDate(today);
 // };
 
+const changeHandler = () => {
+  const SL = theSavedArray.length;
+setTheSavedArray(theSavedArray.slice(0,SL-1));
+generateRandomNum();
+};
+
 const generateRandomNum = () => {
   const theSavedArrayL = theSavedArray.length;
     let rndNum = Math.floor(0 + Math.random()* 10 );
     setChallengeMessage(rndNum);
   if (theSavedArray.indexOf(rndNum) < 0 ){
       setChallengeMessage(rndNum);
-      setSavedChallengeNum(rndNum);
+     // setSavedChallengeNum(rndNum);
+      setTheSavedArray(theSavedArray => [...theSavedArray, rndNum]);
   } else if (theSavedArray.indexOf(rndNum) > 0 && theSavedArrayL < 10){
     generateRandomNum();
   }else if (theSavedArray.indexOf(rndNum) > 0 && theSavedArrayL >= 10){
@@ -96,7 +111,7 @@ const setChallengeMessage = (selectedNumber) => {
 
 const savedChallenges = () => {
   const AL = theSavedArray.length;
-  for (let i = 0; i < AL; i++){
+  for (let i = 0; i < AL-1; i++){
             let a = theSavedArray[i];
             const ST = JSON.stringify(challengesData[a].Title).replace(/['"]+/g, "");
             setTheSavedTitle (theSavedTitle => [...theSavedTitle, ST]);
@@ -150,7 +165,7 @@ if (stageNum === 0){
         
         <View style={styles.buttonCon}>
                <TouchableOpacity
-                     onPress={() => generateRandomNum()}
+                     onPress={() => changeHandler()}
                      style={[styles.button, styles.ChangeChallengeBtn]}
                 >
                         <Text>Change Your Challenge</Text> 
@@ -159,8 +174,9 @@ if (stageNum === 0){
                      onPress={() => save()}
                      style={[styles.button, styles.ChangeChallengeBtn]}
                 >
-                        <Text>Accept the challenge</Text> 
+                        <Text>save the challenge</Text> 
                 </TouchableOpacity>
+               
                 <TouchableOpacity
                      onPress={() => remove()}
                      style={[styles.button, styles.ChangeChallengeBtn]}
