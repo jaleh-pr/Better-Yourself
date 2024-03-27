@@ -25,7 +25,6 @@ const HomePage = (props) => {
                         >  
                             <View>
                                 <Image
-                                    
                                     source={require('../assets/icons8-mail-50.png')}
                                     style= {styles.iconStyle}
                                 ></Image>

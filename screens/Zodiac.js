@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ScrollView, Dimensions} from 'react-native';
+import {StyleSheet, Text, View,ImageBackground, TouchableOpacity, SafeAreaView, ScrollView, Dimensions} from 'react-native';
 
 import RNPickerSelect from "react-native-picker-select";
 
@@ -121,6 +121,9 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
                     
                 </TouchableOpacity>
             </View>
+            <ImageBackground source={require('../assets/zodiac.jpg')} resizeMode="contain" style={styles.bgImage}>
+        
+        </ImageBackground>
     </SafeAreaView>
     )
     } else if ( pageNum === 1 ){
@@ -240,10 +243,10 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
                     </ScrollView>
                 </View>
            
-            <View style={styles.buttonCon}>
+            <View style={styles.smallButtonCon} >
                 <TouchableOpacity
                             onPress={backHandler}
-                            style={styles.button}
+                            style={styles.smallButton}
                         >
                                 <Text style={styles.buttonText}>Back</Text> 
                 </TouchableOpacity> 
@@ -297,8 +300,8 @@ const styles = StyleSheet.create({
         padding:20,
     },
     buttonCon:{
-      //  height: ScrHeight * 0.2,
-        marginTop:15,
+      
+      height: ScrHeight * 0.2,
         justifyContent: 'center',
         alignItems: 'center', 
     },
@@ -317,6 +320,22 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
         fontSize: 16
   },
+  smallButtonCon:{   
+    height: ScrHeight * 0.1,
+      justifyContent: 'center',
+      alignItems: 'center', 
+  },
+  smallButton:{
+    width:ScrWidth * 0.3,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding:10,
+    fontWeight:'bold',
+    borderColor:'#FBB651',
+    borderRadius:10,
+    borderWidth:1,
+    backgroundColor:'#FBB651'
+},
   inputCon:{
         marginTop:25,
   },
@@ -334,6 +353,13 @@ const styles = StyleSheet.create({
   scrollView:{
         backgroundColor: '#F5F5F5',
    
-  }
+  },
+  bgImage:{
+    height:ScrHeight*0.25,
+    width:ScrWidth,
+   // marginLeft:ScrWidth* 0.2,
+    
+   }
+
 })
 export default Zodiac;

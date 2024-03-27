@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity,TextInput, SafeAreaView, ScrollView, Dimensions} from 'react-native';
+import {StyleSheet, Text, View,ImageBackground, TouchableOpacity,TextInput, SafeAreaView, ScrollView, Dimensions} from 'react-native';
 
 const ScrHeight = Dimensions.get('window').height;
 const ScrWidth = Dimensions.get('window').width;
@@ -45,6 +45,9 @@ const PersonalTest = (props) => {
                 </TouchableOpacity> 
             </View>
         </View>
+        <ImageBackground source={require('../assets/self-awareness.png')} resizeMode="contain" style={styles.bgImage}>
+        
+        </ImageBackground>
     </SafeAreaView>
   );
 };
@@ -129,7 +132,13 @@ const styles = StyleSheet.create({
     },
     redButton:{
         backgroundColor:'#DF6149',
-    }
+    },
+    bgImage:{
+        height:ScrHeight*0.35,
+        width:ScrWidth,
+       // marginLeft:ScrWidth* 0.2,
+        
+       }
 
 })
 export default PersonalTest;

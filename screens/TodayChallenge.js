@@ -1,6 +1,6 @@
 
 import React ,{ useState , useEffect} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity,TextInput, SafeAreaView, ScrollView, Dimensions} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity,TextInput, SafeAreaView, ScrollView, Dimensions,ImageBackground} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const ScrHeight = Dimensions.get('window').height;
@@ -131,8 +131,8 @@ if (stageNum === 0){
 
   return (
     <SafeAreaView>
-            
-            <View style={styles.secondMainScreen}>
+
+            <View style={styles.firstMainScreen}>
                 <Text style={styles.mainHeaderText}>Your Today's Challenge</Text>
                 <Text style={styles.secondHeaderText}>
                 Click start to see what your challenge for today is.
@@ -146,6 +146,9 @@ if (stageNum === 0){
                           <Text style={styles.buttonText}>Start</Text> 
                 </TouchableOpacity> 
               </View>
+              <ImageBackground source={require('../assets/challenge.png')} resizeMode="cover" style={styles.bgImage}>
+          
+              </ImageBackground>
     </SafeAreaView>
   );
 }else if (stageNum === 1){
@@ -153,7 +156,7 @@ if (stageNum === 0){
     <SafeAreaView >
 
         <View style={styles.secondMainScreen}>  
-        <Text style={styles.mainHeaderText}>Your Today's Challenge</Text>
+              <Text style={styles.mainHeaderText}>Your Today's Challenge</Text>
                <ScrollView vertical > 
                
                     <Text style={styles.secondHeaderText}>{theTitle}</Text>
@@ -177,12 +180,7 @@ if (stageNum === 0){
                         <Text>save the challenge</Text> 
                 </TouchableOpacity>
                
-                <TouchableOpacity
-                     onPress={() => remove()}
-                     style={[styles.button, styles.ChangeChallengeBtn]}
-                >
-                        <Text>Remove Your Challenge</Text> 
-                </TouchableOpacity>
+              
                 <TouchableOpacity
                      onPress={savedChallenges}
                      style={[styles.button, styles.ChangeChallengeBtn]}
@@ -217,6 +215,12 @@ if (stageNum === 0){
                     >
                             <Text style={styles.buttonText}>Back</Text> 
               </TouchableOpacity>
+              <TouchableOpacity
+                     onPress={() => remove()}
+                     style={[styles.button, styles.ChangeChallengeBtn]}
+                >
+                        <Text>Remove Your Challenge</Text> 
+                </TouchableOpacity>
           </View>
      </SafeAreaView>
      );
@@ -230,7 +234,8 @@ if (stageNum === 0){
                      style={[styles.button, styles.ChangeChallengeBtn]}
                 >
                         <Text>Back</Text> 
-                </TouchableOpacity>
+           </TouchableOpacity>
+          
         </View>
         
          
@@ -289,10 +294,9 @@ paragraphText:{
     padding:20,
 },
 buttonCon:{
-  //  height: ScrHeight * 0.2,
-    marginTop:-15,
-    justifyContent: 'center',
-    alignItems: 'center', 
+  height: ScrHeight * 0.2,
+  justifyContent: 'center',
+  alignItems: 'center', 
 },
 button:{
     width:ScrWidth * 0.6,
@@ -327,6 +331,10 @@ pickerSelectStyles:{
 scrollView:{
     backgroundColor: '#F5F5F5',
 
+},
+bgImage:{
+  height:ScrHeight*0.25,
+  width:ScrWidth,
 }
 })
 export default TodayChalleng;

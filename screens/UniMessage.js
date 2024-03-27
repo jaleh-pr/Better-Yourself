@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Dimensions, Image, StatusBar, SafeAreaView, ScrollView, TextInput} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Dimensions, Image, StatusBar, SafeAreaView, ScrollView, ImageBackground, TextInput} from 'react-native';
 
 
 const ScrHeight = Dimensions.get('window').height;
@@ -69,12 +69,14 @@ const UniMessage = (props) => {
  
 if (stageNum === 0){
   return (
-    <SafeAreaView>
+    <SafeAreaView> 
+      
         <View style={styles.firstMainScreen}>
                  <Text style={styles.mainHeaderText}> Universe Message</Text> 
                 <Text style={styles.secondHeaderText}>Close your eyes and concentrate on the question you seek the answer from the universe</Text>
         
         </View>
+
         <View  style={styles.buttonCon} >
        
             <TouchableOpacity
@@ -86,16 +88,21 @@ if (stageNum === 0){
                             <Text style={styles.buttonText}>Start</Text> 
             </TouchableOpacity> 
         </View>
+        <ImageBackground source={require('../assets/uni-message.png')} resizeMode="contain" style={styles.bgImage}>
+        
+        </ImageBackground>
     </SafeAreaView>
   );
 }else if (stageNum ==2 ) {
     return (
         <SafeAreaView>
-            <View style={styles.mainScreen}>
+              <View style={styles.mainScreen}>
                 <Text style={styles.secondHeaderText}>{theTitle}</Text>  
-                <ScrollView vertical style={styles.scrollView} >   
-                    <Text style= {styles.paragraphText}>{theMessage}</Text>
-                </ScrollView>
+                
+                    <ScrollView vertical style={styles.scrollView} >   
+                        <Text style= {styles.paragraphText}>{theMessage}</Text>
+                    </ScrollView>
+                
             </View> 
             
             <View style={styles.buttonCon}>
@@ -106,7 +113,7 @@ if (stageNum === 0){
                                 <Text style={styles.buttonText}>Back</Text> 
                 </TouchableOpacity> 
             </View>
-            
+           
         </SafeAreaView>
       );
 }else if(stageNum ==3 ){
@@ -127,12 +134,15 @@ const styles = StyleSheet.create({
           marginTop:30,
           marginBottom:10,
           padding: 20,
+         
+          //: 
       },
       firstMainScreen:{
          height:ScrHeight * 0.3,
          marginTop:30,
          marginBottom:10,
          padding: 20,
+        
       },
       mainHeaderText:{
         marginTop:25,
@@ -156,6 +166,7 @@ const styles = StyleSheet.create({
        height: ScrHeight * 0.2,
          justifyContent: 'center',
          alignItems: 'center', 
+       // backgroundColor:'red',
        },
     button:{
         width:ScrWidth * 0.6,
@@ -186,6 +197,12 @@ const styles = StyleSheet.create({
       },
     scrollView:{
         backgroundColor: '#F5F5F5',
+       
+      },
+      bgImage:{
+       height:ScrHeight*0.2,
+       width:ScrWidth* 0.5,
+       marginLeft:ScrWidth* 0.2,
        
       }
 
