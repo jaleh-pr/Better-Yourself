@@ -15,13 +15,28 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCalendarsUsageDescription": "This permission is not needed by the app",
+        "NSCameraUsageDescription": "This permission is not needed by the app.",
+        "NSContactsUsageDescription": "This permission is not needed by the app.",
+        "NSLocationWhenInUseUsageDescription": "This permission is not needed by the app.",
+        "NSMicrophoneUsageDescription": "This permission is not needed by the app.",
+        "NSMotionUsageDescription": "This permission is not needed by the app.",
+        "NSPhotoLibraryAddUsageDescription": "This permission is not needed by the app.",
+        "NSPhotoLibraryUsageDescription": "This permission is not needed by the app.",
+        "NSRemindersUsageDescription": "This permission is not needed by the app."
+    }
+    
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+       
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -144,7 +144,7 @@ if(pageNum === 0 ){
     <SafeAreaView>   
         <View style={styles.secondMainScreen}>
             <Text style={styles.mainHeaderText}>Introvert, Extrovert or Ambivert</Text>
-            <Text style={styles.thirdHeaderText}>
+            <Text style={styles.secondHeaderText}>
                     Please answer each question carefully.
             </Text>
         </View>
@@ -162,8 +162,9 @@ if(pageNum === 0 ){
     return(
     <SafeAreaView>
         <View style={styles.mainScreen}>
+        <Text style={styles.secondHeaderText}>Introvert, Extrovert or Ambivert</Text>
            <View style={styles.questionCon}>
-                <Text style={styles.secondHeaderText}>
+                <Text style={styles.thirdHeaderText}>
                 {pageNum}. {theQuestion}
                 </Text>
             </View> 
@@ -196,25 +197,25 @@ if(pageNum === 0 ){
             </View>
            {/* <Text>{myScore}</Text>
            <Text>{theScore}</Text> */}
+
+            <View style={styles.buttonCon}>
+                    <TouchableOpacity
+                                disabled={nextDisable}
+                                onPress={() => NextQuestion()}
+                            // style={styles.button}
+                            style = {[styles.button,
+                                btnAct === 1
+                                ? styles.btnActive
+                                : styles.btnDeactive
+                                
+                            ]}
+                            >
+                                    <Text style={styles.buttonText}>Next</Text> 
+                    </TouchableOpacity> 
+            
+            </View>
            </View>
-           <View style={styles.buttonCon}>
-                <TouchableOpacity
-                            disabled={nextDisable}
-                            onPress={() => NextQuestion()}
-                        // style={styles.button}
-                        style = {[styles.button,
-                            btnAct === 1
-                              ? styles.btnActive
-                              : styles.btnDeactive
-                              
-                          ]}
-                        >
-                                <Text style={styles.buttonText}>Next</Text> 
-                </TouchableOpacity> 
-            {/* <Text>score:{theScore}</Text> */}
-            {/* <Text>realistic: {realisticScore}</Text> */}
-           
-        </View>
+          
 </SafeAreaView>
     )
   }else if ( pageNum == 100){
@@ -246,14 +247,15 @@ if(pageNum === 0 ){
 
 const styles = StyleSheet.create({
     mainScreen:{
-        height:ScrHeight * 0.6,
-        width:ScrWidth * 0.85,
+        height:ScrHeight * 0.7,
+        width:ScrWidth * 0.9,
          // flex:1,
           // justifyContent: 'center',
           // alignItems: 'center',
-          marginTop:30,
-          marginBottom:30,
+          marginTop:20,
+          marginBottom:20,
           padding: 20,
+       //   backgroundColor:'#FBB655',
       },
        firstMainScreen:{
          height:ScrHeight * 0.3,
@@ -273,22 +275,27 @@ const styles = StyleSheet.create({
         marginTop:25,
        textAlign:'center',
         fontWeight:'bold',
-        fontSize:24,
+        fontSize:20,
+        marginBottom:20
     },
     secondHeaderText:{
-        flex:1,
-        marginTop:25,
-        marginBottom:10,
-        fontSize:16,
-        fontWeight:'bold',
-    },
-    thirdHeaderText:{
-      marginTop:25,
-      //marginBottom:10,
-      fontSize:16,
-      fontWeight:'bold',
-      textAlign:'center',
-    },
+        // height: ScrHeight * 0.2,
+         flex:1,
+          marginTop:5,
+          marginBottom:25,
+         fontSize:18,
+         fontWeight:'bold',
+         textAlign:'center',
+         color:'#2D5018'
+       },
+       thirdHeaderText:{
+         textAlign:'center',
+         //marginTop:5,
+         //marginBottom:10,
+         fontSize:16,
+         fontWeight:'bold',
+         
+       },
     paragraphText:{
         fontSize:15,
         textAlign:'justify',
@@ -297,9 +304,10 @@ const styles = StyleSheet.create({
     },
     buttonCon:{
       //  height: ScrHeight * 0.2,
-        marginTop:5,
-        justifyContent: 'center',
-        alignItems: 'center', 
+      marginTop:30,
+      justifyContent: 'center',
+      alignItems: 'center', 
+     // backgroundColor:'#FBB655',
     },
     button:{
         width:ScrWidth * 0.6,
@@ -311,7 +319,7 @@ const styles = StyleSheet.create({
         borderRadius:10,
         borderWidth:1,
         backgroundColor:'#FBB651',
-       // marginTop:10
+        marginTop:0
     },
     btnActive:{
         opacity: 1,
@@ -331,19 +339,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginTop:20,
-        marginBottom:20,
+        marginBottom:0,
     },
     optionButton:{
-        width:ScrWidth * 0.5,
+        width:ScrWidth * 0.4,
         justifyContent: 'center',
         alignItems: 'center',
-        padding:10,
+        padding:5,
         fontWeight:'bold',
         borderColor:'#98DAE3',
         borderRadius:10,
         borderWidth:2,
        // backgroundColor:'#98DAE3',
-        marginTop:20
+        marginTop:7
     },
     scrollView:{
         backgroundColor: '#F5F5F5',

@@ -187,8 +187,9 @@ if(pageNum === 0 ){
        <SafeAreaView>
             
         <View style={styles.mainScreen}>
-           <View style={styles.questionCon}>
-                <Text style={styles.secondHeaderText}>
+            <Text style={styles.secondHeaderText}>Personality Test</Text>
+            <View style={styles.questionCon}>
+                <Text style={styles.thirdHeaderText}>
                 {pageNum}. {theQuestion}
                 </Text>
             </View> 
@@ -284,14 +285,15 @@ if(pageNum === 0 ){
 
 const styles = StyleSheet.create({
     mainScreen:{
-        height:ScrHeight * 0.6,
-        width:ScrWidth * 0.8,
+        height:ScrHeight * 0.7,
+        width:ScrWidth * 0.9,
          // flex:1,
           // justifyContent: 'center',
           // alignItems: 'center',
-          marginTop:30,
-          marginBottom:30,
+          marginTop:20,
+          marginBottom:20,
           padding: 20,
+         // backgroundColor:'#FBB655',
       },
        firstMainScreen:{
          height:ScrHeight * 0.3,
@@ -308,25 +310,28 @@ const styles = StyleSheet.create({
       // backgroundColor:"yellow",
      },
       mainHeaderText:{
-        marginTop:25,
-       textAlign:'center',
-        fontWeight:'bold',
-        fontSize:24,
+         fontSize:22,
+         marginTop:25,
+         textAlign:'center',
+         fontWeight:'bold',
+         marginBottom:20
     },
     secondHeaderText:{
         flex:1,
-        marginTop:25,
-        marginBottom:10,
-        fontSize:16,
+        marginTop:15,
+       // marginBottom:10,
+        fontSize:18,
         fontWeight:'bold',
         textAlign:'center',
+        color:'#2D5018'
     },
-    thirdHeaderTex:{
-      marginTop:10,
+    thirdHeaderText:{
+      textAlign:'left',
+      marginTop:5,
       //marginBottom:10,
       fontSize:16,
       fontWeight:'bold',
-      textAlign:'left',
+      
     },
     paragraphText:{
         fontSize:15,
@@ -336,13 +341,19 @@ const styles = StyleSheet.create({
     },
     questionCon:{
         flex:1,
-        flexDirection:'row'
+        flexDirection:'row',
+        marginBottom:20
+       // width:ScrWidth * 0.9,
+       // marginLeft: ScrWidth * 0.05,
+       // textAlign:'left',
+       
     },
     buttonCon:{
       //  height: ScrHeight * 0.2,
-        marginTop:35,
+        marginTop:30,
         justifyContent: 'center',
         alignItems: 'center', 
+       // backgroundColor:'#FBB655',
     },
     button:{
         width:ScrWidth * 0.6,
@@ -369,20 +380,20 @@ const styles = StyleSheet.create({
     optionButtonCon:{
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop:20,
-        marginBottom:20,
+       // marginTop:20,
+        marginBottom:0,
     },
     optionButton:{
-        width:ScrWidth * 0.3,
+        width:ScrWidth * 0.4,
         justifyContent: 'center',
         alignItems: 'center',
-        padding:10,
+        padding:5,
         fontWeight:'bold',
         borderColor:'#98DAE3',
         borderRadius:10,
         borderWidth:2,
        // backgroundColor:'#98DAE3',
-        marginTop:10
+        marginTop:0
     },
     scrollView:{
         backgroundColor: '#F5F5F5',

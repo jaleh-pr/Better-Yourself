@@ -519,7 +519,7 @@
         "id": "104",
         "Language": "English",
         "category": "UniMessage",
-        "message":"You can't predict the future, but be brave and step into the unknown. Trust that the Universe will guide you and see where it leads."
+        "message":"You can’t predict the future, but be brave and step into the unknown. Trust that the Universe will guide you and see where it leads."
     },{
         "id": "105",
         "Language": "English",
@@ -539,12 +539,12 @@
         "id": "108",
         "Language": "English",
         "category": "UniMessage",
-        "message":"You might be concerned about whether your work will be successful or liked by others. Right now, don't focus on others' opinions. What matters is that you are letting your creative energy flow, even if it means keeping your latest creations private for yourself."
+        "message":"You might be concerned about whether your work will be successful or liked by others. Right now, don’t focus on others’ opinions. What matters is that you are letting your creative energy flow, even if it means keeping your latest creations private for yourself."
     },{
         "id": "109",
         "Language": "English",
         "category": "UniMessage",
-        "message":"In your relationships, you might be overly protective, dependent, and controlling, like a mother. If this sounds familiar, it's time to change from a parent-child dynamic to an equal adult relationship. Foster independence, trust, and caring understanding."
+        "message":"In your relationships, you might be overly protective, dependent, and controlling, like a mother. If this sounds familiar, it’s time to change from a parent-child dynamic to an equal adult relationship. Foster independence, trust, and caring understanding."
     },{
         "id": "110",
         "Language": "English",
@@ -554,27 +554,137 @@
         "id": "111",
         "Language": "English",
         "category": "UniMessage",
-        "message":"You might have to push yourself to do the hard work you've been avoiding. But if you can use your positive energy and determination, your hard work will pay off in the end."
+        "message":"You might have to push yourself to do the hard work you’ve been avoiding. But if you can use your positive energy and determination, your hard work will pay off in the end."
     },{
         "id": "112",
         "Language": "English",
         "category": "UniMessage",
-        "message":"If you feel limited and trapped, and you've lost your freedom and flexibility, it's time to set your own rules. You may have been going along with the crowd on autopilot, but now you realize that it's time to make some changes."
+        "message":"If you feel limited and trapped, and you’ve lost your freedom and flexibility, it’s time to set your own rules. You may have been going along with the crowd on autopilot, but now you realize that it’s time to make some changes."
     },{
-        "id": "86",
+        "id": "113",
         "Language": "English",
         "category": "UniMessage",
-        "message":"take pride in who you are."
+        "message":"Focus on improving yourself rather than comparing yourself to others. Instead of looking at how others are doing, look at your own progress over time. Ask yourself if you have become a better, more skilled, and more complete person compared to your past self."
     },{
-        "id": "86",
+        "id": "114",
         "Language": "English",
         "category": "UniMessage",
-        "message":"take pride in who you are."
+        "message":"You don’t need to participate in every argument you’re invited to."
     },{
-        "id": "86",
+        "id": "115",
         "Language": "English",
         "category": "UniMessage",
-        "message":"take pride in who you are."
+        "message":"Focus on what you can control and let go of the things that are beyond your control. Instead of stressing over things you cannot change, channel your energy into managing the aspects of your life that you have the power to influence. By prioritizing your efforts on what you can control, you can maintain a sense of balance and peace of mind."
+    },{
+        "id": "116",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"Do not sacrifice your well-being or happiness in order to please or help others. It is important to prioritize your own needs and boundaries, even if it means disappointing or not meeting the expectations of those around you. Remember that taking care of yourself is essential in order to be able to effectively support others in the long run."
+    },{
+        "id": "117",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"Not being good at something initially is the starting point to eventually becoming decent at it. Making mistakes and facing challenges are natural parts of the learning process. By embracing these difficulties and persisting through them, you can gradually improve and gain proficiency in that particular skill or task. Remember that everyone starts somewhere and progress takes time and effort."
+    },{
+        "id": "118",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"If you find yourself to be the most intelligent person in a group, it may be time to find a different group. The individuals you choose to spend time with, particularly during your young adult years, can greatly shape your future. Being around motivated and smart individuals can have a positive impact on your own growth and development. Surrounding yourself with such people can inspire you to strive for excellence and achieve your goals."
+    },{
+        "id": "119",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"If you wouldn’t want people you dislike to stay in your home, why allow them to occupy your thoughts and emotions? It’s important to protect your mental space from negative influences and toxic individuals. Just as you wouldn’t welcome unwelcome guests into your living space, it’s essential to set boundaries and not let negative thoughts or feelings about certain people take up residence in your mind. Prioritize your mental well-being by focusing on positive and uplifting thoughts instead."
+    },{
+        "id": "120",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"To have better relationships, focus on accepting, appreciating, and understanding others. By mastering these three things, all aspects of your relationships will improve."
+    },{
+        "id": "121",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"Help the people you know to grow, and you’ll grow alongside them."
+    },{
+        "id": "122",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"Nine out of ten times, it’s not about you, so try not to take it personally."
+    },{
+        "id": "123",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"Having good intentions is important, but it is your actions that truly show who you are. It is not enough to simply think about doing the right thing; you must follow through with concrete actions that align with your intentions."
+    },{
+        "id": "124",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"Spend your time and energy on those who also make an effort for you. It’s important to value and appreciate the people who are there for you when you need them. Building strong relationships with those who support and care for you can lead to meaningful connections and mutual respect. Remember to reciprocate the kindness and support that others show you."
+    },{
+        "id": "125",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"The more prepared you are, the luckier you get. "
+    },{
+        "id": "126",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"The biggest error you can make in life is thinking you have enough time."
+    },{
+        "id": "127",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"Stay calm and let life guide you. This doesn’t mean being lazy. It means you don’t have to have all the answers or a detailed plan for the future."
+    },{
+        "id": "128",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"Don’t stress about having all the answers, as it’s impossible to have everything figured out. The key is to keep moving forward, even if it’s at a slow pace. Progressing in the right direction is more significant than reaching a specific destination."
+    },{
+        "id": "129",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"Have confidence in your own journey without being concerned about the actions of others."
+    },{
+        "id": "130",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"If it isn’t going to impact your life five years from now, think about whether it's worth worrying about today."
+    },{
+        "id": "131",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"You make the most progress when you step out of your comfort zone, but you need to push yourself to do it."
+    },{
+        "id": "132",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"The best thing you can do for yourself is to love yourself first. Putting yourself first leads to finding happiness and purpose within yourself, instead of looking for it from others or things."
+    },{
+        "id": "133",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"Don't seek validation from others. It can lead to negative outcomes and you'll never truly get their approval. Focus on yourself to avoid feeling unhappy."
+    },{
+        "id": "134",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"Use patience more often. Good things happen, but they usually take time and effort to happen."
+    },{
+        "id": "135",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"Those people you envy for their successful lives? They weren't born with special advantages. They had average resources and abilities, just like you. But they made different choices, worked harder, and were more disciplined. Look at what you have, and put in the effort."
+    },{
+        "id": "136",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"Things feel strongest when they happen for the first time. But just because it's not the first time doesn't mean it gets easier. You need to believe in yourself that you'll be stronger and braver the next time."
+    },{
+        "id": "137",
+        "Language": "English",
+        "category": "UniMessage",
+        "message":"We don't realize how good someone would feel if they were given a compliment."
     },{
         "id": "86",
         "Language": "English",

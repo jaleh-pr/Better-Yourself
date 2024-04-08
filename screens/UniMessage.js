@@ -130,7 +130,7 @@ if (stageNum === 0){
 
 const styles = StyleSheet.create({
     mainScreen:{
-          height:ScrHeight * 0.5,
+          height:ScrHeight * 0.6,
           marginTop:30,
           marginBottom:10,
           padding: 20,
@@ -145,17 +145,20 @@ const styles = StyleSheet.create({
         
       },
       mainHeaderText:{
+        fontSize:22,
         marginTop:25,
         textAlign:'center',
         fontWeight:'bold',
-        fontSize:24,
-    },
+        marginBottom:20
+   },
     secondHeaderText:{
-        marginTop:25,
-        marginBottom:10,
-        fontSize:16,
-        fontWeight:'bold',
-        textAlign:'center',
+        flex:1,
+        marginTop:5,
+        marginBottom:5,
+         fontSize:18,
+         fontWeight:'bold',
+         textAlign:'center',
+         color:'#2D5018'
     },
     paragraphText:{
         fontSize:15,
@@ -163,7 +166,7 @@ const styles = StyleSheet.create({
         padding:20,
     },
     buttonCon:{
-       height: ScrHeight * 0.2,
+       height: ScrHeight * 0.1,
          justifyContent: 'center',
          alignItems: 'center', 
        // backgroundColor:'red',

@@ -123,11 +123,9 @@ const styles = StyleSheet.create({
     display:'flex',
     flexDirection: 'row',
     alignItems:'center',
-    justifyContent:'center',
-   
+    justifyContent:'center',  
     width: ScrWidth *0.8,
     marginTop: 20,
-
 
   },
   button:{
