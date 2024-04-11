@@ -1,6 +1,6 @@
 
 import React ,{ useState , useEffect} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity,TextInput, SafeAreaView, ScrollView, Dimensions,ImageBackground} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ScrollView, Dimensions,ImageBackground, Image} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const ScrHeight = Dimensions.get('window').height;
@@ -8,7 +8,6 @@ const ScrWidth = Dimensions.get('window').width;
 
 
 const TodayChalleng = (props) => {
-  // const [savedChallengeNum, setSavedChallengeNum] = useState("");
   const [stageNum, setStageNum] = useState(0);
   const challengesData = require("../Data/challengEnglish.json");
   const [theSavedArray, setTheSavedArray] = useState([]);
@@ -36,7 +35,6 @@ try{
    ChangeBtn();
    setBtnAct(0);
    setItIsSaved(true);
-   //setSavedArrayL(savedArrayL+1);
 };
 
 const laod = async () => {
@@ -73,7 +71,7 @@ const startGenerator = () => {
   generateRandomNum();
   setStageNum(stageNum+1);
   setSavedArrayL(theSavedArray.length);
- // setTheSavedArray(theSavedArray => [...theSavedArray,savedChallengeNum]);
+
 };
 
 // const dateGenerator = () => {
@@ -84,28 +82,22 @@ const startGenerator = () => {
 const changeHandler = () => {
  const SL = theSavedArray.length;
 setTheSavedArray(theSavedArray.slice(0,SL-1)); //all the array except last one
-//setTheSavedArray(theSavedArray.slice(0,savedArrayL-1));
 generateRandomNum();
 };
 
 const generateRandomNum = () => {
   const theSavedArrayL = theSavedArray.length;
-    let rndNum = Math.floor(0 + Math.random()* 15 );
+    let rndNum = Math.floor(0 + Math.random()* 170 );
     setChallengeMessage(rndNum);
   if (theSavedArray.indexOf(rndNum) < 0 ){
       setChallengeMessage(rndNum);
-     // setSavedChallengeNum(rndNum);
       setTheSavedArray(theSavedArray => [...theSavedArray, rndNum]);
-  } else if (theSavedArray.indexOf(rndNum) > 0 && theSavedArrayL < 10){
+  } else if (theSavedArray.indexOf(rndNum) > 0 && theSavedArrayL < 171){
     generateRandomNum();
-  }else if (theSavedArray.indexOf(rndNum) > 0 && theSavedArrayL >= 10){
-     // setTheSavedArray (theSavedArray.slice(5,10));
-     setTheSavedArray (theSavedArray.slice(4,10));
+  }else if (theSavedArray.indexOf(rndNum) > 0 && theSavedArrayL >= 171){
+     setTheSavedArray (theSavedArray.slice(167,171));
      generateRandomNum();
   }
- 
-  // console.log("theSavedArray", theSavedArray);
-  // console.log("theSavedArrayLength", theSavedArrayL);
 };
 
 const setChallengeMessage = (selectedNumber) => {
@@ -119,15 +111,19 @@ const setChallengeMessage = (selectedNumber) => {
 
 const savedChallenges = () => {
   const AL = theSavedArray.length;
-  // if(AL < 10){
   for (let i = 0; i < AL; i++){
             let a = theSavedArray[i];
             const ST = JSON.stringify(challengesData[a].Title).replace(/['"]+/g, "");
             setTheSavedTitle (theSavedTitle => [...theSavedTitle, ST]);
   }
-// }else{
-//   setTheSavedArray(theSavedTitle.reverse().slice(0,7));
-// }
+
+  // let i =AL ;
+  // while(i>AL-5 && i>0){
+  //             let a = theSavedArray[i];
+  //            const ST = JSON.stringify(challengesData[a].Title).replace(/['"]+/g, "");
+  //            setTheSavedTitle (theSavedTitle => [...theSavedTitle, ST]);
+
+  // }
   setStageNum(2);
   console.log('saved Title ',theSavedTitle);
 };
@@ -149,7 +145,7 @@ if (stageNum === 0){
                 Click start to see what your challenge for today is.
                 </Text>
             </View>
-            <View style= {styles.buttonCon}>
+            <View style= {styles.mainBtnCon}>
               <TouchableOpacity
                       onPress={startGenerator}
                       style={styles.button}
@@ -167,9 +163,19 @@ if (stageNum === 0){
     <SafeAreaView >
 
         <View style={styles.secondMainScreen}>  
-              
+
                <ScrollView  vertical > 
                     <Text style={styles.secondHeaderText}>Your Today's Challenge</Text>
+                    <TouchableOpacity
+                     onPress={savedChallenges}
+                     style={styles.historyBtn}
+                >
+                    
+                    <Image
+                        source={require('../assets/icons8-history-50.png')}
+                        style= {{width:ScrWidth / 8, height: ScrHeight / 23, resizeMode: 'contain', }}
+                    ></Image>
+                </TouchableOpacity>
                     <View style={styles.scrollView}>
                         <Text style={styles.thirdHeaderText}>{theTitle}</Text>
                         <Text style={styles.paragraphText}>{theMessage}</Text>
@@ -197,12 +203,12 @@ if (stageNum === 0){
                             <Text style={styles.buttonText}>Accept It</Text> 
                     </TouchableOpacity>
                 </View>
-                <TouchableOpacity
+                {/* <TouchableOpacity
                      onPress={savedChallenges}
                      style={[styles.button, styles.historyBtn]}
                 >
                         <Text>Your Accepted Challenges</Text> 
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 {/* <TouchableOpacity
                      onPress={() => remove()}
                      style={[styles.button,  styles.historyBtn]}
@@ -210,9 +216,6 @@ if (stageNum === 0){
                         <Text>Remove Your Challenge</Text> 
                 </TouchableOpacity> */}
         </View>
-        {/* <Text style={ styles.marginTop}>saved array:{theSavedArray}</Text>
-        <Text>array l:{theSavedArray.length}</Text> */}
- 
     </SafeAreaView>
      );
     }else if (stageNum === 2){
@@ -220,15 +223,16 @@ if (stageNum === 0){
       <SafeAreaView >
 
           <View style={styles.secondMainScreen}>  
-              <Text>Your 7 recent challenges</Text>
-              <ScrollView vertical > 
-              {itIsSaved 
-              ? theSavedTitle.reverse().slice(0,6).map((SavedT,i) =>(
-                  <Text key={i} style={styles.thirdHeaderText}>{i+1}.{SavedT}</Text>
-              ))
-              : theSavedTitle.reverse().slice(1,7).map((SavedT,i) =>(
-                  <Text key={i} style={styles.thirdHeaderText}>{i+1}.{SavedT}</Text>
-              ))}
+              <ScrollView vertical  > 
+                  <Text  style={styles.secondHeaderText}>Your 5 Recent Challenges</Text>
+                
+                  {itIsSaved 
+                  ? theSavedTitle.reverse().slice(0,5).map((SavedT,i) =>(
+                      <Text key={i} style={[styles.thirdHeaderText, styles.leftAlign]}>{i+1}.{' '+SavedT}</Text>
+                  ))
+                  : theSavedTitle.reverse().slice(1,6).map((SavedT,i) =>(
+                      <Text key={i} style={[styles.thirdHeaderText, styles.leftAlign]}>{i+1}.{' '+SavedT}</Text>
+                  ))}
               </ScrollView>
           </View>
           <View style={styles.buttonCon}>
@@ -259,59 +263,49 @@ if (stageNum === 0){
     }
   };
 const styles = StyleSheet.create({
-  mainScreen:{
-    height:ScrHeight * 0.6,
-     // flex:1,
-      // justifyContent: 'center',
-      // alignItems: 'center',
-      marginTop:30,
-      marginBottom:30,
-      padding: 20,
-  },
+
    firstMainScreen:{
-     height:ScrHeight * 0.3,
-     marginTop:30,
-     marginBottom:10,
-     padding: 20,
+    height:ScrHeight * 0.2,
+    width:ScrWidth ,
+    marginTop:ScrHeight * 0.1,
    // backgroundColor:"yellow",
   },
   secondMainScreen:{
-    height:ScrHeight * 0.5,
-    marginTop:30,
-    marginBottom:10,
-    padding: 20,
+    height:ScrHeight * 0.65,
+    marginTop:ScrHeight * 0.02,
+    padding: ScrHeight * 0.02,
   // backgroundColor:"gray",
  },
  mainHeaderText:{
-  fontSize:22,
-  marginTop:25,
-  textAlign:'center',
-  fontWeight:'bold',
-  marginBottom:20
+    fontSize:ScrHeight * 0.025,  
+    marginTop:ScrHeight * 0.025,  
+    textAlign:'center',
+    fontWeight:'bold',
+    marginBottom:ScrHeight * 0.025,  
 },
 secondHeaderText:{
- // height: ScrHeight * 0.2,
-  flex:1,
-   marginTop:5,
-   marginBottom:25,
-  fontSize:18,
-  fontWeight:'bold',
-  textAlign:'center',
-  color:'#2D5018'
+    flex:1,
+    padding:ScrHeight * 0.03,  
+    fontSize:ScrHeight * 0.018,
+    fontWeight:'bold',
+    textAlign:'center',
+    color:'#2D5018'
 },
 thirdHeaderText:{
   textAlign:'center',
-  //marginTop:5,
-  //marginBottom:10,
-  fontSize:16,
+  padding:ScrHeight * 0.01, 
+  fontSize:ScrHeight * 0.018,
   fontWeight:'bold',
   
 },
 paragraphText:{
-    fontSize:15,
-    textAlign:'justify',
-   // textAlign:'center',
-    padding:20,
+    fontSize:ScrHeight * 0.018,  
+    textAlign:'left',
+    padding:ScrHeight * 0.018,  
+},
+leftAlign:{
+  width: ScrWidth *0.8,
+  textAlign:'left',
 },
 secBtnCon:{
   display:'flex',
@@ -319,82 +313,72 @@ secBtnCon:{
   alignItems:'center',
   justifyContent:'center',  
   width: ScrWidth *0.8,
-  marginTop: 10,
 
 },
-buttonCon:{
- // height: ScrHeight * 0.2,
+mainBtnCon:{
+  height: ScrHeight * 0.25,
   justifyContent: 'center',
   alignItems: 'center', 
 },
+buttonCon:{
+ height: ScrHeight * 0.1,
+ justifyContent: 'center',
+ alignItems: 'center', 
+},
 button:{
-    width:ScrWidth * 0.6,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding:20,
-    fontWeight:'bold',
-   // borderColor:'#FBB651',
-    borderRadius:10,
-   // borderWidth:1,
-    backgroundColor:'#FBB651',
-    marginTop:10
+  width:ScrWidth * 0.6,
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding:ScrHeight * 0.02,  
+  fontWeight:'bold',
+  //borderColor:'#FBB651',
+  borderRadius:10,
+ // borderWidth:1,
+  backgroundColor:'#FBB651'
 },
 backButton:{
   width:ScrWidth * 0.2,
   justifyContent: 'center',
-  alignItems: 'center',
-  padding:10,
-  marginRight:ScrWidth * 0.7,
-  fontWeight:'bold',
+   alignItems: 'center',
+  padding:ScrHeight * 0.01,  
+  marginRight:ScrWidth * 0.65,
+ // fontWeight:'bold',
   borderColor:'#FBB651',
   borderRadius:10,
   borderWidth:1,
   backgroundColor:'#FBB651'
 },
 acceptBtn:{
-  padding:10,
+  padding:ScrWidth*0.04,
   margin:ScrWidth*0.01,
   width:ScrWidth * 0.4,
   backgroundColor:'#98DAE3',
 },
 changeBtn:{
-  padding:10,
+  padding:ScrWidth*0.04,
   margin:ScrWidth*0.01,
   width:ScrWidth * 0.4,
   backgroundColor:'#DF6149',
 },
 historyBtn:{
-  borderColor:'#FBB651',
-  borderWidth:1,
-  padding:0
- // marginBottom:30,
+  width:ScrWidth * 0.11,
+  marginLeft:ScrWidth * 0.77,
+  marginTop: -ScrHeight* 0.03,
+  marginBottom: ScrHeight* 0.01,
 },
 buttonText:{
-    fontWeight:'bold',
-    fontSize: 16
-},
-inputCon:{
-    marginTop:25,
-},
-pickerSelectStyles:{
-    width: ScrWidth * 0.5,
-    marginTop:5,
-    padding:5,
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignSelf: 'stretch',
-    borderWidth: 1,
-    borderColor:'gray',
-    borderRadius:5
+  fontWeight:'bold',
+  fontSize: ScrHeight * 0.018,  
 },
 scrollView:{
   backgroundColor: '#F5F5F5',
    paddingTop:10,
-   
+   height:ScrHeight*0.6,
 },
 bgImage:{
-  height:ScrHeight*0.25,
-  width:ScrWidth,
+  height:ScrHeight * 0.25,
+  //width:ScrWidth,
+  marginTop:ScrHeight * 0.01,  
 },
 btnActive:{
   opacity: 1,

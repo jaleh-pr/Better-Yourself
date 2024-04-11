@@ -6,7 +6,7 @@ const ScrHeight = Dimensions.get('window').height;
 const ScrWidth = Dimensions.get('window').width;
 
 
-const PersonalTest = (props) => {
+const SelfAwareness = (props) => {
 
   const onLanNumProps = (MyScreenNum) => {
     props.onLanguageName("English");
@@ -15,7 +15,7 @@ const PersonalTest = (props) => {
   return (
     <SafeAreaView >
 
-        <View style={styles.secondMainScreen}>
+        <View style={styles.mainScreen}>
            
             <Text style={styles.mainHeaderText}>Self Awareness Test</Text>
         </View>
@@ -53,58 +53,23 @@ const PersonalTest = (props) => {
 };
 
 const styles = StyleSheet.create({
+    
+  
     mainScreen:{
-        height:ScrHeight * 0.6,
-         // flex:1,
-          // justifyContent: 'center',
-          // alignItems: 'center',
-          marginTop:30,
-          marginBottom:30,
-          padding: 20,
-      },
-       firstMainScreen:{
-         height:ScrHeight * 0.3,
-         marginTop:30,
-         marginBottom:10,
-         padding: 20,
+        height:ScrHeight * 0.2,
+        width:ScrWidth ,
+        marginTop:ScrHeight * 0.1,
        // backgroundColor:"yellow",
       },
-      secondMainScreen:{
-        height:ScrHeight * 0.2,
-        marginTop:30,
-        marginBottom:10,
-        padding: 20,
-      // backgroundColor:"yellow",
-     },
       mainHeaderText:{
-        marginTop:25,
-       textAlign:'center',
-        fontWeight:'bold',
-        fontSize:24,
-    },
-    secondHeaderText:{
-        marginTop:25,
-        marginBottom:10,
-        fontSize:16,
-        fontWeight:'bold',
+        fontSize:ScrHeight * 0.025,  
+        marginTop:ScrHeight * 0.025,  
         textAlign:'center',
-    },
-    thirdHeaderTex:{
-      marginTop:10,
-      //marginBottom:10,
-      fontSize:16,
-      fontWeight:'bold',
-      textAlign:'left',
-    },
-    paragraphText:{
-        fontSize:15,
-        textAlign:'justify',
-       // textAlign:'center',
-        padding:20,
+        fontWeight:'bold',
+        marginBottom:ScrHeight * 0.025,  
     },
     buttonCon:{
-      //  height: ScrHeight * 0.2,
-        marginTop:15,
+        height: ScrHeight * 0.09,
         justifyContent: 'center',
         alignItems: 'center', 
     },
@@ -112,14 +77,14 @@ const styles = StyleSheet.create({
         width:ScrWidth * 0.6,
         justifyContent: 'center',
         alignItems: 'center',
-        padding:20,
+        padding:ScrHeight * 0.02,  
         fontWeight:'bold',
         borderRadius:10,
-        marginTop:10
+        backgroundColor:'#FBB651'
     },
     buttonText:{
         fontWeight:'bold',
-        fontSize: 16
+        fontSize: ScrHeight * 0.018,  
     },
     blueButton:{
         backgroundColor:'#98DAE3',
@@ -134,11 +99,10 @@ const styles = StyleSheet.create({
         backgroundColor:'#DF6149',
     },
     bgImage:{
-        height:ScrHeight*0.35,
-        width:ScrWidth,
-       // marginLeft:ScrWidth* 0.2,
+        height:ScrHeight * 0.25,
+        marginTop:ScrHeight * 0.01,  
         
        }
 
 })
-export default PersonalTest;
+export default SelfAwareness;

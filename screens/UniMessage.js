@@ -71,7 +71,7 @@ if (stageNum === 0){
   return (
     <SafeAreaView> 
       
-        <View style={styles.firstMainScreen}>
+        <View style={styles.mainScreen}>
                  <Text style={styles.mainHeaderText}> Universe Message</Text> 
                 <Text style={styles.secondHeaderText}>Close your eyes and concentrate on the question you seek the answer from the universe</Text>
         
@@ -96,7 +96,7 @@ if (stageNum === 0){
 }else if (stageNum ==2 ) {
     return (
         <SafeAreaView>
-              <View style={styles.mainScreen}>
+              <View style={styles.secondMainScreen}>
                 <Text style={styles.secondHeaderText}>{theTitle}</Text>  
                 
                     <ScrollView vertical style={styles.scrollView} >   
@@ -130,40 +130,46 @@ if (stageNum === 0){
 
 const styles = StyleSheet.create({
     mainScreen:{
-          height:ScrHeight * 0.6,
-          marginTop:30,
-          marginBottom:10,
-          padding: 20,
-         
-          //: 
+        height:ScrHeight * 0.2,
+        width:ScrWidth ,
+        marginTop:ScrHeight * 0.1,
+          //backgroundColor:'red',
+          
       },
       firstMainScreen:{
          height:ScrHeight * 0.3,
-         marginTop:30,
-         marginBottom:10,
-         padding: 20,
+         width:ScrWidth * 0.8,
+         marginTop:ScrHeight * 0.1,
+        // marginBottom:ScrHeight * 0.01,
+        // padding: ScrHeight * 0.1,
+         //backgroundColor:'red',
         
       },
+      secondMainScreen:{
+        height:ScrHeight * 0.65,
+        marginTop:ScrHeight * 0.02,
+        padding: ScrHeight * 0.02,
+      // backgroundColor:"gray",
+     },
       mainHeaderText:{
-        fontSize:22,
-        marginTop:25,
+        fontSize:ScrHeight * 0.025,  
+        marginTop:ScrHeight * 0.025,  
         textAlign:'center',
         fontWeight:'bold',
-        marginBottom:20
+        marginBottom:ScrHeight * 0.025,  
    },
     secondHeaderText:{
         flex:1,
-        marginTop:5,
-        marginBottom:5,
-         fontSize:18,
+        padding:ScrHeight * 0.03,  
+        fontSize:ScrHeight * 0.018,
          fontWeight:'bold',
          textAlign:'center',
          color:'#2D5018'
     },
     paragraphText:{
-        fontSize:15,
-        textAlign:'justify',
-        padding:20,
+        fontSize:ScrHeight * 0.018,  
+       // textAlign:'justify',
+        padding:ScrHeight * 0.018,  
     },
     buttonCon:{
        height: ScrHeight * 0.1,
@@ -175,7 +181,7 @@ const styles = StyleSheet.create({
         width:ScrWidth * 0.6,
         justifyContent: 'center',
         alignItems: 'center',
-        padding:20,
+        padding:ScrHeight * 0.02,  
         fontWeight:'bold',
         borderColor:'#FBB651',
         borderRadius:10,
@@ -186,7 +192,7 @@ const styles = StyleSheet.create({
       width:ScrWidth * 0.2,
       justifyContent: 'center',
       alignItems: 'center',
-      padding:10,
+      padding:ScrHeight * 0.01,  
       marginRight:ScrWidth * 0.7,
       fontWeight:'bold',
       borderColor:'#FBB651',
@@ -196,17 +202,15 @@ const styles = StyleSheet.create({
     },
     buttonText:{
         fontWeight:'bold',
-        fontSize: 16
+        fontSize: ScrHeight * 0.018,  
       },
     scrollView:{
         backgroundColor: '#F5F5F5',
-       
+        height:ScrHeight*0.4,
       },
       bgImage:{
-       height:ScrHeight*0.2,
-       width:ScrWidth* 0.5,
-       marginLeft:ScrWidth* 0.2,
-       
+       height:ScrHeight*0.25,
+       marginTop:ScrHeight * 0.01, 
       }
 
 

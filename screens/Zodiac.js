@@ -104,7 +104,7 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
   if(pageNum === 0 ){
     return(
         <SafeAreaView >       
-            <View style={styles.firstMainScreen}>
+            <View style={styles.mainScreen}>
                 <Text style={styles.mainHeaderText}>
                     Zodic
                 </Text>
@@ -258,20 +258,10 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
 
 const styles = StyleSheet.create({
     mainScreen:{
-        height:ScrHeight * 0.6,
-         // flex:1,
-          // justifyContent: 'center',
-          // alignItems: 'center',
-          marginTop:30,
-          marginBottom:30,
-          padding: 20,
-      },
-       firstMainScreen:{
-         height:ScrHeight * 0.3,
-         marginTop:30,
-         marginBottom:10,
-         padding: 20,
-       // backgroundColor:"yellow",
+        height:ScrHeight * 0.2,
+        width:ScrWidth ,
+        marginTop:ScrHeight * 0.1,
+          //backgroundColor:'red',
       },
       secondMainScreen:{
         height:ScrHeight * 0.4,
@@ -281,17 +271,19 @@ const styles = StyleSheet.create({
       // backgroundColor:"yellow",
      },
       mainHeaderText:{
-        marginTop:25,
-       textAlign:'center',
+        fontSize:ScrHeight * 0.025,  
+        marginTop:ScrHeight * 0.025,  
+        textAlign:'center',
         fontWeight:'bold',
-        fontSize:24,
+        marginBottom:ScrHeight * 0.025,  
     },
     secondHeaderText:{
-        marginTop:25,
-        marginBottom:10,
-        fontSize:16,
-        fontWeight:'bold',
-        textAlign:'center',
+        flex:1,
+        padding:ScrHeight * 0.03,   
+        fontSize:ScrHeight * 0.018,
+         fontWeight:'bold',
+         textAlign:'center',
+         color:'#2D5018'
     },
     paragraphText:{
         fontSize:15,
@@ -300,8 +292,7 @@ const styles = StyleSheet.create({
         padding:20,
     },
     buttonCon:{
-      
-      height: ScrHeight * 0.2,
+        height: ScrHeight * 0.1,
         justifyContent: 'center',
         alignItems: 'center', 
     },
@@ -309,7 +300,7 @@ const styles = StyleSheet.create({
         width:ScrWidth * 0.6,
         justifyContent: 'center',
         alignItems: 'center',
-        padding:20,
+        padding:ScrHeight * 0.02,  
         fontWeight:'bold',
         borderColor:'#FBB651',
         borderRadius:10,
@@ -317,8 +308,8 @@ const styles = StyleSheet.create({
         backgroundColor:'#FBB651'
   },
   buttonText:{
-        fontWeight:'bold',
-        fontSize: 16
+    fontWeight:'bold',
+    fontSize: ScrHeight * 0.018, 
   },
   smallButtonCon:{   
     height: ScrHeight * 0.1,

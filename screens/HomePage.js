@@ -100,24 +100,20 @@ const styles = StyleSheet.create({
     mainScreen:{
         justifyContent: 'center',
         alignItems: 'center',
-        height:ScrHeight * 0.7,
-        marginTop:30,
-        marginBottom:10,
-        padding: 20,
-        //backgroundColor:'blue'
+        height:ScrHeight *0.9,
     },
   textCon:{
-    marginTop:10,
+    marginTop:ScrHeight *0.012,
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonText:{
     fontWeight:'bold',
-    fontSize: 14,  
+    fontSize: ScrHeight * 0.015,  
   },
   btnCon:{
     height:ScrHeight*0.22,
-    padding:10,
+    padding:ScrHeight*0.02,
   },
   secBtnCon:{
     display:'flex',
@@ -125,7 +121,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',  
     width: ScrWidth *0.8,
-    marginTop: 20,
+    marginTop: ScrHeight*0.009,
 
   },
   button:{
@@ -135,11 +131,9 @@ const styles = StyleSheet.create({
      display:'flex',
     alignItems:'center',
     justifyContent:'center',
-   // shadowRadius: 50,
-   // shadowColor: 'black',
    shadowColor: '#171717',
    shadowOffset: {width: -2, height: 4},
-   shadowOpacity: 0.2,
+   shadowOpacity: 0.3,
    shadowRadius: 3,
   },
   iconStyle:{

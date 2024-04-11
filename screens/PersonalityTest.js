@@ -1,13 +1,13 @@
 
 import React, { useState } from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Dimensions, SafeAreaView, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Dimensions, SafeAreaView} from 'react-native';
 
 const ScrHeight = Dimensions.get('window').height;
 const ScrWidth = Dimensions.get('window').width;
 
 
 
-const DiskTest = (props) => {
+const PersonalityTest = (props) => {
 
     const DiskTestData = require("../Data/DiskTestEn.json");
     const DiskAnswerData = require("../Data/DiskAnswerEn.json");
@@ -32,28 +32,10 @@ const DiskTest = (props) => {
     const [typeAnalysis, SetTypeAnalysis] = useState();
     const [myArray, setMyArray] = useState([]);
     const [btnAct , setBtnAct] = useState(0);
+   // const [btnSelected , setBtnSelected] = useState(false);
     const [nextDisable , setNextDisable] = useState(true);
 
-    // const btnActive = () => {
-    //     return{
-    //         backgroundColor: "#ccc",
-    //         borderStyle: "solid",
-    //         margin:10,
-    //         padding:15,
-    //         borderWidth:1,
-    //     };
-    // };
-
-    // const btnDeactive = () => {
-    //     return{
-    //         backgroundColor: "#ccc",
-    //         margin:10,
-    //         padding:15,
-    //        disabled:"disabled",
-    //        opacity: 0.5,
-    //     };
-    // };
-
+  
     const generateRandomNum = () => {
         const rndNum = Math.floor(Math.random() * 20 ) ;
         if(myArray.indexOf(rndNum) < 0 ){
@@ -96,17 +78,18 @@ const DiskTest = (props) => {
 
     const getValueHandler = (selectedValue) =>{
         setBtnAct(1);
+        
         setNextDisable(false);
         if (selectedValue === radioProps[0]){
-            setMyValue(1)
+            setMyValue(1);
         } else if (selectedValue === radioProps[1]){
-            setMyValue(2)
+            setMyValue(2);
         } else if (selectedValue === radioProps[2]){
-            setMyValue(3)
+            setMyValue(3);
         } else if (selectedValue === radioProps[3]){
-            setMyValue(4)
+            setMyValue(4);
         } else if (selectedValue === radioProps[4]){
-            setMyValue(5)
+            setMyValue(5);
         }
     }; 
 
@@ -166,7 +149,7 @@ if(pageNum === 0 ){
   return (
     <SafeAreaView>
             
-            <View style={styles.secondMainScreen}>
+            <View style={styles.firstMainScreen}>
                 <Text style={styles.mainHeaderText}>Personality Test</Text>
                 <Text style={styles.secondHeaderText} >
                 Answer each question by selecting the option that best describes you.
@@ -186,8 +169,8 @@ if(pageNum === 0 ){
     return(
        <SafeAreaView>
             
-        <View style={styles.mainScreen}>
-            <Text style={styles.secondHeaderText}>Personality Test</Text>
+        <View style={styles.thirdMainScreen}>
+            <Text style={styles.pageTitle}>Personality Test</Text>
             <View style={styles.questionCon}>
                 <Text style={styles.thirdHeaderText}>
                 {pageNum}. {theQuestion}
@@ -195,27 +178,37 @@ if(pageNum === 0 ){
             </View> 
             <View style={styles.optionButtonCon}>
                 <View >
-                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[0])}>
+                    <TouchableOpacity 
+                        style={[styles.optionButton, {backgroundColor: myValue==1 ? "#98DAE3" : "white"}]}
+                        onPress={getValueHandler.bind(this, radioProps[0])}>
                         <Text style={styles.buttonText}>{radioProps[0]}</Text>  
                     </TouchableOpacity>
                 </View> 
                 <View >
-                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[1])}>
+                    <TouchableOpacity 
+                       style={[styles.optionButton, {backgroundColor: myValue==2 ? "#98DAE3" : "white"}]}
+                        onPress={getValueHandler.bind(this, radioProps[1])}>
                         <Text style={styles.buttonText}>{radioProps[1]}</Text>  
                     </TouchableOpacity>
                 </View> 
                 <View >
-                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[2])}>
+                    <TouchableOpacity 
+                        style={[styles.optionButton, {backgroundColor: myValue==3 ? "#98DAE3" : "white"}]}
+                        onPress={getValueHandler.bind(this, radioProps[2])}>
                         <Text style={styles.buttonText}>{radioProps[2]}</Text>  
                     </TouchableOpacity>
                 </View> 
                 <View>
-                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[3])}>
+                    <TouchableOpacity 
+                       style={[styles.optionButton, {backgroundColor: myValue==4 ? "#98DAE3" : "white"}]}
+                        onPress={getValueHandler.bind(this, radioProps[3])}>
                         <Text style={styles.buttonText}>{radioProps[3]}</Text>  
                     </TouchableOpacity>
                 </View> 
                 <View>
-                    <TouchableOpacity style={styles.optionButton} onPress={getValueHandler.bind(this, radioProps[4])}>
+                    <TouchableOpacity 
+                       style={[styles.optionButton, {backgroundColor: myValue==5 ? "#98DAE3" : "white"}]}
+                        onPress={getValueHandler.bind(this, radioProps[4])}>
                         <Text style={styles.buttonText}>{radioProps[4]}</Text>  
                     </TouchableOpacity>
                 </View> 
@@ -230,23 +223,24 @@ if(pageNum === 0 ){
                 <Text>questionNum = {questionSec}</Text>    
                 <Text>{pageNum}</Text>         
            </View> */}
-           <View style={styles.buttonCon}>
-            <TouchableOpacity
-                       
-                        disabled={nextDisable}
-                        onPress={() => NextQuestion()}
-                        style = {[styles.button,
-                          btnAct === 1
-                            ? styles.btnActive
-                            : styles.btnDeactive
-                            
-                        ]}
-                    >
-                            <Text style={styles.buttonText}>Next</Text> 
-                            
-            </TouchableOpacity> 
-            </View>
         </View>
+        <View style={styles.buttonCon}>
+                <TouchableOpacity
+                        
+                            disabled={nextDisable}
+                            onPress={() => NextQuestion()}
+                            style = {[styles.button,
+                            btnAct === 1
+                                ? styles.btnActive
+                                : styles.btnDeactive
+                                
+                            ]}
+                        >
+                                <Text style={styles.buttonText}>Next</Text> 
+                                
+                </TouchableOpacity> 
+        </View>
+        
     </SafeAreaView>
     )
   }else if(pageNum === 100) {
@@ -284,73 +278,71 @@ if(pageNum === 0 ){
 };
 
 const styles = StyleSheet.create({
-    mainScreen:{
-        height:ScrHeight * 0.7,
-        width:ScrWidth * 0.9,
-         // flex:1,
-          // justifyContent: 'center',
-          // alignItems: 'center',
-          marginTop:20,
-          marginBottom:20,
-          padding: 20,
-         // backgroundColor:'#FBB655',
+
+    firstMainScreen:{
+        height:ScrHeight * 0.2,
+        width:ScrWidth *0.8 ,
+         marginTop:ScrHeight * 0.1,
+      // backgroundColor:"yellow",
       },
-       firstMainScreen:{
-         height:ScrHeight * 0.3,
-         marginTop:30,
-         marginBottom:10,
-         padding: 20,
-       // backgroundColor:"yellow",
-      },
-      secondMainScreen:{
+    secondMainScreen:{
         height:ScrHeight * 0.4,
         marginTop:30,
         marginBottom:10,
         padding: 20,
       // backgroundColor:"yellow",
      },
-      mainHeaderText:{
-         fontSize:22,
-         marginTop:25,
-         textAlign:'center',
-         fontWeight:'bold',
-         marginBottom:20
+     thirdMainScreen:{
+        height:ScrHeight * 0.5,
+        width:ScrWidth *0.8 ,
+        marginTop:ScrHeight * 0.02,
+        marginBottom: ScrHeight * 0.02,
+       // backgroundColor:"yellow",
+     },
+    mainHeaderText:{
+        fontSize:ScrHeight * 0.025,  
+        marginTop:ScrHeight * 0.025,  
+        textAlign:'center',
+        fontWeight:'bold',
+        marginBottom:ScrHeight * 0.025,  
     },
     secondHeaderText:{
         flex:1,
-        marginTop:15,
-       // marginBottom:10,
-        fontSize:18,
-        fontWeight:'bold',
-        textAlign:'center',
-        color:'#2D5018'
+        padding:ScrHeight * 0.03,  
+        fontSize:ScrHeight * 0.018,
+         fontWeight:'bold',
+         textAlign:'center',
+         color:'#2D5018'
     },
     thirdHeaderText:{
       textAlign:'left',
-      marginTop:5,
+     // marginTop:5,
       //marginBottom:10,
-      fontSize:16,
+      fontSize:ScrHeight * 0.018,
       fontWeight:'bold',
       
     },
+    pageTitle:{
+      //  flex:1,
+        padding:ScrHeight * 0.03,  
+        fontSize:ScrHeight * 0.022,
+         fontWeight:'bold',
+         textAlign:'center',
+         color:'#2D5018',
+         
+    },
     paragraphText:{
-        fontSize:15,
-        textAlign:'justify',
-       // textAlign:'center',
-        padding:20,
+        fontSize:ScrHeight * 0.018,  
+        padding:ScrHeight * 0.018,  
     },
     questionCon:{
-        flex:1,
-        flexDirection:'row',
-        marginBottom:20
-       // width:ScrWidth * 0.9,
-       // marginLeft: ScrWidth * 0.05,
-       // textAlign:'left',
-       
+      //  height:ScrHeight * 0.09,
+        marginTop:ScrHeight * 0.03,
+        marginBottom:ScrHeight * 0.03,
+      
     },
     buttonCon:{
-      //  height: ScrHeight * 0.2,
-        marginTop:30,
+        height: ScrHeight * 0.12,
         justifyContent: 'center',
         alignItems: 'center', 
        // backgroundColor:'#FBB655',
@@ -359,13 +351,12 @@ const styles = StyleSheet.create({
         width:ScrWidth * 0.6,
         justifyContent: 'center',
         alignItems: 'center',
-        padding:20,
+        padding:ScrHeight * 0.02,  
         fontWeight:'bold',
         borderColor:'#FBB651',
         borderRadius:10,
         borderWidth:1,
-        backgroundColor:'#FBB651',
-        marginTop:10
+        backgroundColor:'#FBB651'
     },
     btnActive:{
         opacity: 1,
@@ -375,29 +366,25 @@ const styles = StyleSheet.create({
     },
     buttonText:{
         fontWeight:'bold',
-        fontSize: 16
+        fontSize: ScrHeight * 0.018, 
     },
     optionButtonCon:{
+        height:ScrHeight * 0.3, 
         justifyContent: 'center',
         alignItems: 'center',
-       // marginTop:20,
-        marginBottom:0,
     },
     optionButton:{
         width:ScrWidth * 0.4,
         justifyContent: 'center',
         alignItems: 'center',
-        padding:5,
+        padding:ScrHeight * 0.01,
         fontWeight:'bold',
         borderColor:'#98DAE3',
         borderRadius:10,
         borderWidth:2,
        // backgroundColor:'#98DAE3',
-        marginTop:0
+        marginTop:ScrHeight * 0.008
     },
-    scrollView:{
-        backgroundColor: '#F5F5F5',
-    
-    }
+
 })
-export default DiskTest;
+export default PersonalityTest;
