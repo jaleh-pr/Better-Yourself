@@ -104,7 +104,7 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
   if(pageNum === 0 ){
     return(
         <SafeAreaView >       
-            <View style={styles.mainScreen}>
+            <View style={styles.firstMainScreen}>
                 <Text style={styles.mainHeaderText}>
                     Zodic
                 </Text>
@@ -112,7 +112,7 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
                     Explore the characteristics and birthdates associated with each zodiac sign
                 </Text>
             </View>
-            <View style={styles.buttonCon}>
+            <View style={styles.mainBtnCon}>
                 <TouchableOpacity
                     onPress={starthandler}
                     style={styles.button}
@@ -135,7 +135,7 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
             <Text style={styles.secondHeaderText}> Enter Your Date Of Birth</Text>
             
                 <View style={styles.inputCon}>
-                    <Text>Your month of birth:</Text>
+                    <Text >Your month of birth:</Text>
                     <View style={styles.pickerSelectStyles}>
                         <RNPickerSelect
                             
@@ -145,6 +145,7 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
                                     color: 'red',
                                     borderColor:'black',
                                     borderWidth:1,
+                            
                                 }}
                             onValueChange={(value) => setMonthValue(value)}
                             items={[
@@ -165,7 +166,7 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
                     </View>
                 </View>
                 <View style={styles.inputCon}>
-                    <Text>Your date of birth:</Text>
+                    <Text >Your date of birth:</Text>
                     <View style={styles.pickerSelectStyles}>
                         <RNPickerSelect
                             placeholder={{
@@ -235,10 +236,10 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
 
         <SafeAreaView>
             
-                <View style= {styles.mainScreen}> 
+                <View style= {styles.thirdMainScreen}> 
                      <Text style={styles.mainHeaderText}> Zodiac</Text> 
-                    <Text style= {styles.secondHeaderText}>{theTitle}</Text>
-                    <ScrollView vertical showsVerticalScrollIndicator={true} persistentScrollbar={true} style={styles.scrollView}>
+                    <Text style= {styles.thirdHeaderText}>{theTitle}</Text>
+                    <ScrollView vertical showsVerticalScrollIndicator={true}  persistentScrollbar={true} style={styles.scrollView}>
                          <Text style= {styles.paragraphText}>{theMessage}</Text>
                     </ScrollView>
                 </View>
@@ -257,11 +258,11 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
 }
 
 const styles = StyleSheet.create({
-    mainScreen:{
+    firstMainScreen:{
         height:ScrHeight * 0.2,
         width:ScrWidth ,
         marginTop:ScrHeight * 0.1,
-          //backgroundColor:'red',
+       // backgroundColor:"yellow",
       },
       secondMainScreen:{
         height:ScrHeight * 0.4,
@@ -270,6 +271,14 @@ const styles = StyleSheet.create({
         padding: 20,
       // backgroundColor:"yellow",
      },
+     thirdMainScreen:{
+        height:ScrHeight * 0.6,
+        marginTop:30,
+        marginBottom:10,
+        padding: 20,
+     //  backgroundColor:"yellow",
+     },
+     
       mainHeaderText:{
         fontSize:ScrHeight * 0.025,  
         marginTop:ScrHeight * 0.025,  
@@ -285,6 +294,13 @@ const styles = StyleSheet.create({
          textAlign:'center',
          color:'#2D5018'
     },
+    thirdHeaderText:{
+        textAlign:'center',
+        padding:ScrHeight * 0.01, 
+        fontSize:ScrHeight * 0.018,
+        fontWeight:'bold',
+        
+    },
     paragraphText:{
         fontSize:15,
         textAlign:'justify',
@@ -292,10 +308,15 @@ const styles = StyleSheet.create({
         padding:20,
     },
     buttonCon:{
-        height: ScrHeight * 0.1,
+        height: ScrHeight * 0.12,
         justifyContent: 'center',
         alignItems: 'center', 
     },
+    mainBtnCon:{
+        height: ScrHeight * 0.25,
+        justifyContent: 'center',
+        alignItems: 'center', 
+      },
     button:{
         width:ScrWidth * 0.6,
         justifyContent: 'center',
@@ -332,8 +353,8 @@ const styles = StyleSheet.create({
   },
   pickerSelectStyles:{
         width: ScrWidth * 0.5,
-        marginTop:5,
-        padding:5,
+        marginTop:ScrHeight * 0.009,
+        padding:ScrHeight * 0.015, 
         justifyContent: 'center',
         alignItems: 'center',
         alignSelf: 'stretch',
@@ -346,10 +367,9 @@ const styles = StyleSheet.create({
    
   },
   bgImage:{
-    height:ScrHeight*0.25,
-    width:ScrWidth,
-   // marginLeft:ScrWidth* 0.2,
-    
+    height:ScrHeight * 0.25,
+    //width:ScrWidth,
+    marginTop:ScrHeight * 0.01,
    }
 
 })

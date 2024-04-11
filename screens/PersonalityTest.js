@@ -9,8 +9,8 @@ const ScrWidth = Dimensions.get('window').width;
 
 const PersonalityTest = (props) => {
 
-    const DiskTestData = require("../Data/DiskTestEn.json");
-    const DiskAnswerData = require("../Data/DiskAnswerEn.json");
+    const PersonalityTestData = require("../Data/PersonalityTestEn.json");
+    const PersonalityAnswerData = require("../Data/PersonalityAnswerEn.json");
 
     const [pageNum , setPageNum ] = useState(0);
     const [questionNum , setQuestionNum ] = useState(0);
@@ -32,7 +32,6 @@ const PersonalityTest = (props) => {
     const [typeAnalysis, SetTypeAnalysis] = useState();
     const [myArray, setMyArray] = useState([]);
     const [btnAct , setBtnAct] = useState(0);
-   // const [btnSelected , setBtnSelected] = useState(false);
     const [nextDisable , setNextDisable] = useState(true);
 
   
@@ -94,13 +93,13 @@ const PersonalityTest = (props) => {
     }; 
 
     const setQuestionAnswers = (questionNum) => {
-        const ques = JSON.stringify(DiskTestData[questionNum].question);
-        const queSec = JSON.stringify(DiskTestData[questionNum].section);
-        const op1 = JSON.stringify(DiskTestData[questionNum].options[0]);
-        const op2 = JSON.stringify(DiskTestData[questionNum].options[1]);
-        const op3 = JSON.stringify(DiskTestData[questionNum].options[2]);
-        const op4 = JSON.stringify(DiskTestData[questionNum].options[3]);
-        const op5 = JSON.stringify(DiskTestData[questionNum].options[4]);
+        const ques = JSON.stringify(PersonalityTestData[questionNum].question);
+        const queSec = JSON.stringify(PersonalityTestData[questionNum].section);
+        const op1 = JSON.stringify(PersonalityTestData[questionNum].options[0]);
+        const op2 = JSON.stringify(PersonalityTestData[questionNum].options[1]);
+        const op3 = JSON.stringify(PersonalityTestData[questionNum].options[2]);
+        const op4 = JSON.stringify(PersonalityTestData[questionNum].options[3]);
+        const op5 = JSON.stringify(PersonalityTestData[questionNum].options[4]);
         setTheQuestion(ques.replace(/['"]+/g, ""));
         setQuestionSec(queSec.replace(/['"]+/g, ""));
         setOption1(op1.replace(/['"]+/g, ""));
@@ -139,7 +138,7 @@ const personTypeAnalysis = (personType) => {
         const personTypeList = ['D', 'I', 'S', 'C', 'DI', 'ID' , 'SD', 'CD', 'DS', 'IS', 'SI', 'CI', 'DC', 'IC', 'SC', 'CS'];
         if(personType == personTypeList[i]){
             
-        const analysis = JSON.stringify(DiskAnswerData[i].Description);
+        const analysis = JSON.stringify(PersonalityAnswerData[i].Description);
             SetTypeAnalysis(analysis.replace(/['"]+/g, ""));
         }
    };
@@ -264,12 +263,9 @@ if(pageNum === 0 ){
     return(
         <SafeAreaView>
             <View style={styles.secondMainScreen}>
-                    <Text style={styles.secondHeaderText}>Person Type: {personType}</Text>
-                    {/* <Text>Max Num: {maxNum}</Text>
-                    <Text>Second Max: {secondMaxNum}</Text> */}
-                    
-                         <Text style={styles.paragraphText}>Type analysis: {typeAnalysis}</Text>
-                   
+                    {/* <Text style={styles.secondHeaderText}>Person Type: {personType}</Text> */}
+                    <Text style={styles.secondHeaderText}>Your Personality Type</Text>
+                    <Text style={styles.paragraphText}>{typeAnalysis}</Text>
             </View>
         </SafeAreaView>
     )

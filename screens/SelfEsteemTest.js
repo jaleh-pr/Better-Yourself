@@ -64,7 +64,7 @@ const SelfEsteemTest = (props) => {
         setBtnAct(0);
         setNextDisable(true);
         setSelectedOp(0);
-        if(pageNum <58 ){
+        if(pageNum <60 ){
         generateRandomNum();
         setPageNum( pageNum + 1 );
         setSelectedBtn(0);
@@ -74,40 +74,41 @@ const SelfEsteemTest = (props) => {
     };
 
     const generateRandomNum = () => {
-        const rndNum = Math.floor(Math.random() * 58 ) ;
+        const rndNum = Math.floor(Math.random() * 61 ) ;
         if(myArray.indexOf(rndNum) < 0 ){
-           // setCount(count+1);
            setPageNum(pageNum+1);
             setMyArray((myArray) => [...myArray , rndNum]);
-          //  setQuestionNum(questionNum);
           setQuestionNum(rndNum);
             setQuestionAnswers(rndNum);   
-          //  NextQuestion(rndNum);
-
         } else {
             generateRandomNum();
         }
         
     };
 
+
+ 
     const getValueHandler = (selectedValue) =>{
-        highlightSelectedValue(selectedValue);
-        if( questionNum == 0 || questionNum == 5 ||questionNum == 12 || questionNum == 19 ||questionNum == 26 || questionNum == 33 || questionNum == 40 || questionNum == 47 ) {
-            if (selectedValue === radioProps[2]){
-            setTheRealistic(1);
-            }
-        }else{
-            setTheRealistic(0);
-            if (selectedValue === radioProps[2]){
+        highlightSelectedValue(selectedValue);   
+        if (selectedValue === radioProps[2]){
                 setMyScore(1);
-            }else{
-                setMyScore(0);
-            }
-        };
-        setBtnAct(1);
-        setNextDisable(false);
-     
-    }; 
+                setTheRealistic(0);  
+        }else if (selectedValue !== radioProps[2]){
+                 setMyScore(0);
+                 checkRealistic();
+             } 
+            setBtnAct(1);
+            setNextDisable(false);  
+    };
+
+    const checkRealistic = () =>{
+        if( questionNum == 0 || questionNum == 5 ||questionNum == 12 || questionNum == 19 ||questionNum == 26 || questionNum == 33 || questionNum == 40 || questionNum == 47 ) { 
+            setTheRealistic(1);     
+        }else{
+            setTheRealistic(0);  
+            }   
+    };
+
 
     const highlightSelectedValue = (selectedValue) => {
         if (selectedValue === radioProps[0]){
@@ -137,19 +138,19 @@ const SelfEsteemTest = (props) => {
         if(realisticScore > 4){
             setTheContent("Please retake the test and provide accurate answers to the questions.") 
         }else{
-            if(theScore < 32 ){
+            if(theScore < 28 ){
                 setTheContent("Your self-esteem is significantly below average.") ;
                 setMoreInfo("Practice self-care and self-compassion: Treat yourself with kindness and understanding, just as you would treat a friend in need. Set realistic goals and celebrate small achievements: Break down larger goals into smaller, manageable tasks and acknowledge your progress along the way. Challenge negative self-talk: Replace self-critical thoughts with positive affirmations and focus on your strengths and accomplishments. Surround yourself with supportive and positive people: Build a network of friends and family who uplift and encourage you. Seek professional help if needed: Consider talking to a therapist or counselor who can provide guidance and support in improving your self-esteem");
-            }else if (theScore >= 32 && theScore < 36 ){
+            }else if (theScore >= 28 && theScore < 35 ){
                 setTheContent("Your self-esteem is somewhat below average.");
                 setMoreInfo("Remind yourself of your strengths, accomplishments, and positive qualities regularly. Pursue hobbies and interests that make you feel good about yourself and boost your self-esteem.Identify and challenge negative self-talk by replacing it with more positive and realistic thoughts. Prioritize your physical and mental well-being by engaging in activities that promote self-love and self-compassion. ");
-            }else if (theScore >= 36 && theScore < 40 ){
+            }else if (theScore >= 35 && theScore < 42 ){
                 setTheContent("You have average self-esteem.");
                 setMoreInfo("Maintain healthy habits that promote your physical and mental well-being, such as exercise, proper nutrition, and sufficient rest. Set challenging but achievable goals. Focus on the positive aspects of your life and express gratitude for the things you have, fostering a sense of contentment and self-worth. Explore new experiences, learn new skills, and challenge yourself to continue growing and evolving.");
-            }else if (theScore >= 40 && theScore < 44 ){
+            }else if (theScore >= 42 && theScore < 50 ){
                 setTheContent("Good job! Your self-esteem is somewhat above average");
                 setMoreInfo("Keep believing in yourself and your abilities . you're doing great!");
-            }else if (theScore >= 44 && theScore < 47 ){
+            }else if (theScore >= 50 && theScore < 56){
                 setTheContent("Congratulations! You have a very high self-esteem.");
                 setMoreInfo("Your self-esteem is impressive. Keep shining and uplifting others around you.");
             }else{
@@ -184,7 +185,7 @@ if(pageNum === 0 ){
         </View>
     </SafeAreaView>
   );
-  } else if (pageNum >= 1 && pageNum <59){
+  } else if (pageNum >= 1 && pageNum <61){
     return(
         <SafeAreaView>
             
@@ -212,8 +213,9 @@ if(pageNum === 0 ){
                 </View> 
             </View>
             </View>
-            <Text>{myScore}</Text>
-           <Text>{theScore}</Text> 
+            {/* <Text>{myScore}</Text>
+           <Text>Total score: {theScore}</Text> 
+           <Text>Realistic score: {realisticScore}</Text>  */}
             <View style={styles.buttonCon}>
                 <TouchableOpacity
                             disabled={nextDisable}
@@ -227,8 +229,7 @@ if(pageNum === 0 ){
                         >
                                 <Text style={styles.buttonText}>Next</Text> 
                 </TouchableOpacity> 
-                {/* <Text>score:{theScore}</Text>
-                <Text>realistic: {realisticScore}</Text> */}
+               
             </View>
         
 </SafeAreaView>

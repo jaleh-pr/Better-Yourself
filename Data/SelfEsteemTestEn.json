@@ -5,7 +5,7 @@
         "language": "English",
         "question": "I spend a significant amount of time daydreaming.",
         "options":["Like me", "Unlike me"],
-        "answer": "Like me"
+        "answer": "Unlike me"
     },
     {
         "id": "2",
@@ -38,9 +38,9 @@
     {
         "id": "6",
         "language": "English",
-        "question": "I never worry about anything. ",
+        "question": "I NEVER worry about anything. ",
         "options":["Like me", "Unlike me"],
-        "answer": "Like me"
+        "answer": "Unlike me"
     },
     {
         "id": "7",
@@ -87,9 +87,9 @@
     {
         "id": "13",
         "language": "English",
-        "question": "I always make good choices.",
+        "question": "I ALWAYS make good choices.",
         "options":["Like me", "Unlike me"],
-        "answer": "Like me"
+        "answer": "Unlike me"
     },{
         "id": "14",
         "language": "English",
@@ -129,9 +129,9 @@
     },{
         "id": "20",
         "language": "English",
-        "question": "I am always unhappy.",
+        "question": "I am ALWAYS unhappy.",
         "options":["Like me", "Unlike me"],
-        "answer": "Like me"
+        "answer": "Unlike me"
     },{
         "id": "21",
         "language": "English",
@@ -171,9 +171,9 @@
     },{
         "id": "27",
         "language": "English",
-        "question": "I like everyone I know.",
+        "question": "I like EVERYONE I know.",
         "options":["Like me", "Unlike me"],
-        "answer": "Like me"
+        "answer": "Unlike me"
     },{
         "id": "28",
         "language": "English",
@@ -213,15 +213,15 @@
     },{
         "id": "34",
         "language": "English",
-        "question": "I never get in trouble.",
+        "question": "I NEVER get in trouble.",
         "options":["Like me", "Unlike me"],
-        "answer": "Like me"
+        "answer": "Unlike me"
     },{
         "id": "35",
         "language": "English",
-        "question": "I’m not doing as good at work as I want to.",
+        "question": "I’m doing as good at work as I want to.",
         "options":["Like me", "Unlike me"],
-        "answer": "Unlike me"
+        "answer": "Like me"
     },{
         "id": "36",
         "language": "English",
@@ -243,9 +243,9 @@
     },{
         "id": "39",
         "language": "English",
-        "question": "I don’t enjoy being around other people.",
+        "question": "I enjoy being around other people.",
         "options":["Like me", "Unlike me"],
-        "answer": "Unlike me"
+        "answer": "Like me"
     },{
         "id": "40",
         "language": "English",
@@ -255,9 +255,9 @@
     },{
         "id": "41",
         "language": "English",
-        "question": "I am always confident.",
+        "question": "I am ALWAYS confident.",
         "options":["Like me", "Unlike me"],
-        "answer": "Like me"
+        "answer": "Unlike me"
     },{
         "id": "42",
         "language": "English",
@@ -297,9 +297,9 @@
     },{
         "id": "48",
         "language": "English",
-        "question": "I always speak honestly.",
+        "question": "I ALWAYS speak honestly.",
         "options":["Like me", "Unlike me"],
-        "answer": "Like me"
+        "answer": "Unlike me"
     },{
         "id": "49",
         "language": "English",
@@ -315,9 +315,9 @@
     },{
         "id": "51",
         "language": "English",
-        "question": "I’m a failure.",
+        "question": "I’m not a failure.",
         "options":["Like me", "Unlike me"],
-        "answer": "Unlike me"
+        "answer": "Like me"
     },{
         "id": "52",
         "language": "English",
@@ -357,9 +357,9 @@
     },{
         "id": "58",
         "language": "English",
-        "question": "I am not someone whom people can rely on.",
+        "question": "I am someone whom people can rely on.",
         "options":["Like me", "Unlike me"],
-        "answer": "Unlike me"
+        "answer": "Like me"
     },
     {
         "id": "59",
@@ -371,6 +371,13 @@
         "id": "60",
         "language": "English",
         "question": "I downplay when I receive a compliment.",
+        "options":["Like me", "Unlike me"],
+        "answer": "Unlike me"
+    },
+    {
+        "id": "61",
+        "language": "English",
+        "question": "I often have doubts about my skills and capabilities.",
         "options":["Like me", "Unlike me"],
         "answer": "Unlike me"
     }
