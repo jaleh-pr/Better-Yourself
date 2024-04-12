@@ -262,7 +262,7 @@ if (stageNum === 0){
 
           <View style={styles.secondMainScreen}>  
               <ScrollView vertical  > 
-                  <Text  style={styles.secondHeaderText}>Your 5 Recent Challenges</Text>
+                  <Text  style={styles.secondHeaderText}>Your 5 Recent Accepted Challenges</Text>
                 
                   {itIsSaved 
                   ? theSavedTitle.reverse().slice(0,5).map((SavedT,i) =>(
@@ -444,7 +444,7 @@ changeBtn:{
 historyBtn:{
   width:ScrWidth * 0.11,
   marginLeft:ScrWidth * 0.77,
-  marginTop: -ScrHeight* 0.03,
+  marginTop: -ScrHeight* 0.05,
   marginBottom: ScrHeight* 0.01,
 },
 buttonText:{
