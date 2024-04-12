@@ -1,13 +1,13 @@
 
 import React ,{ useState , useEffect} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ScrollView, Dimensions,ImageBackground, Image} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ScrollView, Dimensions,ImageBackground, Image, Alert} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const ScrHeight = Dimensions.get('window').height;
 const ScrWidth = Dimensions.get('window').width;
 
 
-const TodayChalleng = (props) => {
+const TodayChallenge = (props) => {
   const [stageNum, setStageNum] = useState(0);
   const challengesData = require("../Data/challengEnglish.json");
   const [theSavedArray, setTheSavedArray] = useState([]);
@@ -57,7 +57,20 @@ const remove = async () => {
   }finally{
     setTheSavedArray([]);
   }
+  setStageNum(4);
 };
+
+const removeGenerator = () => {
+  Alert.alert('Are you sure that you want to delete all your challenges history?', '', [
+    {
+      text: 'Cancel',
+      onPress: () => console.log('Cancel Pressed'),
+      style: 'cancel',
+    },
+    {text: 'OK', onPress: () => remove()},
+  ]);
+}
+
 
 
 useEffect(() => {
@@ -67,15 +80,19 @@ useEffect(() => {
 );
 
 const undrestoodGenerator = () =>{
-  setStageNum(stageNum+1);
+  setStageNum(2);
 }
 
 const startGenerator = () => {
   generateRandomNum();
-  setStageNum(stageNum+1);
+  setStageNum(1);
   setSavedArrayL(theSavedArray.length);
 
 };
+
+const backToStartGenerator = () => {
+  setStageNum(0);
+}
 
 // const dateGenerator = () => {
 //   const today = JSON.stringify(new Date().getDate());
@@ -256,30 +273,41 @@ if (stageNum === 0){
                   ))}
               </ScrollView>
           </View>
-          <View style={styles.buttonCon}>
-              <TouchableOpacity
-                        onPress={backFunction}
-                        style={[styles.backButton]}
-                    >
-                            <Text style={styles.buttonText}>Back</Text> 
-              </TouchableOpacity>
-             
-          </View>
+          <View style={styles.twoButtonCon}>
+                  <TouchableOpacity
+                                onPress={backFunction}
+                                style={styles.backButton}
+                            >
+                                    <Text style={styles.buttonText}>Back</Text> 
+                  </TouchableOpacity>
+                
+                  <TouchableOpacity
+                            onPress={removeGenerator}
+                             style={styles.rowBtn}
+                        >
+                            <Image
+                                source={require('../assets/icons8-delete-80.png')}
+                                style= {{height: ScrHeight / 13, resizeMode: 'contain', width:ScrWidth / 9, marginBottom:10 }}
+                            ></Image>
+                  </TouchableOpacity>
+              </View>
      </SafeAreaView>
      );
     }else if (stageNum === 4){
       return(
-      <SafeAreaView style={styles.mainSection}>
-         <Text>There is no history</Text>
-          <View style={styles.content}>  
-          <TouchableOpacity
-                     onPress={backFunction}
-                     style={[styles.button]}
-                >
-                        <Text>Back</Text> 
-           </TouchableOpacity>
-        </View>
-     </SafeAreaView>
+        <SafeAreaView >
+          <View style={styles.thirdMainScreen}>
+            <Text style={styles.secondHeaderText}>You have deleted all the accepted challenges history.</Text>
+            {/* <View style={styles.buttonCon}>  
+              <TouchableOpacity
+                        onPress={() => backToStartGenerator()}
+                        style={styles.button}
+                    >
+                            <Text style={styles.buttonText}>OK</Text> 
+              </TouchableOpacity>
+          </View> */}
+          </View>
+    </SafeAreaView>
      );
     }
   };
@@ -369,6 +397,13 @@ buttonCon:{
  justifyContent: 'center',
  alignItems: 'center', 
 },
+twoButtonCon:{
+  flexDirection: 'row',
+  marginBottom:ScrHeight * 0.03,
+  // backgroundColor:'#FBB651',
+   width:ScrWidth * 0.7,
+   marginLeft: ScrWidth * 0.1,
+},
 button:{
   width:ScrWidth * 0.6,
   justifyContent: 'center',
@@ -381,11 +416,13 @@ button:{
   backgroundColor:'#FBB651'
 },
 backButton:{
+  height: ScrHeight*0.05,
   width:ScrWidth * 0.2,
   justifyContent: 'center',
    alignItems: 'center',
   padding:ScrHeight * 0.01,  
-  marginRight:ScrWidth * 0.65,
+  marginRight:ScrWidth * 0.3,
+  marginTop: ScrHeight*0.01,
  // fontWeight:'bold',
   borderColor:'#FBB651',
   borderRadius:10,
@@ -435,4 +472,4 @@ marginTop:{
   marginTop:50,
 }
 })
-export default TodayChalleng;
+export default TodayChallenge;

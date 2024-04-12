@@ -6,7 +6,7 @@ import LanguageSelection from "./screens/LanguageSelection";
 import WarningE  from './screens/WarningE';
 import HomePage from './screens/HomePage';
 import UniMessage from './screens/UniMessage';
-import TodayChalleng from './screens/TodayChallenge';
+import TodayChallenge from './screens/TodayChallenge';
 import SelfAwareness from './screens/SelfAwareness';
 import Zodiac from './screens/Zodiac';
 import Footer from './components/Footer';
@@ -63,7 +63,7 @@ export default function App() {
   if (LanguageName === "English" && ScreenNum === 3){
     content = <UniMessage onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   }else if (LanguageName === "English" && ScreenNum === 4){
-    content = <TodayChalleng onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+    content = <TodayChallenge onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   }else if (LanguageName === "English" && ScreenNum === 5){
     content = <SelfAwareness onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   }else if (LanguageName === "English" && ScreenNum === 6){
