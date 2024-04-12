@@ -87,7 +87,7 @@ const UniMessageMainSection = (props) => {
 
     const generateMessage = () => {
         setStageNum(2);
-        let rndNum = Math.floor(0 + Math.random()* 100 );
+        let rndNum = Math.floor(0 + Math.random()* 143 );
         setBtnAct(0);
         setMyArrayLen(myNumArray.length);
         setUniverseMessage(rndNum);

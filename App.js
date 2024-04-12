@@ -37,12 +37,30 @@ export default function App() {
     setTheSectionName (theSectionName)
   }
 
-  let content = < LanguageSelection onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
-  if(LanguageName === "English" && ScreenNum === 1){
-    content = <WarningE onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
-  } else if (LanguageName === "English" && ScreenNum === 2){
-    content = <HomePage onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler} onSectionName={SectionNameHandler}/>
-  }else if (LanguageName === "English" && ScreenNum === 3){
+  // let content = < LanguageSelection onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+  // if(LanguageName === "English" && ScreenNum === 1){
+  //   content = <WarningE onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+  // } else if (LanguageName === "English" && ScreenNum === 2){
+  //   content = <HomePage onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler} onSectionName={SectionNameHandler}/>
+  // }else if (LanguageName === "English" && ScreenNum === 3){
+  //   content = <UniMessage onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+  // }else if (LanguageName === "English" && ScreenNum === 4){
+  //   content = <TodayChalleng onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+  // }else if (LanguageName === "English" && ScreenNum === 5){
+  //   content = <SelfAwareness onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+  // }else if (LanguageName === "English" && ScreenNum === 6){
+  //   content = <Zodiac onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+  // }else if (LanguageName === "English" && ScreenNum === 7){
+  //   content = <PersonalityTest onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+  // }else if (LanguageName === "English" && ScreenNum === 8){
+  //   content = <SelfEsteemTest onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+  // }else if (LanguageName === "English" && ScreenNum === 9){
+  //   content = <IntrovertExtrovert onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
+  // }
+
+  
+  let content = <HomePage onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler} onSectionName={SectionNameHandler}/>
+  if (LanguageName === "English" && ScreenNum === 3){
     content = <UniMessage onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   }else if (LanguageName === "English" && ScreenNum === 4){
     content = <TodayChalleng onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
@@ -57,11 +75,6 @@ export default function App() {
   }else if (LanguageName === "English" && ScreenNum === 9){
     content = <IntrovertExtrovert onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
   }
-    // } else if (LanguageName === "English" && ScreenNum === 11){
-  //   content = <ZodiacMonth onLanguageName = {LanguageNameHandler} onScreenNum = {ScreenNumberHandler}/>
-  // }
-
-  
 
   let footer;
   if (ScreenNum > 2){

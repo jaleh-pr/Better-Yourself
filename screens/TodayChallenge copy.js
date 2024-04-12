@@ -1,7 +1,8 @@
 
 import React ,{ useState , useEffect} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ScrollView, Dimensions,ImageBackground, Image} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ScrollView, Dimensions,ImageBackground, Image, Alert} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+//import CheckBox from '@react-native-community/checkbox';
 
 const ScrHeight = Dimensions.get('window').height;
 const ScrWidth = Dimensions.get('window').width;
@@ -19,6 +20,9 @@ const TodayChalleng = (props) => {
   const [changeBtnDisable , setChangeBtnDisable] = useState(false);
   const [savedArrayL, setSavedArrayL] = useState();
   const [itIsSaved, setItIsSaved] = useState(false);
+  const [itIsDeleted, setItIsDeleted] = useState(false);
+  const [isSelected, setSelection] = useState(false);
+
 
   const ChangeBtn = () => {
     setChangeBtnDisable(true)
@@ -50,6 +54,7 @@ const laod = async () => {
 };
 
 const remove = async () => {
+  setStageNum(4);
   try{
     await AsyncStorage.removeItem ("SavedArray");
   } catch (err) {
@@ -57,6 +62,7 @@ const remove = async () => {
   }finally{
     setTheSavedArray([]);
   }
+  
 };
 
 
@@ -66,8 +72,15 @@ useEffect(() => {
 }, []
 );
 
-const undrestoodGenerator = () =>{
-  setStageNum(stageNum+1);
+const removeGenerator = () => {
+  Alert.alert('Are you sure that you want to delete all your challenges history?', '', [
+    {
+      text: 'Cancel',
+      onPress: () => console.log('Cancel Pressed'),
+      style: 'cancel',
+    },
+    {text: 'OK', onPress: () => remove()},
+  ]);
 }
 
 const startGenerator = () => {
@@ -76,6 +89,10 @@ const startGenerator = () => {
   setSavedArrayL(theSavedArray.length);
 
 };
+
+const undrestoodGenerator = () =>{
+  setStageNum(stageNum+1);
+}
 
 // const dateGenerator = () => {
 //   const today = JSON.stringify(new Date().getDate());
@@ -119,14 +136,6 @@ const savedChallenges = () => {
             const ST = JSON.stringify(challengesData[a].Title).replace(/['"]+/g, "");
             setTheSavedTitle (theSavedTitle => [...theSavedTitle, ST]);
   }
-
-  // let i =AL ;
-  // while(i>AL-5 && i>0){
-  //             let a = theSavedArray[i];
-  //            const ST = JSON.stringify(challengesData[a].Title).replace(/['"]+/g, "");
-  //            setTheSavedTitle (theSavedTitle => [...theSavedTitle, ST]);
-
-  // }
   setStageNum(stageNum+1);
   console.log('saved Title ',theSavedTitle);
 };
@@ -161,7 +170,6 @@ if (stageNum === 0){
               </ImageBackground>
     </SafeAreaView>
   );
-
 }else if (stageNum === 1) {
   return(
     <SafeAreaView>
@@ -179,6 +187,7 @@ if (stageNum === 0){
     </SafeAreaView>
 
   );
+
 }else if (stageNum === 2){
   return (
     <SafeAreaView >
@@ -243,9 +252,9 @@ if (stageNum === 0){
       return(
       <SafeAreaView >
 
-          <View style={styles.secondMainScreen}>  
+          <View style={styles.fourthMainScreen}>  
               <ScrollView vertical  > 
-                  <Text  style={styles.secondHeaderText}>Your 5 Recent Challenges</Text>
+                  <Text  style={styles.secondHeaderText}>Your 5 recent accepted Challenges</Text>
                 
                   {itIsSaved 
                   ? theSavedTitle.reverse().slice(0,5).map((SavedT,i) =>(
@@ -255,29 +264,39 @@ if (stageNum === 0){
                       <Text key={i} style={[styles.thirdHeaderText, styles.leftAlign]}>{i+1}.{' '+SavedT}</Text>
                   ))}
               </ScrollView>
-          </View>
-          <View style={styles.buttonCon}>
-              <TouchableOpacity
-                        onPress={backFunction}
-                        style={[styles.backButton]}
-                    >
-                            <Text style={styles.buttonText}>Back</Text> 
-              </TouchableOpacity>
-             
-          </View>
+            
+              <View style={styles.twoButtonCon}>
+                  <TouchableOpacity
+                                onPress={backFunction}
+                               // style={styles.backButton}
+                            >
+                                    <Text style={styles.buttonText}>Back</Text> 
+                  </TouchableOpacity>
+                
+                  <TouchableOpacity
+                            onPress={removeGenerator}
+                             style={styles.rowBtn}
+                        >
+                            <Image
+                                source={require('../assets/icons8-delete-80.png')}
+                                style= {{height: ScrHeight / 13, resizeMode: 'contain', width:ScrWidth / 9, marginBottom:10 }}
+                            ></Image>
+                  </TouchableOpacity>
+              </View>
+            </View>
      </SafeAreaView>
      );
     }else if (stageNum === 4){
       return(
-      <SafeAreaView style={styles.mainSection}>
-         <Text>There is no history</Text>
-          <View style={styles.content}>  
-          <TouchableOpacity
-                     onPress={backFunction}
-                     style={[styles.button]}
-                >
-                        <Text>Back</Text> 
-           </TouchableOpacity>
+      <SafeAreaView style={styles.thirdMainScreen}>
+         <Text style={styles.secondHeaderText}>You have deleted all the accepted challenges history</Text>
+          <View style={styles.buttonCon}>  
+            <TouchableOpacity
+                      onPress={setStageNum(2)}
+                      style={styles.button}
+                  >
+                          <Text style={styles.buttonText}>OK</Text> 
+            </TouchableOpacity>
         </View>
      </SafeAreaView>
      );
@@ -295,31 +314,23 @@ const styles = StyleSheet.create({
     height:ScrHeight * 0.65,
     marginTop:ScrHeight * 0.02,
     padding: ScrHeight * 0.02,
-  // backgroundColor:"gray",
+   //backgroundColor:"gray",
  },
  thirdMainScreen:{
-  height:ScrHeight * 0.4,
-  marginTop:ScrHeight * 0.2,
-  padding: ScrHeight * 0.02,
-},
-fourthMainScreen:{
-  flex:1,
-  height:ScrHeight * 0.5,
-  width:ScrWidth *0.8, 
-  justifyContent: 'center',
-  alignItems: 'center',
-  color: "black",
-  paddingTop: 10,
-  //backgroundColor:'yellow',
-},
-warningText:{
-  textAlign:'justify',
-  padding:ScrHeight * 0.03, 
-  fontSize:ScrHeight * 0.02,
-  lineHeight: ScrHeight * 0.031,
-  color:'#2D5018',
-  fontWeight:'bold',
-},
+    height:ScrHeight * 0.4,
+    marginTop:ScrHeight * 0.2,
+    padding: ScrHeight * 0.02,
+ },
+ fourthMainScreen:{
+    flex:1,
+    height:ScrHeight * 0.5,
+    width:ScrWidth *0.8, 
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: "black",
+    paddingTop: 10,
+    //backgroundColor:'yellow',
+ },
  mainHeaderText:{
     fontSize:ScrHeight * 0.025,  
     marginTop:ScrHeight * 0.025,  
@@ -341,6 +352,14 @@ thirdHeaderText:{
   fontSize:ScrHeight * 0.018,
   fontWeight:'bold',
   
+},
+warningText:{
+  textAlign:'justify',
+  padding:ScrHeight * 0.03, 
+  fontSize:ScrHeight * 0.02,
+  lineHeight: ScrHeight * 0.031,
+  color:'#2D5018',
+  fontWeight:'bold',
 },
 paragraphText:{
     fontSize:ScrHeight * 0.018,  
@@ -369,12 +388,19 @@ buttonCon:{
  justifyContent: 'center',
  alignItems: 'center', 
 },
+twoButtonCon:{
+  flexDirection: 'row',
+  marginBottom:ScrHeight * 0.03,
+  // backgroundColor:'#FBB651',
+   width:ScrWidth * 0.8,
+},
 button:{
   width:ScrWidth * 0.6,
   justifyContent: 'center',
   alignItems: 'center',
   padding:ScrHeight * 0.02,  
   fontWeight:'bold',
+  borderColor:'#FBB651',
   //borderColor:'#FBB651',
   borderRadius:10,
  // borderWidth:1,
@@ -383,14 +409,15 @@ button:{
 backButton:{
   width:ScrWidth * 0.2,
   justifyContent: 'center',
-   alignItems: 'center',
+  alignItems: 'center',
   padding:ScrHeight * 0.01,  
-  marginRight:ScrWidth * 0.65,
+  marginRight:ScrWidth * 0.5,
  // fontWeight:'bold',
   borderColor:'#FBB651',
   borderRadius:10,
   borderWidth:1,
-  backgroundColor:'#FBB651'
+  backgroundColor:'#FBB651',
+ // marginBottom:ScrHeight * 0.1, 
 },
 acceptBtn:{
   padding:ScrWidth*0.04,

@@ -17,6 +17,7 @@ const HomePage = (props) => {
     <SafeAreaView >
             
             <View style={styles.mainScreen}>
+                <Text style={styles.mainHeaderText}>Self Boost</Text>
                 <View style= {styles.secBtnCon}>
                     <View style= {styles.btnCon}>
                         <TouchableOpacity
@@ -100,8 +101,15 @@ const styles = StyleSheet.create({
     mainScreen:{
         justifyContent: 'center',
         alignItems: 'center',
-        height:ScrHeight *0.9,
+        height:ScrHeight *0.7,
     },
+    mainHeaderText:{
+        fontSize:ScrHeight * 0.025,  
+        marginTop:ScrHeight * 0.025,  
+        textAlign:'center',
+        fontWeight:'bold',
+        marginBottom:ScrHeight * 0.1,  
+   },
   textCon:{
     marginTop:ScrHeight *0.012,
     justifyContent: 'center',

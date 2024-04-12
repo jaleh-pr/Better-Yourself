@@ -17,8 +17,7 @@ const onLanNumProps = (MyLanguage) => {
             
             <View style={styles.firstMainScreen}>
                 <Text style={styles.secondHeaderText}>
-                Please be advised that if you think any of the challenges could hurt you or your family, it's best to avoid taking part in them.
-                 </Text>
+                Please remember, if you think that any of the challenges given to you might hurt you, your family, or make things difficult for you, it's best to avoid taking part in them. It's important to prioritize your safety and well-being. </Text>
             </View>
             <View style={styles.buttonCon}>
                 <TouchableOpacity

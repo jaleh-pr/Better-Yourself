@@ -39,17 +39,17 @@ const UniMessage = (props) => {
 
     const generateMessage = () => {
         setStageNum(2);
-        let rndNum = Math.floor(0 + Math.random()* 100 );
+        let rndNum = Math.floor(0 + Math.random()* 143 );
         setMyArrayLen(myNumArray.length);
         setUniverseMessage(rndNum);
         setMyNumArray(myNumArray => [...myNumArray, rndNum]);
 
-        if (myNumArray.indexOf(rndNum) < 0 && myArrayLen < 100){
+        if (myNumArray.indexOf(rndNum) < 0 && myArrayLen < 143){
             setUniverseMessage(rndNum);
             setMyArrayLen(myArrayLen+1);
-        } else if (myNumArray.indexOf(rndNum) > 0 && myArrayLen < 100){
+        } else if (myNumArray.indexOf(rndNum) > 0 && myArrayLen < 143){
             generateMessage();
-        }else if (myNumArray.indexOf(rndNum) > 0 && myArrayLen >= 100){
+        }else if (myNumArray.indexOf(rndNum) > 0 && myArrayLen >= 143){
             setMyNumArray ([]);
             generateMessage();
         }
