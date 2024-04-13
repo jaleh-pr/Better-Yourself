@@ -135,7 +135,7 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
             <Text style={styles.secondHeaderText}> Enter Your Date Of Birth</Text>
             
                 <View style={styles.inputCon}>
-                    <Text >Your month of birth:</Text>
+                    <Text style={styles.labelText}>Your month of birth:</Text>
                     <View style={styles.pickerSelectStyles}>
                         <RNPickerSelect
                             
@@ -145,8 +145,8 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
                                     color: 'red',
                                     borderColor:'black',
                                     borderWidth:1,
-                            
                                 }}
+                        
                             onValueChange={(value) => setMonthValue(value)}
                             items={[
                                 { label: "January", value: "1" },
@@ -166,7 +166,7 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
                     </View>
                 </View>
                 <View style={styles.inputCon}>
-                    <Text >Your date of birth:</Text>
+                    <Text style={styles.labelText}>Your date of birth:</Text>
                     <View style={styles.pickerSelectStyles}>
                         <RNPickerSelect
                             placeholder={{
@@ -302,10 +302,13 @@ const styles = StyleSheet.create({
         
     },
     paragraphText:{
-        fontSize:15,
-        textAlign:'justify',
-       // textAlign:'center',
-        padding:20,
+        fontSize:ScrHeight * 0.018,  
+        textAlign:'left',
+        padding:ScrHeight * 0.018,  
+    },
+    labelText: {
+        fontSize:ScrHeight * 0.018,  
+        textAlign:'left',
     },
     buttonCon:{
         height: ScrHeight * 0.12,
@@ -349,7 +352,7 @@ const styles = StyleSheet.create({
     backgroundColor:'#FBB651'
 },
   inputCon:{
-        marginTop:25,
+        marginTop:ScrHeight * 0.02,
   },
   pickerSelectStyles:{
         width: ScrWidth * 0.5,
@@ -360,7 +363,7 @@ const styles = StyleSheet.create({
         alignSelf: 'stretch',
         borderWidth: 1,
         borderColor:'gray',
-        borderRadius:5
+        borderRadius:5,
   },
   scrollView:{
         backgroundColor: '#F5F5F5',
