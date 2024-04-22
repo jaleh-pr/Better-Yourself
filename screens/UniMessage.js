@@ -71,7 +71,12 @@ if (stageNum === 0){
   return (
     <SafeAreaView> 
       
-        <View style={styles.mainScreen}>
+        <View style={styles.firstMainScreen}>
+            <View style= {styles.centeredSection}>
+                <ImageBackground source={require('../assets/bg-universeMessage-app.png')} resizeMode="contain" style={styles.bgImage}>
+                
+                </ImageBackground>
+            </View>
                  <Text style={styles.mainHeaderText}> Universe Message</Text> 
                 <Text style={styles.secondHeaderText}>Close your eyes and concentrate on the question you seek the answer from the universe</Text>
         
@@ -88,9 +93,7 @@ if (stageNum === 0){
                             <Text style={styles.buttonText}>Start</Text> 
             </TouchableOpacity> 
         </View>
-        <ImageBackground source={require('../assets/uni-message.png')} resizeMode="contain" style={styles.bgImage}>
-        
-        </ImageBackground>
+       
     </SafeAreaView>
   );
 }else if (stageNum ==2 ) {
@@ -137,13 +140,10 @@ const styles = StyleSheet.create({
           
       },
       firstMainScreen:{
-         height:ScrHeight * 0.3,
-         width:ScrWidth * 0.8,
-         marginTop:ScrHeight * 0.1,
-        // marginBottom:ScrHeight * 0.01,
-        // padding: ScrHeight * 0.1,
-         //backgroundColor:'red',
-        
+        height:ScrHeight * 0.6,
+        width:ScrWidth ,
+        marginTop:ScrHeight * 0.03,
+       //backgroundColor:"yellow",
       },
       secondMainScreen:{
         height:ScrHeight * 0.65,
@@ -209,9 +209,15 @@ const styles = StyleSheet.create({
         height:ScrHeight*0.4,
       },
       bgImage:{
-       height:ScrHeight*0.25,
-       marginTop:ScrHeight * 0.01, 
-      }
+        width:ScrHeight * 0.35,
+        height:ScrHeight * 0.35,
+        //backgroundColor: '#F5F5F5',
+      },
+      centeredSection:{
+        display:'flex',
+        //alignContent:'center',
+        alignItems:'center'
+      },
 
 
 })

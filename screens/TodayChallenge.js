@@ -160,11 +160,18 @@ if (stageNum === 0){
     <SafeAreaView>
 
             <View style={styles.firstMainScreen}>
-                <Text style={styles.mainHeaderText}>Your Today's Challenge</Text>
+              <View style= {styles.centeredSection}>
+                  <ImageBackground source={require('../assets/bg-challenge-app.png')} resizeMode="cover" style={styles.bgImage}>
+              
+                  </ImageBackground>
+                  <Text style={styles.mainHeaderText}>Your Today's Challenge</Text>
+                </View>
+                
                 <Text style={styles.secondHeaderText}>
-                Click start to see what your challenge for today is.
+                Every day, we provide you with a challenge to help you improve yourself. If you complete these challenges for 30 days, you will definitely see significant positive changes in your life.
                 </Text>
             </View>
+           
             <View style= {styles.mainBtnCon}>
               <TouchableOpacity
                       onPress={startGenerator}
@@ -173,9 +180,8 @@ if (stageNum === 0){
                           <Text style={styles.buttonText}>Start</Text> 
                 </TouchableOpacity> 
               </View>
-              <ImageBackground source={require('../assets/challenge.png')} resizeMode="cover" style={styles.bgImage}>
-          
-              </ImageBackground>
+             
+              
     </SafeAreaView>
   );
 
@@ -183,7 +189,7 @@ if (stageNum === 0){
   return(
     <SafeAreaView>
         <View style={styles.thirdMainScreen}>
-            <Text style={styles.warningText}>Please remember, if you are under 16 years old or believe that any of the challenges given to you might hurt you, your family, or make things difficult for you, it's best to avoid taking part in them. It's important to prioritize your safety and well-being.</Text>
+            <Text style={styles.warningText}>Please remember, if you believe that any of the challenges given to you might hurt you, your family, or make things difficult for you, it's best to avoid taking part in them. It's important to prioritize your safety and well-being.</Text>
             <View style={styles.buttonCon}>
                 <TouchableOpacity
                             onPress={() => undrestoodGenerator()}
@@ -241,18 +247,7 @@ if (stageNum === 0){
                             <Text style={styles.buttonText}>Accept It</Text> 
                     </TouchableOpacity>
                 </View>
-                {/* <TouchableOpacity
-                     onPress={savedChallenges}
-                     style={[styles.button, styles.historyBtn]}
-                >
-                        <Text>Your Accepted Challenges</Text> 
-                </TouchableOpacity> */}
-                {/* <TouchableOpacity
-                     onPress={() => remove()}
-                     style={[styles.button,  styles.historyBtn]}
-                >
-                        <Text>Remove Your Challenge</Text> 
-                </TouchableOpacity> */}
+               
         </View>
     </SafeAreaView>
      );
@@ -314,10 +309,10 @@ if (stageNum === 0){
 const styles = StyleSheet.create({
 
    firstMainScreen:{
-    height:ScrHeight * 0.2,
+    height:ScrHeight * 0.6,
     width:ScrWidth ,
-    marginTop:ScrHeight * 0.1,
-   // backgroundColor:"yellow",
+    marginTop:ScrHeight * 0.03,
+   //backgroundColor:"yellow",
   },
   secondMainScreen:{
     height:ScrHeight * 0.65,
@@ -353,7 +348,7 @@ warningText:{
     marginTop:ScrHeight * 0.025,  
     textAlign:'center',
     fontWeight:'bold',
-    marginBottom:ScrHeight * 0.025,  
+   // marginBottom:ScrHeight * 0.02,  
 },
 secondHeaderText:{
     flex:1,
@@ -361,19 +356,23 @@ secondHeaderText:{
     fontSize:ScrHeight * 0.018,
     fontWeight:'bold',
     textAlign:'center',
-    color:'#2D5018'
+    color:'#2D5018',
+    lineHeight:ScrHeight * 0.023,  
 },
 thirdHeaderText:{
   textAlign:'center',
   padding:ScrHeight * 0.01, 
+  marginLeft:ScrHeight * 0.01, 
+  marginRight:ScrHeight * 0.01, 
   fontSize:ScrHeight * 0.018,
   fontWeight:'bold',
   
 },
 paragraphText:{
-    fontSize:ScrHeight * 0.018,  
+    fontSize:ScrHeight * 0.019,  
     textAlign:'left',
-    padding:ScrHeight * 0.018,  
+    padding:ScrHeight * 0.018, 
+    lineHeight: ScrHeight * 0.027, 
 },
 leftAlign:{
   width: ScrWidth *0.8,
@@ -388,14 +387,16 @@ secBtnCon:{
 
 },
 mainBtnCon:{
-  height: ScrHeight * 0.25,
+  height: ScrHeight * 0.1,
   justifyContent: 'center',
   alignItems: 'center', 
+  //backgroundColor:"yellow",
 },
 buttonCon:{
  height: ScrHeight * 0.1,
  justifyContent: 'center',
  alignItems: 'center', 
+ 
 },
 twoButtonCon:{
   flexDirection: 'row',
@@ -454,12 +455,18 @@ buttonText:{
 scrollView:{
   backgroundColor: '#F5F5F5',
    paddingTop:10,
-   height:ScrHeight*0.6,
+   height:ScrHeight*0.7,
+   marginBottom:ScrHeight*0.06,
+},
+centeredSection:{
+  display:'flex',
+  //alignContent:'center',
+  alignItems:'center'
 },
 bgImage:{
-  height:ScrHeight * 0.25,
-  //width:ScrWidth,
-  marginTop:ScrHeight * 0.01,  
+  width:ScrHeight * 0.35,
+  height:ScrHeight * 0.35,
+  //backgroundColor: '#F5F5F5',
 },
 btnActive:{
   opacity: 1,

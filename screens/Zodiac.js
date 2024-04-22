@@ -104,7 +104,12 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
   if(pageNum === 0 ){
     return(
         <SafeAreaView >       
-            <View style={styles.firstMainScreen}>
+             <View style={styles.firstMainScreen}>
+                <View style= {styles.centeredSection}>
+                    <ImageBackground source={require('../assets/bg-zodiac-app.png')} resizeMode="contain" style={styles.bgImage}>
+                    
+                    </ImageBackground>
+                </View>
                 <Text style={styles.mainHeaderText}>
                     Zodic
                 </Text>
@@ -121,9 +126,7 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
                     
                 </TouchableOpacity>
             </View>
-            <ImageBackground source={require('../assets/zodiac.jpg')} resizeMode="contain" style={styles.bgImage}>
-        
-        </ImageBackground>
+           
     </SafeAreaView>
     )
     } else if ( pageNum === 1 ){
@@ -259,10 +262,10 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
 
 const styles = StyleSheet.create({
     firstMainScreen:{
-        height:ScrHeight * 0.2,
+        height:ScrHeight * 0.6,
         width:ScrWidth ,
-        marginTop:ScrHeight * 0.1,
-       // backgroundColor:"yellow",
+        marginTop:ScrHeight * 0.03,
+       //backgroundColor:"yellow",
       },
       secondMainScreen:{
         height:ScrHeight * 0.4,
@@ -288,11 +291,12 @@ const styles = StyleSheet.create({
     },
     secondHeaderText:{
         flex:1,
-        padding:ScrHeight * 0.03,   
+        padding:ScrHeight * 0.03,  
         fontSize:ScrHeight * 0.018,
          fontWeight:'bold',
          textAlign:'center',
          color:'#2D5018'
+    
     },
     thirdHeaderText:{
         textAlign:'center',
@@ -316,7 +320,7 @@ const styles = StyleSheet.create({
         alignItems: 'center', 
     },
     mainBtnCon:{
-        height: ScrHeight * 0.25,
+        height: ScrHeight * 0.1,
         justifyContent: 'center',
         alignItems: 'center', 
       },
@@ -370,10 +374,15 @@ const styles = StyleSheet.create({
    
   },
   bgImage:{
-    height:ScrHeight * 0.25,
-    //width:ScrWidth,
-    marginTop:ScrHeight * 0.01,
-   }
+    width:ScrHeight * 0.35,
+    height:ScrHeight * 0.35,
+    //backgroundColor: '#F5F5F5',
+  },
+  centeredSection:{
+    display:'flex',
+    //alignContent:'center',
+    alignItems:'center'
+  },
 
 })
 export default Zodiac;

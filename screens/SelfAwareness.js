@@ -15,8 +15,12 @@ const SelfAwareness = (props) => {
   return (
     <SafeAreaView >
 
-        <View style={styles.mainScreen}>
-           
+        <View style={styles.firstMainScreen}>
+            <View style= {styles.centeredSection}>
+                <ImageBackground source={require('../assets/bg-Test-app.png')} resizeMode="contain" style={styles.bgImage}>
+                
+                </ImageBackground>
+            </View>
             <Text style={styles.mainHeaderText}>Self Awareness Test</Text>
         </View>
         <View>
@@ -45,9 +49,7 @@ const SelfAwareness = (props) => {
                 </TouchableOpacity> 
             </View>
         </View>
-        <ImageBackground source={require('../assets/self-awareness.png')} resizeMode="contain" style={styles.bgImage}>
-        
-        </ImageBackground>
+       
     </SafeAreaView>
   );
 };
@@ -60,6 +62,12 @@ const styles = StyleSheet.create({
         width:ScrWidth ,
         marginTop:ScrHeight * 0.1,
        // backgroundColor:"yellow",
+      },
+      firstMainScreen:{
+        height:ScrHeight * 0.45,
+        width:ScrWidth ,
+        marginTop:ScrHeight * 0.03,
+       //backgroundColor:"yellow",
       },
       mainHeaderText:{
         fontSize:ScrHeight * 0.025,  
@@ -99,10 +107,15 @@ const styles = StyleSheet.create({
         backgroundColor:'#DF6149',
     },
     bgImage:{
-        height:ScrHeight * 0.25,
-        marginTop:ScrHeight * 0.01,  
-        
-       }
+        width:ScrHeight * 0.35,
+        height:ScrHeight * 0.35,
+        //backgroundColor: '#F5F5F5',
+      },
+      centeredSection:{
+        display:'flex',
+        //alignContent:'center',
+        alignItems:'center'
+      },
 
 })
 export default SelfAwareness;
