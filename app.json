@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "better-yourself",
-    "slug": "better-yourself",
+    "name": "self-boost",
+    "slug": "self-boost",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

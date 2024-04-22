@@ -247,14 +247,14 @@ if(pageNum === 0 ){
         <SafeAreaView>
            <View style={styles.secondMainScreen}>
                  <Text style={styles.secondHeaderText}>You have finished the test</Text>
-           <View style={styles.buttonCon}>
-                <TouchableOpacity
-                            onPress={() => resultFunction()}
-                            style={styles.button}
-                        >
-                                <Text style={styles.buttonText}>See The Result</Text> 
-                </TouchableOpacity>  
-            </View>
+                <View style={styles.buttonCon}>
+                        <TouchableOpacity
+                                    onPress={() => resultFunction()}
+                                    style={styles.button}
+                                >
+                                        <Text style={styles.buttonText}>See The Result</Text> 
+                        </TouchableOpacity>  
+                 </View>
            </View>
        </SafeAreaView>
     )
@@ -282,7 +282,7 @@ const styles = StyleSheet.create({
       // backgroundColor:"yellow",
       },
     secondMainScreen:{
-        height:ScrHeight * 0.4,
+        height:ScrHeight * 0.6,
         marginTop:30,
         marginBottom:10,
         padding: 20,
