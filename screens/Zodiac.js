@@ -138,10 +138,12 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
             <Text style={styles.secondHeaderText}> Enter Your Date Of Birth</Text>
             
                 <View style={styles.inputCon}>
-                    <Text style={styles.labelText}>Your month of birth:</Text>
+                    <Text style={styles.labelText}>Your Month Of Birth:</Text>
                     <View style={styles.pickerSelectStyles}>
                         <RNPickerSelect
-                            
+                            //style={styles.sourcePicker}
+                            pickerProps={{ style: styles.sourcePicker }}
+                            textInputProps={{ style: styles.sourcePicker }}
                             placeholder={{
                                     label: 'Select the month',
                                     value: null,
@@ -169,9 +171,11 @@ const ZodiacMonthData = require("../Data/ZodiacMonth.json");
                     </View>
                 </View>
                 <View style={styles.inputCon}>
-                    <Text style={styles.labelText}>Your date of birth:</Text>
+                    <Text style={styles.labelText}>Your Date Of Birth:</Text>
                     <View style={styles.pickerSelectStyles}>
                         <RNPickerSelect
+                            pickerProps={{ style: styles.sourcePicker }}
+                            textInputProps={{ style: styles.sourcePicker }}
                             placeholder={{
                                     label: 'Select the date',
                                     value: null,
@@ -368,6 +372,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor:'gray',
         borderRadius:5,
+  },
+  sourcePicker:{
+    fontSize:ScrHeight * 0.018,
+    color:'gray'
   },
   scrollView:{
         backgroundColor: '#F5F5F5',

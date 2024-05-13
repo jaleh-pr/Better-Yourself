@@ -17,7 +17,13 @@ const HomePage = (props) => {
     <SafeAreaView >
             
             <View style={styles.mainScreen}>
-                <Text style={styles.mainHeaderText}>Self Boost</Text>
+                <View style= {styles.logoCon}>   
+                    <Image
+                            source={require('../assets/logo.png')}
+                            style= {styles.logoStyle}
+                    ></Image>
+                    <Text style={styles.mainHeaderText}>Self Boost</Text>
+                </View>
                 <View style= {styles.secBtnCon}>
                     <View style= {styles.btnCon}>
                         <TouchableOpacity
@@ -104,11 +110,12 @@ const styles = StyleSheet.create({
         height:ScrHeight *0.7,
     },
     mainHeaderText:{
-        fontSize:ScrHeight * 0.025,  
-        marginTop:ScrHeight * 0.025,  
+        fontSize:ScrHeight * 0.03,  
+      //  marginTop:ScrHeight * 0.025,  
         textAlign:'center',
         fontWeight:'bold',
-        marginBottom:ScrHeight * 0.1,  
+        //color:'#FBB651'
+      //  marginBottom:ScrHeight * 0.1,  
    },
   textCon:{
     marginTop:ScrHeight *0.012,
@@ -132,21 +139,35 @@ const styles = StyleSheet.create({
     marginTop: ScrHeight*0.009,
 
   },
+  logoCon:{
+  //  display:'flex',
+  //  flexDirection: 'row',
+    alignItems:'center',
+    justifyContent:'center',  
+    width: ScrWidth *0.8,
+    marginBottom: ScrHeight*0.07,
+
+  },
   button:{
     height: ScrHeight * 0.12,
     width:ScrHeight * 0.12,
     borderRadius:10,
-     display:'flex',
+    display:'flex',
     alignItems:'center',
     justifyContent:'center',
-   shadowColor: '#171717',
-   shadowOffset: {width: -2, height: 4},
-   shadowOpacity: 0.3,
-   shadowRadius: 3,
+    shadowColor: '#171717',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
   },
   iconStyle:{
     width:ScrWidth / 8,
      height:ScrWidth / 8, 
+     resizeMode:'stretch',   
+  },
+  logoStyle:{
+    width:ScrWidth / 4,
+     height:ScrWidth / 4, 
      resizeMode:'stretch',   
   },
   blueButton:{

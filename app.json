@@ -2,7 +2,7 @@
   "expo": {
     "name": "self-boost",
     "slug": "self-boost",
-    "version": "1.0.0",
+    "version": "1.0.9",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -26,20 +26,29 @@
         "NSPhotoLibraryAddUsageDescription": "This permission is not needed by the app.",
         "NSPhotoLibraryUsageDescription": "This permission is not needed by the app.",
         "NSRemindersUsageDescription": "This permission is not needed by the app."
-    }
-    
+      },
+      "bundleIdentifier": "com.self.boost",
+      "buildNumber": "9"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "permissions": [
-       
-      ]
+      "permissions": [],
+      "package": "com.self.boost"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3e3f8b15-68f9-4470-9b8a-370a63584eda"
+      }
+    },
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/3e3f8b15-68f9-4470-9b8a-370a63584eda"
     }
   }
 }

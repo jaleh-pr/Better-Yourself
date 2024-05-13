@@ -278,11 +278,11 @@ if (stageNum === 0){
                 
                   <TouchableOpacity
                             onPress={removeGenerator}
-                             style={styles.rowBtn}
+                            // style={styles.rowBtn}
                         >
                             <Image
                                 source={require('../assets/icons8-delete-80.png')}
-                                style= {{height: ScrHeight / 13, resizeMode: 'contain', width:ScrWidth / 9, marginBottom:10 }}
+                                style= {{height: ScrHeight / 15, resizeMode: 'contain', width:ScrWidth / 15, marginBottom:10 }}
                             ></Image>
                   </TouchableOpacity>
               </View>
@@ -422,7 +422,7 @@ backButton:{
   justifyContent: 'center',
    alignItems: 'center',
   padding:ScrHeight * 0.01,  
-  marginRight:ScrWidth * 0.3,
+  marginRight:ScrWidth * 0.4,
   marginTop: ScrHeight*0.01,
  // fontWeight:'bold',
   borderColor:'#FBB651',

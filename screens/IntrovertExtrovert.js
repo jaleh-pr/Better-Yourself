@@ -137,11 +137,11 @@ const IntrovertExtrovert = (props) => {
 
 const theResult = () => {
         setPageNum(101);
-        if(theScore < 36 ){
+        if(theScore < 43 ){
             setTheContent("You are an introvert. For an introvert, it can be beneficial to prioritize self-care and set boundaries to ensure they have enough time for solitude and recharging. Engaging in activities that align with their interests and values, such as reading, writing, or creative pursuits, can be fulfilling for introverts. Building strong, meaningful relationships with a few close friends or family members can also provide a sense of connection and support. Additionally, practicing mindfulness and self-awareness can help introverts navigate social situations and honor their need for alone time. Ultimately, embracing and celebrating their introverted nature can lead to a more fulfilling and balanced life.") ;
-        }else if (theScore >= 36 && theScore < 64 ){
+        }else if (theScore >= 43 && theScore < 75 ){
             setTheContent("You are an ambivert. For an ambivert, who falls somewhere between introversion and extroversion, it is important to maintain a balance between social interaction and alone time. Experiment with different social settings and activities to identify what energizes you and what drains you. This self-awareness can assist you in effectively managing your social interactions. Practice setting boundaries and saying no when you require time alone. Utilize your ability to navigate both social and solitary situations to your advantage in various aspects of your life. Seek out a supportive community or network that understands and respects your ambivert nature.");
-        }else if (theScore >= 64 && theScore < 101 ){
+        }else if (theScore >= 75 && theScore < 101 ){
             setTheContent("You are an extrovert. For an extrovert, it is beneficial to engage in social activities and interactions to energize and recharge. Extroverts thrive in group settings, enjoy meeting new people, and are often outgoing and sociable. They may find fulfillment in networking, social events, and collaborative projects that involve working with others. It is important for extroverts to seek out opportunities for social engagement and to maintain a balance between socializing and personal time for self-care and reflection.");
         }
 };
